@@ -7,46 +7,29 @@ obj/
 *.sln.docstates
 *.userprefs
 .vs/
-*.DotSettings.user
-
-## NuGet
-*.nupkg
-**/[Pp]ackages/*
-!**/[Pp]ackages/build/
+project.lock.json
 *.nuget.props
 *.nuget.targets
-project.lock.json
-project.fragment.lock.json
 
 ## Build results
 [Dd]ebug/
 [Rr]elease/
 x64/
 x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
+[Bb]uild/
 bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
 
-## Test results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
-TestResult.xml
-coverage/
+## NuGet
+**/[Pp]ackages/*
+*.nupkg
+**/packages/*
 
-## IDE
+## Rider
 .idea/
-*.swp
-*.swo
-*~
 
-## OS
+## macOS
 .DS_Store
-Thumbs.db
 
-## Docker
-docker-compose.override.yml
+## Temporary files
+*.tmp
+*.temp
