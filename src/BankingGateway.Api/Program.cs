@@ -60,7 +60,8 @@ try
             options.AddAudiences(jwtSettings.Audience);
             options.UseIntrospection()
                    .SetClientId(jwtSettings.Audience)
-                   .SetClientSecret(builder.Configuration["OpenIddict:GatewayClientSecret"] ?? string.Empty);
+                   .SetClientSecret(builder.Configuration["OpenIddict:GatewayClientSecret"]
+                       ?? throw new InvalidOperationException("OpenIddict:GatewayClientSecret must be configured."));
             options.UseSystemNetHttp();
             options.UseAspNetCore();
         });

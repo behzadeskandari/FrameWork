@@ -127,13 +127,18 @@ try
             options.UseReferenceAccessTokens()
                    .UseReferenceRefreshTokens();
 
-            options.UseAspNetCore()
+            var aspNetCoreOptions = options.UseAspNetCore()
                    .EnableAuthorizationEndpointPassthrough()
                    .EnableTokenEndpointPassthrough()
                    .EnableUserinfoEndpointPassthrough()
                    .EnableLogoutEndpointPassthrough()
-                   .EnableStatusCodePagesIntegration()
-                   .DisableTransportSecurityRequirement(); // only in dev; remove in prod
+                   .EnableStatusCodePagesIntegration();
+
+            // Only disable HTTPS enforcement in Development; enforce in production
+            if (builder.Environment.IsDevelopment())
+            {
+                aspNetCoreOptions.DisableTransportSecurityRequirement();
+            }
         })
         .AddValidation(options =>
         {

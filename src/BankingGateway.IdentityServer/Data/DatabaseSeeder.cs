@@ -129,10 +129,11 @@ public static class DatabaseSeeder
         var m2mClientId = "banking-service-m2m";
         if (await appManager.FindByClientIdAsync(m2mClientId) is null)
         {
+            var m2mSecret = Guid.NewGuid().ToString("N");
             await appManager.CreateAsync(new OpenIddictApplicationDescriptor
             {
                 ClientId = m2mClientId,
-                ClientSecret = Guid.NewGuid().ToString("N"),
+                ClientSecret = m2mSecret,
                 DisplayName = "Banking Service M2M",
                 ClientType = OpenIddictConstants.ClientTypes.Confidential,
                 Permissions =
@@ -143,6 +144,12 @@ public static class DatabaseSeeder
                     OpenIddictConstants.Permissions.Prefixes.Scope + "banking_api"
                 }
             });
+
+            // Log the generated secret so operators can configure downstream services
+            logger.LogWarning(
+                "M2M client '{ClientId}' created with auto-generated secret. " +
+                "Store this secret securely — it will not be shown again: {Secret}",
+                m2mClientId, m2mSecret);
         }
 
         // 4c. banking-spa (Public client — Authorization Code + PKCE, no secret)

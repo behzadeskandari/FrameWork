@@ -182,6 +182,7 @@ public sealed class AuthorizationController : Controller
     [Authorize(AuthenticationSchemes = OpenIddictServerAspNetCoreDefaults.AuthenticationScheme)]
     [HttpGet("~/connect/userinfo")]
     [HttpPost("~/connect/userinfo")]
+    [IgnoreAntiforgeryToken]
     public async Task<IActionResult> Userinfo()
     {
         var user = await _userManager.GetUserAsync(User);
