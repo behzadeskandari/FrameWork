@@ -5,8 +5,6 @@ using BankingGateway.Core.Configuration;
 using BankingGateway.Infrastructure;
 using FluentValidation;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
@@ -54,22 +52,20 @@ try
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
-    // ── Authentication (JWT Bearer) ─────────────────────────────────
-    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddJwtBearer(options =>
+    // ── Authentication (OpenIddict introspection) ────────────────────
+    builder.Services.AddOpenIddict()
+        .AddValidation(options =>
         {
-            options.Authority = jwtSettings.Authority;
-            options.Audience = jwtSettings.Audience;
-            options.RequireHttpsMetadata = jwtSettings.RequireHttpsMetadata;
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
-                ValidateIssuerSigningKey = true,
-                ClockSkew = TimeSpan.FromMinutes(1)
-            };
+            options.SetIssuer(jwtSettings.Authority);
+            options.AddAudiences(jwtSettings.Audience);
+            options.UseIntrospection()
+                   .SetClientId(jwtSettings.Audience)
+                   .SetClientSecret(builder.Configuration["OpenIddict:GatewayClientSecret"] ?? string.Empty);
+            options.UseSystemNetHttp();
+            options.UseAspNetCore();
         });
+
+    builder.Services.AddAuthentication(OpenIddict.Validation.AspNetCore.OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme);
 
     // Claims transformation
     builder.Services.AddTransient<IClaimsTransformation, ClaimsTransformer>();
