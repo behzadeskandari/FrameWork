@@ -19,8 +19,7 @@ public static class DependencyInjection
 
         // Caching - choose based on config
         var redisSettings = configuration.GetSection(RedisSettings.SectionName).Get<RedisSettings>();
-        if (redisSettings is not null && !string.IsNullOrWhiteSpace(redisSettings.ConnectionString)
-            && redisSettings.ConnectionString != "localhost:6379")
+        if (redisSettings is { Enabled: true } && !string.IsNullOrWhiteSpace(redisSettings.ConnectionString))
         {
             services.AddStackExchangeRedisCache(options =>
             {

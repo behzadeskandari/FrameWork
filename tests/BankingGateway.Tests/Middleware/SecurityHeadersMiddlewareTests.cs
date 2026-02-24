@@ -1,28 +1,39 @@
 using BankingGateway.Api.Middleware;
 using FluentAssertions;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Hosting;
 
 namespace BankingGateway.Tests.Middleware;
 
 public class SecurityHeadersMiddlewareTests
 {
     [Fact]
-    public async Task Should_Add_Security_Headers()
+    public async Task Should_Add_Security_Headers_To_Response()
     {
-        var middleware = new SecurityHeadersMiddleware(context =>
-        {
-            context.Response.StatusCode = 200;
-            return Task.CompletedTask;
-        });
+        using var host = await new HostBuilder()
+            .ConfigureWebHost(webBuilder =>
+            {
+                webBuilder.UseTestServer();
+                webBuilder.Configure(app =>
+                {
+                    app.UseMiddleware<SecurityHeadersMiddleware>();
+                    app.Run(context =>
+                    {
+                        context.Response.StatusCode = 200;
+                        return Task.CompletedTask;
+                    });
+                });
+            })
+            .StartAsync();
 
-        var context = new DefaultHttpContext();
-        context.Response.Body = new MemoryStream();
+        var client = host.GetTestClient();
+        var response = await client.GetAsync("/test");
 
-        await middleware.InvokeAsync(context);
-
-        // Headers are added OnStarting, which requires flushing.
-        // For DefaultHttpContext, OnStarting callbacks fire when response starts writing.
-        // Since we can't easily trigger them, let's just verify the middleware doesn't throw.
-        context.Response.StatusCode.Should().Be(200);
+        response.Headers.GetValues("X-Content-Type-Options").Should().Contain("nosniff");
+        response.Headers.GetValues("X-Frame-Options").Should().Contain("DENY");
+        response.Headers.GetValues("X-XSS-Protection").Should().Contain("1; mode=block");
+        response.Headers.GetValues("Referrer-Policy").Should().Contain("strict-origin-when-cross-origin");
     }
 }

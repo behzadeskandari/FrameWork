@@ -51,6 +51,8 @@ public class ConfigurationTests
     {
         var settings = new RedisSettings();
 
+        settings.Enabled.Should().BeFalse();
+        settings.ConnectionString.Should().BeEmpty();
         settings.InstanceName.Should().Be("BankingGateway_");
     }
 }

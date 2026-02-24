@@ -101,10 +101,10 @@ try
 
     // ── Health Checks ───────────────────────────────────────────────
     var healthChecksBuilder = builder.Services.AddHealthChecks();
-    var redisConn = builder.Configuration.GetSection("Redis:ConnectionString").Value;
-    if (!string.IsNullOrWhiteSpace(redisConn) && redisConn != "localhost:6379")
+    var redisConfig = builder.Configuration.GetSection(RedisSettings.SectionName).Get<RedisSettings>();
+    if (redisConfig is { Enabled: true } && !string.IsNullOrWhiteSpace(redisConfig.ConnectionString))
     {
-        healthChecksBuilder.AddRedis(redisConn, name: "redis");
+        healthChecksBuilder.AddRedis(redisConfig.ConnectionString, name: "redis");
     }
 
     // ── OpenTelemetry ───────────────────────────────────────────────
