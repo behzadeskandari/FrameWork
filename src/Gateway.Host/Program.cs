@@ -107,9 +107,17 @@ builder.Services.AddCors(options =>
                 .AllowAnyHeader()
                 .AllowCredentials();
         }
+        else if (builder.Environment.IsDevelopment())
+        {
+            // Only allow any origin in development; production must configure allowed origins
+            policy.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        }
         else
         {
-            policy.AllowAnyOrigin()
+            // Restrictive default: no origins allowed in non-development environments
+            policy.WithOrigins("https://localhost")
                 .AllowAnyMethod()
                 .AllowAnyHeader();
         }
