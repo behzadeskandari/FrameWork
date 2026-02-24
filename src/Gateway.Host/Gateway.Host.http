@@ -1,6 +1,6 @@
 @Gateway.Host_HostAddress = http://localhost:5295
 
-GET {{Gateway.Host_HostAddress}}/weatherforecast/
+GET {{Gateway.Host_HostAddress}}/api/v1/gateway/ping
 Accept: application/json
 
 ###
