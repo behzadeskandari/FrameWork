@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.11" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Gateway.Framework.Core\Gateway.Framework.Core.csproj" />
+    <ProjectReference Include="..\..\src\Gateway.Framework.Shared\Gateway.Framework.Shared.csproj" />
+    <ProjectReference Include="..\..\src\Gateway.Framework.Security\Gateway.Framework.Security.csproj" />
+    <ProjectReference Include="..\..\src\Gateway.Framework.Logging\Gateway.Framework.Logging.csproj" />
+    <ProjectReference Include="..\..\src\Gateway.Framework.Resilience\Gateway.Framework.Resilience.csproj" />
+    <ProjectReference Include="..\..\src\Gateway.Framework.Infrastructure\Gateway.Framework.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Gateway.Host\Gateway.Host.csproj" />
+  </ItemGroup>
+
+</Project>

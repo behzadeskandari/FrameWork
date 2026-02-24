@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0" />
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gateway.Framework.Core\Gateway.Framework.Core.csproj" />
+    <ProjectReference Include="..\Gateway.Framework.Shared\Gateway.Framework.Shared.csproj" />
+    <ProjectReference Include="..\Gateway.Framework.Security\Gateway.Framework.Security.csproj" />
+    <ProjectReference Include="..\Gateway.Framework.Logging\Gateway.Framework.Logging.csproj" />
+    <ProjectReference Include="..\Gateway.Framework.Monitoring\Gateway.Framework.Monitoring.csproj" />
+    <ProjectReference Include="..\Gateway.Framework.Resilience\Gateway.Framework.Resilience.csproj" />
+    <ProjectReference Include="..\Gateway.Framework.Infrastructure\Gateway.Framework.Infrastructure.csproj" />
+    <ProjectReference Include="..\Gateway.Framework.Gateway\Gateway.Framework.Gateway.csproj" />
+  </ItemGroup>
+
+</Project>
