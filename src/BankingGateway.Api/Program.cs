@@ -131,13 +131,21 @@ try
     app.UseMiddleware<CorrelationIdMiddleware>();
 
     // ── Security headers ────────────────────────────────────────────
-    app.UseMiddleware<SecurityHeadersMiddleware>();
+    //app.UseMiddleware<SecurityHeadersMiddleware>();
 
     // ── IP Filtering ────────────────────────────────────────────────
     app.UseMiddleware<IpFilteringMiddleware>();
 
     // ── Request size limit ──────────────────────────────────────────
     app.UseMiddleware<RequestSizeLimitMiddleware>();
+
+
+
+    app.UseWhen(context => !context.Request.Path.StartsWithSegments("/swagger"), appBuilder =>
+    {
+        appBuilder.UseMiddleware<SecurityHeadersMiddleware>();
+    });
+
 
     // ── HTTPS & HSTS ────────────────────────────────────────────────
     if (!app.Environment.IsDevelopment())

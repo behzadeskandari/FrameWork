@@ -34,7 +34,7 @@ public sealed class AccountController : Controller
     public IActionResult Login(string? returnUrl = null)
     {
         ViewData["ReturnUrl"] = returnUrl;
-        return View();
+        return View("~/Views/Account/Index.cshtml"); ;
     }
 
     // ── POST /account/login ────────────────────────────────────────────

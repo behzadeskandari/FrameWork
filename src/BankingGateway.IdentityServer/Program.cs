@@ -175,9 +175,12 @@ try
     app.UseRouting();
     app.UseAuthentication();
     app.UseAuthorization();
-
+    app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
     app.MapControllers();
     app.MapRazorPages();
+
 
     // ── Serilog request logging ──────────────────────────────────────
     app.UseSerilogRequestLogging();

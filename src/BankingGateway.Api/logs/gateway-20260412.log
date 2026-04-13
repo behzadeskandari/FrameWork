@@ -1,0 +1,51 @@
+2026-04-12 14:48:06.765 +03:30 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: OpenIddict:GatewayClientSecret must be configured.
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__2(OpenIddictValidationBuilder options) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 61
+   at Microsoft.Extensions.DependencyInjection.OpenIddictValidationExtensions.AddValidation(OpenIddictBuilder builder, Action`1 configuration)
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 56
+2026-04-12 14:53:15.614 +03:30 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: OpenIddict:GatewayClientSecret must be configured.
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__2(OpenIddictValidationBuilder options) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 61
+   at Microsoft.Extensions.DependencyInjection.OpenIddictValidationExtensions.AddValidation(OpenIddictBuilder builder, Action`1 configuration)
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 56
+2026-04-12 14:53:29.717 +03:30 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: OpenIddict:GatewayClientSecret must be configured.
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__2(OpenIddictValidationBuilder options) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 61
+   at Microsoft.Extensions.DependencyInjection.OpenIddictValidationExtensions.AddValidation(OpenIddictBuilder builder, Action`1 configuration)
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 56
+2026-04-12 14:56:14.208 +03:30 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: OpenIddict:GatewayClientSecret must be configured.
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__2(OpenIddictValidationBuilder options) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 61
+   at Microsoft.Extensions.DependencyInjection.OpenIddictValidationExtensions.AddValidation(OpenIddictBuilder builder, Action`1 configuration)
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 56
+2026-04-12 14:56:36.491 +03:30 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: OpenIddict:GatewayClientSecret must be configured.
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__2(OpenIddictValidationBuilder options) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 61
+   at Microsoft.Extensions.DependencyInjection.OpenIddictValidationExtensions.AddValidation(OpenIddictBuilder builder, Action`1 configuration)
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 56
+2026-04-12 14:56:49.374 +03:30 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: OpenIddict:GatewayClientSecret must be configured.
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__2(OpenIddictValidationBuilder options) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 61
+   at Microsoft.Extensions.DependencyInjection.OpenIddictValidationExtensions.AddValidation(OpenIddictBuilder builder, Action`1 configuration)
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 56
+2026-04-12 14:58:16.409 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:02:24.126 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:03:58.676 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:04:20.273 +03:30 [INF] HTTP GET /.well-known/appspecific/com.chrome.devtools.json responded 404 in 1.4389 ms
+2026-04-12 15:07:41.969 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:07:56.373 +03:30 [INF] HTTP GET /.well-known/appspecific/com.chrome.devtools.json responded 404 in 1.4694 ms
+2026-04-12 15:08:24.328 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:08:38.524 +03:30 [INF] HTTP GET /.well-known/appspecific/com.chrome.devtools.json responded 404 in 0.8068 ms
+2026-04-12 15:12:34.593 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:12:50.187 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.4753 ms
+2026-04-12 15:16:29.332 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:22:50.572 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:33:34.590 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:35:19.766 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:36:53.427 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:39:18.148 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:41:33.093 +03:30 [INF] Loading proxy data from config.
+2026-04-12 15:43:08.093 +03:30 [INF] Loading proxy data from config.
+2026-04-12 16:38:29.272 +03:30 [INF] Loading proxy data from config.
+2026-04-12 16:42:27.817 +03:30 [INF] Loading proxy data from config.
+2026-04-12 16:43:10.376 +03:30 [INF] Loading proxy data from config.
