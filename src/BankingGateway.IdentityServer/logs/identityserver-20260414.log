@@ -781,3 +781,1235 @@ Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
 2026-04-14 10:09:11.985 +03:30 [INF] HTTP GET / responded 200 in 1.0266 ms
 2026-04-14 10:09:11.988 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
 2026-04-14 10:09:11.991 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:12:18.553 +03:30 [INF] HTTP GET / responded 200 in 1590.3712 ms
+2026-04-14 10:12:18.599 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:12:18.604 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:12:18.689 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.2079 ms
+2026-04-14 10:16:45.388 +03:30 [INF] HTTP GET / responded 200 in 1920.6083 ms
+2026-04-14 10:16:45.444 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:16:45.451 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:16:45.468 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1163 ms
+2026-04-14 10:17:11.430 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:17:11.438 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:17:11.443 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:17:11.457 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:5010/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:21:00.221 +03:30 [FTL] Identity server terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Program.cs:line 167
+2026-04-14 10:21:26.797 +03:30 [INF] Admin user 'admin@bankinggateway.local' created.
+2026-04-14 10:21:26.959 +03:30 [WRN] M2M client 'banking-service-m2m' created with auto-generated secret. Store this secret securely — it will not be shown again: 96b9e9f0493a41db81067e8c98b9ab15
+2026-04-14 10:21:30.079 +03:30 [INF] HTTP GET / responded 200 in 1913.0989 ms
+2026-04-14 10:21:30.089 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:21:30.094 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:21:30.150 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.2040 ms
+2026-04-14 10:21:39.378 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:21:39.390 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:21:39.395 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:21:39.414 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:5010/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:24:14.018 +03:30 [FTL] Identity server terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Program.cs:line 167
+2026-04-14 10:24:18.917 +03:30 [INF] Admin user 'admin@bankinggateway.local' created.
+2026-04-14 10:24:19.090 +03:30 [WRN] M2M client 'banking-service-m2m' created with auto-generated secret. Store this secret securely — it will not be shown again: 1d3e8acaae8547dc81cebadd71ebc30b
+2026-04-14 10:24:28.000 +03:30 [INF] HTTP GET / responded 200 in 1640.9526 ms
+2026-04-14 10:24:28.023 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:24:28.031 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:24:28.060 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1523 ms
+2026-04-14 10:24:41.409 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:24:41.419 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:24:41.423 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:24:41.434 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:5010/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:29:30.591 +03:30 [FTL] Identity server terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Program.cs:line 167
+2026-04-14 10:29:35.651 +03:30 [INF] Admin user 'admin@bankinggateway.local' created.
+2026-04-14 10:29:35.825 +03:30 [WRN] M2M client 'banking-service-m2m' created with auto-generated secret. Store this secret securely — it will not be shown again: 952acf7a4c16407e9c8999d621351c86
+2026-04-14 10:29:42.517 +03:30 [INF] HTTP GET / responded 200 in 1790.7515 ms
+2026-04-14 10:29:42.525 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:29:42.537 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:29:42.581 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1777 ms
+2026-04-14 10:29:59.031 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:29:59.041 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:29:59.047 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:29:59.065 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:5010/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:32:22.940 +03:30 [FTL] Identity server terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Program.cs:line 167
+2026-04-14 10:32:28.720 +03:30 [INF] Admin user 'admin@bankinggateway.local' created.
+2026-04-14 10:32:28.881 +03:30 [WRN] M2M client 'banking-service-m2m' created with auto-generated secret. Store this secret securely — it will not be shown again: 6dc2b01831c54e978b64c2183d82f446
+2026-04-14 10:32:31.520 +03:30 [INF] HTTP GET / responded 200 in 1595.6701 ms
+2026-04-14 10:32:31.529 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:32:31.535 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:32:35.200 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1246 ms
+2026-04-14 10:32:45.309 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:32:45.317 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:32:45.327 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:32:45.340 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:32:45.424 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 10:32:45.430 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 10:32:45.438 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 10:32:45.461 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:35:09.890 +03:30 [FTL] Identity server terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Program.cs:line 167
+2026-04-14 10:35:16.768 +03:30 [INF] Admin user 'admin@bankinggateway.local' created.
+2026-04-14 10:35:16.938 +03:30 [WRN] M2M client 'banking-service-m2m' created with auto-generated secret. Store this secret securely — it will not be shown again: bdd9706b5cbf451da012ff31a1af3942
+2026-04-14 10:35:25.911 +03:30 [INF] HTTP GET / responded 200 in 1509.4570 ms
+2026-04-14 10:35:25.921 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:35:25.935 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:35:25.972 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1359 ms
+2026-04-14 10:35:36.500 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:35:36.508 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:35:36.513 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:35:36.529 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:35:36.589 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 10:35:36.594 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 10:35:36.598 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 10:35:36.613 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:37:12.388 +03:30 [INF] HTTP GET / responded 200 in 1862.9280 ms
+2026-04-14 10:37:12.458 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:37:12.468 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:37:12.489 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.2091 ms
+2026-04-14 10:37:31.669 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:37:31.681 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:37:31.686 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:37:31.703 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:37:31.770 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 10:37:31.776 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 10:37:31.782 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 10:37:31.798 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:37:31.936 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 10:37:31.947 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "bankinggateway-api",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "LoalvhZYzx4rhhBz9HuHhlrcGfVmywgRYgZLvfhUvwU",
+  "code_challenge": "pzZWpyY1COcmZssyI2humRFiFV4PB2tK-V5E32ZF3Lc",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.FCdcIh8V18PJkOb_s-ZOvzSbpp9esFUrtq6uepye23SMtqAs9-k-Eve8DEuWIR9-Li5w-T3B4ixDAeLYEYUxaKYBpzG9o8BwDVafL4YbGe5OIjEl63NItXLlXIsMCTzwPVAdE8jnFBbNjxy_WQGfiJGKyUBdjmzsRCMFD_vkvTQmm3n3qwLSEoE5I9w26UZ8eOLkwRwtX3Vg3GcefI0jnuzICsBG7O8jXpqmpmWaUSTGYJs4436beLafOeYen7Surs5DkV5zuhpymXLQRfwDq90cZjwlE8gvDDCcGCYloim92Le6F3yOflixF-SSqDw39vYQ3IARy9MtgjIckNnJfIrYKhx05fx5MdMlN-qkpB91tL9iVioHFvNIbw_i0GH84G_oweoB7gNypfrD7DqK2gkK4ccmSnZ6xFrZAKb8Gv-qGZYDnjM-YjT6G8Bb4ry-keMGJev9BDZogNuuR9xXpRbmb8f41dG1bkMrZ0eDta8qYXzjw8WWiklxTOaORgJINVghbt-gu4zsB7b7KHXNUTinolmRXYfVctmiodMm1-MzRWIvUo_j7XcW7CcCMRTM1GDuuWVyphoq-97syMcpw63jyGgTo1cBQVvH-ChV7xTXlLhmEgeaGvja2jYvpMrrAZUGgFf3T5KejRNpPP-S9TQeiZsjeFxEsrfhiLIB9r0.42xEFyD0yLI57xziqU-BCw.ZsgFqBjMWYPl_UHxY8i0YoJrJNYVa_yFmF88hbuWyHWfdWKcCXSSMLf655T-ABIhNEunzw8WCHEIugpO76mkUl6ENJBhNwoFjqP0iyxIyDAerp2zl6r5xvk7P_2KQtaW4pldqiK5Y9yEu6iO2fWbRubvutbYmq0utff4ApVV6-UlS5vBELu0ZdrrHvIvf58OzxzjCpOg6ifqcHFoovVB1apN5WMZ0r4FnKmhPqObcBGH8iWA7m7KHD0dbr0sKY-VR3xbD3_E_Hbt5XlKMonOErzEKMvqU1OxIVeMIz9t_i7xFJOf7qHQHraRjfC2GRhMSMUsBsNXC6s0vqXyCumcG0fUnzvKpDBk2J3QCIZnM2gCO2_oW3GNPGjDTkaJQy5BfaBKpKbbXA5pmVhnIBOuYtHmwiHikVrEOLtBwmzijgkTqrsizFBm-j8zW5WdRPjmxzu8JfsaMX02ZMghyp82sszZiGIDCCItp0JZReBzyJPEN9X0hWUOXENECapzXjNqAd2EEwT4DSedBJ8P9TsngpE_nXkXrDiCwewQvf9RfrmlY07MN3qX9vKlAHZRBhZYAaVwfq1uSve9YztzAgQWZ7nSnF10g1BDYGVf0LmKNGDqR9-BMWPlZ8HzkYKhTSlvz_UMPy8PZmZbcFqgrneGFBBbojuApD4uqtCypbBSWCzeDGmAqAS6ePrKMVmSj0Eki-dyQdf8lXr7jdrpY5zo5gkPxPRYy_7XcqTYtUFqTY5sfIVhojDYSrgp_-X4d4NPURo8xSvFEb93iClrQAjU-aww9iD2lsWAT_ik6OkXg6lkuYXkJ4fm1mx_EFjsvNRzOZnTtE81NamZztLldUIN01P6XX2x5u27zqwuFFu0a6dsjcUB-uEGm4WGUmTUYCO6WsPfovPRJ1M5ZWN9lq7hjMMGxTc_WqaGpPXIbKe-84I8Ir4I-wGtwAKh-E5r6GCvv4bLM7isKIRMvperr6WI4RMFgunzAk2LkfePZTYSOkUfTfP_JWwNpJ7Izy7YCabCDhitlNaizZKJ0tMVae_zM06i6gITrGmTmCFRhxrlBqcoeuvTsyjyF-eR5e0tBoJWBdyd-6-dAausyC1CtH8o_NaJGLs0n3MPpOadQIarqtlKZMgCsRJztd0VGN2yykxaoy-5KSPHka3GR0drBnnhZTeLLGEXONh5dmIB50xkCRMDkaVSgOQRG3TxMPITjhpWKG0RGVfItykT0qFQxm9GwpelV5qnUhNpDbB-KV2xKegW-dKyUtlTlveH2BkMs3K4uLJN7OmygrSoaq_Fag0_1cvW8v9YjbRp57Jq1C5skLAGZIjky4LoJN4EkXvTUzHWJEUpregoZ7LXfpHr8-Mfu268roZEdqY-2HJJqPBQMUckn1-wRfC0mTiZXbk-eBBLJ9HU7YWh8o5NccvN9eSQndSfQ--XLeuDhGakkSZy5gKvWrbvTP53pOxHh8WeV5C8FNM4Yx9nlVfxNpEMeUQDokQ0fQPQw5NnqiZcJslY_Z_oMAoRe5WADOaaonsr_68vQIaCZ-aq3c003RYqRDTofWdhf2TJdmG80ehJIOuB9qveqEOMq3RJSgqXfs3BPTWPX5KVWaZMD0h_q2W9AgA31RgQyJaPtTSXsP6XFhlHa6lATmbNFdG_y_gb6l93rY8utHstomMOCBx3X-c77_xyVZizx-oluJj-xkbYHXN7ifyyAPX_PKDKZ493MyFYSbjT4l8Fc_8-6FyzH0uRbrsAFttVRScApJQI0p4Aknc0_rBZrBOEzxp1o3yijTLLek7tB_rMXu2kiORGeNqhRYCNyFWRzMYTI0RX877bsl4KAsM2t7pCAa33dLf1ubJ-n4F-eX6i1z0b5w_Yp1IlAFbdffxuKKHelw-N2lKntFmn3MAt8TmnqoGhq6K-9pyfszVd6ziWA0Qjc_fx37rHp0c-7_Ob5njPQdsGZIFdBcvPU6Ee78k-ZNQg8INdMRUKYjyhkizTUKImRPmdlYe_Ec0mHh4-cV77V4pUWZ0F1Ls8GGsQJ0NINU_IODsJNcA74BVJgJ-2x488_v3hwso9caI3ytRr0kfUOKQWBLyZ8NR6cBCZ-wPAvEmaP4wvDI4hdE0jEXZtr0RwN8qppVz6HnOF_BMdDmT-6KvjT-ywUkyERn9_UDPG015FT-QNs0FDhNF1.62iiIg4RYMGFXUu9Ar9u2hLvp2PJ2ZMy6UePAwRaO84"
+}.
+2026-04-14 10:37:31.991 +03:30 [INF] The authentication demand was rejected because the client application was not found: 'bankinggateway-api'.
+2026-04-14 10:37:32.010 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "invalid_request",
+  "error_description": "The specified 'client_id' is invalid.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2052"
+}.
+2026-04-14 10:37:32.068 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0254 ms
+2026-04-14 10:40:50.048 +03:30 [FTL] Identity server terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Program.cs:line 167
+2026-04-14 10:40:56.125 +03:30 [INF] Admin user 'admin@bankinggateway.local' created.
+2026-04-14 10:40:56.292 +03:30 [WRN] M2M client 'banking-service-m2m' created with auto-generated secret. Store this secret securely — it will not be shown again: 7dbde81a11f94d0f940ee2b8fa763e1d
+2026-04-14 10:41:04.811 +03:30 [INF] HTTP GET / responded 200 in 1679.6685 ms
+2026-04-14 10:41:04.821 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:41:04.828 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:41:04.878 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1363 ms
+2026-04-14 10:41:13.273 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:41:13.281 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:41:13.288 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:41:13.308 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:41:13.416 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 10:41:13.422 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 10:41:13.425 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 10:41:13.443 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:41:13.558 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 10:41:13.566 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "e5Q7O2hxwFS0EB5ShrEX-H3Ko9OcLEq45QLESj5zWbk",
+  "code_challenge": "Tx5R3EYbtdGLmnTCQZOsz5CGocM6Bpi9E8c_ZjIx3f8",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.04lk3EFYQqUXI6i7GZWtotZEeGuIxhxWxSxn0vaI_SysEtKMvxXWm9bAg-Q0bGy6qqSJlpcFlBB4MV-K3oGWOpr7JxSubNlXB2BQaZIsPHoZ10v2yUjslZwQTfZlsH0u-Hd7TFKE5_JcJNU9uTWka-Eeb80Xr8nbH8dLHRu3s1n71nIkpSLL0TcfNjTTUFV-gjZnTcwXUA8RaCydlc2dR_tftJju1Rsd52vh8Uwb2YAaSUoyutzZKH6cHgKctv_eYc7XQ_ANWIcTJ_MkeYRq9yE4BElB2-jaDWNuCBgE0hHcnDSUGv5CpMVzyy7acNGYWz2uffC2hj9liQ3HuSeTcCgjS_9qxvKKOCUo4kF8U4m2BBImrFYe7UU6qClOXFGd5IpQIqfD8xVpSRN5LQo-nC4JfUc5nw6S89xIdT0hC-3OEj_i3oM2jWe41tmzmM3YF49BNdmp1WmeW9UMOgac-pRecEix1AW0nHqc0mrR1-rcV6ZqnhWSJoU_KVq8QXZG4P7UCCNvRYeTDehZM213LoeQKGtnniHTjb9htMliW5AEbEM6dE5xlgeGFTEzquUQhgAE_FUOBWHCGKh_BOl8qYdMK972bjkrBLA1jVcbYXeCX3UGIWAlLm5ZvstTcWSN5zB0GBH3DwX2NgXwIIcvFD5eAhdCcNGPzFshxjSJuAA.QYnl_YOIYEWSrmoNKkXGXw.FzySNMGGF-4xNUL0-G17O3KKT97_rZTri9lzlg9LwPgl7j9k2pVinAwIBkP1OKA0zAEEaL3LOKeXL37whtY06_Azv5l4v78c7oASSeUIQOjNZD63WlSwckJGhFGoFT4gjDeML9k3Yjx4HHwF-abqiIFq8MFkOM2f-xMmBZCN0Gxh24Z4QsNcz3kJIzGY9R41bvHv39oVMPTZeauFUNYQBtVIBHnBw2B-BYuH5j_ihlQpxc3Rabvmg5Bci3PhIPqttcJ1bO11mfRZfCP7G33euaulAc83PIgX-2dhO0X2ss5XfGEl42R60UGveuRCsRX2vT4xm_avmy7YtLfhw_N9QNA9F9MPqpThD4XG-BWcKFe20fzqO0OVPv1cRl4Kx43Cu8K8QZxBONro9flClM_zsIP6xBU-rAsIw2YRPdJewBJ0avt_Kr816vFj9JNUIKYmm-QUUVVkUph73BjS-KdqsshVAvBH4QgVqO7kjz6IpWpl7j2y8RIKvQNsaKvsrBovMxjFVCYVOKu_HWHf2m42tFyYTKNFUL2nrbxHZsBv923cavUTZ5vgCmIVt4m4mV5MD0UrR4zlDhaqvyJtrSQk0ZZxVlESymkii5UZ1sisgEcehkY6SD8PaaxFKIEBDnkInkJpZF7gwW4kIo1FvLSDBT8qOQfOlxaOmJgjmFyBQArkZJGLSgtXUxaYC5dVaAtRry4R59g7NCASADvFTmfci4BXl1bakFsDM9bGTDPdEYi1vI5Wzu0CsdOBrrTPrOnfaxMKu4_ylEpGcmvUZ1Q4vq2dz6Ep9YRfkpIm5SE9zt0TYOOJ4f4yN-fjGgDB1AedFnSkFjgft4pdmaeADCj6BQZW4nkXm2R0JLmZuj5F55bHxdI49QlVUosoYYesc09biVLnU2ZkC1jVZtZlxkXg0vlQTEQ3LLVnMslCf9RhZcAUpRiy9KFpOKtZ8QrgQtxDzsda1Dbb2mpsOsImD32FsHbjl9s8Uwni8HQ_PVOjPzFU4pp0M6_jebcaEUrt9uP5AKMoxtTJixlI2D5bpaa9Lc0v3apGdq30jWYJY7YIY0fv-fLuq1ph-BCWPGcPSAlY-Zb-C73cNYOXogjr_1YEg-a0_BwcLu0rtVmc0mq0V_TkRTuL-rwIMcceLeZvO2h1Hna1f-uKC--15DYsegjQwsF99L-TJgfisvuJUM-uUZUV0k4wm8HNPkQmD2lWzTSbzhWRXUupD13VXJhR9acjA5c6rUTZY6fQcapD0iHdBuzryc1wMJMUj3phkbayqNPuGzXj5OFMREq6ffRbchqNQqdfiC3TtkJzmrjFgE7GtFG3xb0qB8dRHX_rvKVBcrM4WTNeCaHCci2hmQo_6Eiga0N86hTUmsGW8NhofnJtMakijszJtGMeQUo710qmcX5ePtNnux0207bunfsW2k_oiG1s7N1UEZQ8w45vYv1x1k7eQ7i8gqMsDaEl1yvC2qboteHnsl3gROYn8ep-fEkVQfqX6FJRCbCg8JqjRSOt7ch8t0ey_05vsaiYMcReh0stiSahMncNR19bZVR4-tbVHpka42kj8zyOGgdPWQUPebd9-tX0UdGVVdn9s2o0Ihgyp4edlneYxx2cQObKEHSMBL9BTFuPBv-KD_KmINLmqt3MQDqAU_McVEfgIjaK3xvKuuXsRC_s0zjyoRLKI9yRH8y4uqvHfP2ZdqgWs57Q7HS8-l4Ia2P_hIikk4mvzcRe_QQc43lBHM2kTnn_Lwzv1vUqhMIfPIioxluhvRxXOrcN2A-tXf0Y1Vns6y-yqNsvR9jS_PCsglcXXPQ2NkvxOq6ZMZR0gIetIPHW0pXhUj6sD8LtQ7cCPgQ7RiKLC5uKyMMn9r0_Cmr96mAv6OVyNcPh8AixEFcd0azIZ-KgFhU2QgVcy1Kd_5DnlcL4Giyp-Zdn_S2CT5IeEq8w8Hm-Yc9Gp9fO199zYS_CH5vY4TllMPKflrI9VOmwbhzbppUbhPkoJSR9RiTU-smgA0ng1aghBtYERetWnYMSgU7whqkMdyjSXEV60ECqzU45DQXih6r2bvOp03HgR1OzrimUyx1eVR16HCipd9GYpHQuM56S2LSoaMOvPEgTsr8s58dUvAE_MICBCHu8kwfG4EiwsENlaglHKiPuaPt1q9ES-gX7hBst5bvqImKgpqKEHQ1x.VR9uSgQA3CqBV_XvQ1cJksDXn81wFOumZpKa6Ywcn4M"
+}.
+2026-04-14 10:41:13.605 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 10:41:13.632 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 17.4473 ms
+2026-04-14 10:41:17.203 +03:30 [INF] HTTP GET /Account/Login responded 200 in 3562.9575 ms
+2026-04-14 10:41:17.208 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:41:17.213 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:42:27.647 +03:30 [INF] HTTP GET /Account/Login responded 200 in 2520.6352 ms
+2026-04-14 10:42:27.651 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:42:27.656 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:42:53.134 +03:30 [INF] HTTP GET / responded 200 in 1485.1328 ms
+2026-04-14 10:42:53.169 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:42:53.174 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:42:56.944 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1409 ms
+2026-04-14 10:43:01.136 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:43:01.146 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:43:01.151 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:43:01.170 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:43:01.254 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 10:43:01.260 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 10:43:01.265 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 10:43:01.291 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:43:01.417 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 10:43:01.427 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "xOE1TchO_LhH9k3IDueV8HMtoEjYwoVtErKndg7FHas",
+  "code_challenge": "sFLrC23ZNK8cHKy6lej3_b7Oxfc5sdBmmIio9aUXTYA",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.gReDf_4ClM0CSsUq7Lu0US7O0nM3fvJwm2E6h5XGegnerVmOqj9N-jocK_O56wbM7Z8oZRM_amqypc90u-h597FO1AWNZUWwWAsinQoOUJnq66gNzH6MJfaVAjYMsP2LA6W6UEwThhCUI3-GrWHymHGyPYVzrcNDQTXL3hYw_mn_9NCPle07lXKp0onl8LyHyF-LomqVa1N1njEh8HCiXblS5GJChyGlRMOwi49ewJhyjXAHeuBuaSmD-df4N_NeCdDV9HKayE975owQVtu69mbtZilKdCX3tKtv8vJrZqKzvBPZSWcxFn92L2_jd4_iLGQHYUFrqoKAtntxuB_c6OwJ3uC_YNkFBDlqHkZyZIanFCTGaCPRnmX7oM0MelHKiEHczTF05nHSjWLo1MCkAfae6JK2bqPDUlAbh2IaTHX1v4cSWW608HEY2IPRX43nmbghhwLEGS_iCUd4F3jVvSai4A_UUlcLsKoUcx3aFdQLsDC4RxEEVf-rWhDEOS4Vx18GA4JgPfUnfRgRV_WqanxAKB4ATKwRjivqdFjosKvmgxMv7JqdvlLjoG8QUFCEcl8TlgsVR4oN_oXWm2mq27nAGehKRhOnnMv_Azpxl4mubr_6m-WEiTqNakCcPFIwRzuPsiZoG45ZpaXeeKygodTe-fPsBaQIjFClG3sdgYU.uebYYck3QxRtkoZf2IFj6g.q9QKGnQXsTmS4-bJ0PHDw76MekK5T5X42cJzKm_kGYF-3RY0c-riza-cxQFIoOKpViLLKreKPqxPdkOo7UNgtlc-fbyAOB9l77NhhR9IQACfwsD6iocVc88GVsnTlMw0GUYVED9FXs9vpdo5MkJattrOAfUdve3u9Gky6P7RarCdQB-uOvw1TSJ7cVNK9KKYL65UVG7KfeLTVpLBYMGIlI7hn8RbRpodZwpDVxd7ug6SdykOTjvkmwrXp3hYvsBaxTQmCxAvOtFSuAgqg7gNtG6PHHiqNMal-zAhxKS_Z9RJ0W0Ud6uOixoL5UvSSgvKtCTLjuhGtae5zoFiB2nsANCTWt-CZbm3mTInaM8igExTB7J7VYniqDzHga8-qvDcRQEQFMmm8pzyEcKiVQSMD5BwqMtwnnllGMvzy5EyWbSgvm4qK_LPRMw9Hc28PNihh6B2nZBxM0x1sA3btf3abw0_7IPh5zyzLuyVa2r2x9jmHfv8uzKZ_MS96FWpS-fiR_UQ4Psw85SkXzpI7M0K0t4JrNfafNiFC7AEbc_ijtK1u_d8NiWT4LzGHR6lBpv-ATBWEdzeg6P9KOorHt6oHlDsg_-jTG9u8961JJY-pqaQ2bpJCl4MRtSiijENhiuN22FApHd1exBcvF5i1JTKKcORVa0Ifz09NWbPKNvf2OhTUgU6rmdzujKci7PQZ5dMZcrLWPjg305TzQQETPe1g02JAFGnNJzuXYQWQbwa-KYOBuQBg2jxGZEfBirVDMbunbs_Do5cbFrh_L1EJ8d31SuVywoMGPCwoy4m9nbvmp7r--xZ4VaNXmKhvlGSlogIHs2s7nZyake0G7tkPHPIJAa__MRLxlxuZsiGZsBBAoxIRdeSD87-XCm8ZInytk3mUpKeZEAqWe0m2VTaY_fd7JYo32Wi0331240-UUgffH_2J2Y9cbaC65bryoCpYSMjko_hYXUNOHKrded7jqJ0aXlecMeI9GfQsl139S6YnwmfuwA5I-Gvbjxcq6eflu8AxYBukS2YIj_fH5pzQdCvvbitln2Qu3R6kMdUZlJnc43Ix7moN6RJ_HcLj8JKz6l-2FSrFjGfAi9IY1qxZBc-fsjs2j2HIIB-Nn2c2V0uy7wodScAxwV-i8INXNg6-srZ6eUUtqjfiblb6bhF8i4RyGSVulXwuyGkEtdfOSp_xpYcio6bbSIZRj_oGspSz3Atylf_lKoKWR_Q9OBVhtdcl979zzMzuoaRKozovp5IHfgvhtRek0t-Xphkb-Gw-o4EWPYJ-KonX-lRLQ_6LB6TC0Zx7dmByAtm2tynbesZggbdH16-LnTJ8TFRr15wntPpSqHAmBC0l2RbSDY8bXmnRZaV6bd8xzz_zjvSP-KM3168dbOAcNSn69d3rcdhwQJlfylaFQIfk0V1sbaeogADj7SjQg6vCHGqDfSu9AFfm1FYzff8l7zLVnkQkJ0qtEbYlM12dSUM6o12ODlRzpVfFDocM3rP8tKQahX0nJvA282j__c--7b86MJay9bwXwNAX1fHzKG3jcB352HZbXQK-5VAfxzuv8imHoUFe2eWDCkfKe6Pv5yno7uAFM70FgW0M3QFByZPYbDl4jYVYaSlmewTxWlEmmXOiqJN238gX_gLc10DA_ptE924AkVSIc_8QswA-93XWg9kM3FXe1PeUo7IufXNvb5e6VtqFJUYEpUELDWg7PJFRoxm0xApYwwS3yKKedoiTdY02JLwljiOqtF-z-AauNzOUnpunI5BERnw1Oe3oTn9yfTnJSA0dRLUi2MJCtS3KK1ZIaxoMy1-VK8ib9fYYgflBdLbzqfCrj0TIDh13r1o-W_yPmSKJWR8atUwE0vedpYN3fhc0Aod_dgKQXPFOwglZrR9z9lbzTQXq8AqWMbqCTwOyJtyC5wU4ih2a49GwcYn-JrbeKtUBfuVKuWncP8f_E5i8-cD4n6FPvuzpaO1IVwHktDTUs-ZN-kiHlqWQkV7BsnVoC5A9LZcj-7NvZ26HRaQGl03I3F6uXexm7FvLDO-u26bHWdW2qoYCyxMsT5v7pnqfxvbnl5RUKwimjGDP73oH1eGduJx_IqenLWrKc6aRrrVylyDtvRGWmcqGTDpX5PvTXW_kUV03jhU8rCWK8QxLaWcd64Tx09aEXVnVmVRAU4wKdfV.ZYNb2eAQ8sukBAzj0CfNd07MH7Y0gGsw11N5Tw83gq0"
+}.
+2026-04-14 10:43:01.475 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 10:43:01.498 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 14.1560 ms
+2026-04-14 10:43:05.691 +03:30 [INF] HTTP GET /Account/Login responded 200 in 4183.3170 ms
+2026-04-14 10:43:05.699 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:43:05.706 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:43:05.756 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0097 ms
+2026-04-14 10:43:31.356 +03:30 [INF] User 'admin@bankinggateway.local' logged in successfully.
+2026-04-14 10:43:31.362 +03:30 [INF] HTTP POST /Account/Login responded 302 in 2315.1571 ms
+2026-04-14 10:43:31.374 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 10:43:31.376 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "xOE1TchO_LhH9k3IDueV8HMtoEjYwoVtErKndg7FHas",
+  "code_challenge": "sFLrC23ZNK8cHKy6lej3_b7Oxfc5sdBmmIio9aUXTYA",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.gReDf_4ClM0CSsUq7Lu0US7O0nM3fvJwm2E6h5XGegnerVmOqj9N-jocK_O56wbM7Z8oZRM_amqypc90u-h597FO1AWNZUWwWAsinQoOUJnq66gNzH6MJfaVAjYMsP2LA6W6UEwThhCUI3-GrWHymHGyPYVzrcNDQTXL3hYw_mn_9NCPle07lXKp0onl8LyHyF-LomqVa1N1njEh8HCiXblS5GJChyGlRMOwi49ewJhyjXAHeuBuaSmD-df4N_NeCdDV9HKayE975owQVtu69mbtZilKdCX3tKtv8vJrZqKzvBPZSWcxFn92L2_jd4_iLGQHYUFrqoKAtntxuB_c6OwJ3uC_YNkFBDlqHkZyZIanFCTGaCPRnmX7oM0MelHKiEHczTF05nHSjWLo1MCkAfae6JK2bqPDUlAbh2IaTHX1v4cSWW608HEY2IPRX43nmbghhwLEGS_iCUd4F3jVvSai4A_UUlcLsKoUcx3aFdQLsDC4RxEEVf-rWhDEOS4Vx18GA4JgPfUnfRgRV_WqanxAKB4ATKwRjivqdFjosKvmgxMv7JqdvlLjoG8QUFCEcl8TlgsVR4oN_oXWm2mq27nAGehKRhOnnMv_Azpxl4mubr_6m-WEiTqNakCcPFIwRzuPsiZoG45ZpaXeeKygodTe-fPsBaQIjFClG3sdgYU.uebYYck3QxRtkoZf2IFj6g.q9QKGnQXsTmS4-bJ0PHDw76MekK5T5X42cJzKm_kGYF-3RY0c-riza-cxQFIoOKpViLLKreKPqxPdkOo7UNgtlc-fbyAOB9l77NhhR9IQACfwsD6iocVc88GVsnTlMw0GUYVED9FXs9vpdo5MkJattrOAfUdve3u9Gky6P7RarCdQB-uOvw1TSJ7cVNK9KKYL65UVG7KfeLTVpLBYMGIlI7hn8RbRpodZwpDVxd7ug6SdykOTjvkmwrXp3hYvsBaxTQmCxAvOtFSuAgqg7gNtG6PHHiqNMal-zAhxKS_Z9RJ0W0Ud6uOixoL5UvSSgvKtCTLjuhGtae5zoFiB2nsANCTWt-CZbm3mTInaM8igExTB7J7VYniqDzHga8-qvDcRQEQFMmm8pzyEcKiVQSMD5BwqMtwnnllGMvzy5EyWbSgvm4qK_LPRMw9Hc28PNihh6B2nZBxM0x1sA3btf3abw0_7IPh5zyzLuyVa2r2x9jmHfv8uzKZ_MS96FWpS-fiR_UQ4Psw85SkXzpI7M0K0t4JrNfafNiFC7AEbc_ijtK1u_d8NiWT4LzGHR6lBpv-ATBWEdzeg6P9KOorHt6oHlDsg_-jTG9u8961JJY-pqaQ2bpJCl4MRtSiijENhiuN22FApHd1exBcvF5i1JTKKcORVa0Ifz09NWbPKNvf2OhTUgU6rmdzujKci7PQZ5dMZcrLWPjg305TzQQETPe1g02JAFGnNJzuXYQWQbwa-KYOBuQBg2jxGZEfBirVDMbunbs_Do5cbFrh_L1EJ8d31SuVywoMGPCwoy4m9nbvmp7r--xZ4VaNXmKhvlGSlogIHs2s7nZyake0G7tkPHPIJAa__MRLxlxuZsiGZsBBAoxIRdeSD87-XCm8ZInytk3mUpKeZEAqWe0m2VTaY_fd7JYo32Wi0331240-UUgffH_2J2Y9cbaC65bryoCpYSMjko_hYXUNOHKrded7jqJ0aXlecMeI9GfQsl139S6YnwmfuwA5I-Gvbjxcq6eflu8AxYBukS2YIj_fH5pzQdCvvbitln2Qu3R6kMdUZlJnc43Ix7moN6RJ_HcLj8JKz6l-2FSrFjGfAi9IY1qxZBc-fsjs2j2HIIB-Nn2c2V0uy7wodScAxwV-i8INXNg6-srZ6eUUtqjfiblb6bhF8i4RyGSVulXwuyGkEtdfOSp_xpYcio6bbSIZRj_oGspSz3Atylf_lKoKWR_Q9OBVhtdcl979zzMzuoaRKozovp5IHfgvhtRek0t-Xphkb-Gw-o4EWPYJ-KonX-lRLQ_6LB6TC0Zx7dmByAtm2tynbesZggbdH16-LnTJ8TFRr15wntPpSqHAmBC0l2RbSDY8bXmnRZaV6bd8xzz_zjvSP-KM3168dbOAcNSn69d3rcdhwQJlfylaFQIfk0V1sbaeogADj7SjQg6vCHGqDfSu9AFfm1FYzff8l7zLVnkQkJ0qtEbYlM12dSUM6o12ODlRzpVfFDocM3rP8tKQahX0nJvA282j__c--7b86MJay9bwXwNAX1fHzKG3jcB352HZbXQK-5VAfxzuv8imHoUFe2eWDCkfKe6Pv5yno7uAFM70FgW0M3QFByZPYbDl4jYVYaSlmewTxWlEmmXOiqJN238gX_gLc10DA_ptE924AkVSIc_8QswA-93XWg9kM3FXe1PeUo7IufXNvb5e6VtqFJUYEpUELDWg7PJFRoxm0xApYwwS3yKKedoiTdY02JLwljiOqtF-z-AauNzOUnpunI5BERnw1Oe3oTn9yfTnJSA0dRLUi2MJCtS3KK1ZIaxoMy1-VK8ib9fYYgflBdLbzqfCrj0TIDh13r1o-W_yPmSKJWR8atUwE0vedpYN3fhc0Aod_dgKQXPFOwglZrR9z9lbzTQXq8AqWMbqCTwOyJtyC5wU4ih2a49GwcYn-JrbeKtUBfuVKuWncP8f_E5i8-cD4n6FPvuzpaO1IVwHktDTUs-ZN-kiHlqWQkV7BsnVoC5A9LZcj-7NvZ26HRaQGl03I3F6uXexm7FvLDO-u26bHWdW2qoYCyxMsT5v7pnqfxvbnl5RUKwimjGDP73oH1eGduJx_IqenLWrKc6aRrrVylyDtvRGWmcqGTDpX5PvTXW_kUV03jhU8rCWK8QxLaWcd64Tx09aEXVnVmVRAU4wKdfV.ZYNb2eAQ8sukBAzj0CfNd07MH7Y0gGsw11N5Tw83gq0"
+}.
+2026-04-14 10:43:31.385 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 10:43:31.571 +03:30 [INF] An ad hoc authorization was automatically created and associated with the 'banking-gateway' application: c4459178-f1df-44b1-416d-08de99f55593.
+2026-04-14 10:43:31.693 +03:30 [INF] The authorization response was successfully returned to 'https://localhost:7033/api/auth/callback' using the query response mode: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.gReDf_4ClM0CSsUq7Lu0US7O0nM3fvJwm2E6h5XGegnerVmOqj9N-jocK_O56wbM7Z8oZRM_amqypc90u-h597FO1AWNZUWwWAsinQoOUJnq66gNzH6MJfaVAjYMsP2LA6W6UEwThhCUI3-GrWHymHGyPYVzrcNDQTXL3hYw_mn_9NCPle07lXKp0onl8LyHyF-LomqVa1N1njEh8HCiXblS5GJChyGlRMOwi49ewJhyjXAHeuBuaSmD-df4N_NeCdDV9HKayE975owQVtu69mbtZilKdCX3tKtv8vJrZqKzvBPZSWcxFn92L2_jd4_iLGQHYUFrqoKAtntxuB_c6OwJ3uC_YNkFBDlqHkZyZIanFCTGaCPRnmX7oM0MelHKiEHczTF05nHSjWLo1MCkAfae6JK2bqPDUlAbh2IaTHX1v4cSWW608HEY2IPRX43nmbghhwLEGS_iCUd4F3jVvSai4A_UUlcLsKoUcx3aFdQLsDC4RxEEVf-rWhDEOS4Vx18GA4JgPfUnfRgRV_WqanxAKB4ATKwRjivqdFjosKvmgxMv7JqdvlLjoG8QUFCEcl8TlgsVR4oN_oXWm2mq27nAGehKRhOnnMv_Azpxl4mubr_6m-WEiTqNakCcPFIwRzuPsiZoG45ZpaXeeKygodTe-fPsBaQIjFClG3sdgYU.uebYYck3QxRtkoZf2IFj6g.q9QKGnQXsTmS4-bJ0PHDw76MekK5T5X42cJzKm_kGYF-3RY0c-riza-cxQFIoOKpViLLKreKPqxPdkOo7UNgtlc-fbyAOB9l77NhhR9IQACfwsD6iocVc88GVsnTlMw0GUYVED9FXs9vpdo5MkJattrOAfUdve3u9Gky6P7RarCdQB-uOvw1TSJ7cVNK9KKYL65UVG7KfeLTVpLBYMGIlI7hn8RbRpodZwpDVxd7ug6SdykOTjvkmwrXp3hYvsBaxTQmCxAvOtFSuAgqg7gNtG6PHHiqNMal-zAhxKS_Z9RJ0W0Ud6uOixoL5UvSSgvKtCTLjuhGtae5zoFiB2nsANCTWt-CZbm3mTInaM8igExTB7J7VYniqDzHga8-qvDcRQEQFMmm8pzyEcKiVQSMD5BwqMtwnnllGMvzy5EyWbSgvm4qK_LPRMw9Hc28PNihh6B2nZBxM0x1sA3btf3abw0_7IPh5zyzLuyVa2r2x9jmHfv8uzKZ_MS96FWpS-fiR_UQ4Psw85SkXzpI7M0K0t4JrNfafNiFC7AEbc_ijtK1u_d8NiWT4LzGHR6lBpv-ATBWEdzeg6P9KOorHt6oHlDsg_-jTG9u8961JJY-pqaQ2bpJCl4MRtSiijENhiuN22FApHd1exBcvF5i1JTKKcORVa0Ifz09NWbPKNvf2OhTUgU6rmdzujKci7PQZ5dMZcrLWPjg305TzQQETPe1g02JAFGnNJzuXYQWQbwa-KYOBuQBg2jxGZEfBirVDMbunbs_Do5cbFrh_L1EJ8d31SuVywoMGPCwoy4m9nbvmp7r--xZ4VaNXmKhvlGSlogIHs2s7nZyake0G7tkPHPIJAa__MRLxlxuZsiGZsBBAoxIRdeSD87-XCm8ZInytk3mUpKeZEAqWe0m2VTaY_fd7JYo32Wi0331240-UUgffH_2J2Y9cbaC65bryoCpYSMjko_hYXUNOHKrded7jqJ0aXlecMeI9GfQsl139S6YnwmfuwA5I-Gvbjxcq6eflu8AxYBukS2YIj_fH5pzQdCvvbitln2Qu3R6kMdUZlJnc43Ix7moN6RJ_HcLj8JKz6l-2FSrFjGfAi9IY1qxZBc-fsjs2j2HIIB-Nn2c2V0uy7wodScAxwV-i8INXNg6-srZ6eUUtqjfiblb6bhF8i4RyGSVulXwuyGkEtdfOSp_xpYcio6bbSIZRj_oGspSz3Atylf_lKoKWR_Q9OBVhtdcl979zzMzuoaRKozovp5IHfgvhtRek0t-Xphkb-Gw-o4EWPYJ-KonX-lRLQ_6LB6TC0Zx7dmByAtm2tynbesZggbdH16-LnTJ8TFRr15wntPpSqHAmBC0l2RbSDY8bXmnRZaV6bd8xzz_zjvSP-KM3168dbOAcNSn69d3rcdhwQJlfylaFQIfk0V1sbaeogADj7SjQg6vCHGqDfSu9AFfm1FYzff8l7zLVnkQkJ0qtEbYlM12dSUM6o12ODlRzpVfFDocM3rP8tKQahX0nJvA282j__c--7b86MJay9bwXwNAX1fHzKG3jcB352HZbXQK-5VAfxzuv8imHoUFe2eWDCkfKe6Pv5yno7uAFM70FgW0M3QFByZPYbDl4jYVYaSlmewTxWlEmmXOiqJN238gX_gLc10DA_ptE924AkVSIc_8QswA-93XWg9kM3FXe1PeUo7IufXNvb5e6VtqFJUYEpUELDWg7PJFRoxm0xApYwwS3yKKedoiTdY02JLwljiOqtF-z-AauNzOUnpunI5BERnw1Oe3oTn9yfTnJSA0dRLUi2MJCtS3KK1ZIaxoMy1-VK8ib9fYYgflBdLbzqfCrj0TIDh13r1o-W_yPmSKJWR8atUwE0vedpYN3fhc0Aod_dgKQXPFOwglZrR9z9lbzTQXq8AqWMbqCTwOyJtyC5wU4ih2a49GwcYn-JrbeKtUBfuVKuWncP8f_E5i8-cD4n6FPvuzpaO1IVwHktDTUs-ZN-kiHlqWQkV7BsnVoC5A9LZcj-7NvZ26HRaQGl03I3F6uXexm7FvLDO-u26bHWdW2qoYCyxMsT5v7pnqfxvbnl5RUKwimjGDP73oH1eGduJx_IqenLWrKc6aRrrVylyDtvRGWmcqGTDpX5PvTXW_kUV03jhU8rCWK8QxLaWcd64Tx09aEXVnVmVRAU4wKdfV.ZYNb2eAQ8sukBAzj0CfNd07MH7Y0gGsw11N5Tw83gq0",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 10:43:31.704 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 313.8995 ms
+2026-04-14 10:43:31.776 +03:30 [INF] The request URI matched a server endpoint: "Token".
+2026-04-14 10:43:31.782 +03:30 [INF] The token request was successfully extracted: {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "2atS87Kwt70qBKhSGSyAv4Bvlen-TydH8f0AzjXI7CM",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 10:43:31.800 +03:30 [INF] Client authentication failed for banking-gateway.
+2026-04-14 10:43:31.803 +03:30 [INF] The authentication demand was rejected because the confidential application 'banking-gateway' didn't specify valid client credentials.
+2026-04-14 10:43:31.811 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "error": "invalid_client",
+  "error_description": "The specified client credentials are invalid.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2055"
+}.
+2026-04-14 10:47:37.703 +03:30 [FTL] Identity server terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Program.cs:line 167
+2026-04-14 10:47:42.674 +03:30 [INF] Admin user 'admin@bankinggateway.local' created.
+2026-04-14 10:47:42.832 +03:30 [WRN] M2M client 'banking-service-m2m' created with auto-generated secret. Store this secret securely — it will not be shown again: 8547e3be395a4e66910fe23353c82f9e
+2026-04-14 10:47:51.670 +03:30 [INF] HTTP GET / responded 200 in 1759.1268 ms
+2026-04-14 10:47:51.680 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:47:51.686 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:47:51.735 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1919 ms
+2026-04-14 10:48:00.990 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:48:01.001 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:48:01.006 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:48:01.024 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:48:01.106 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 10:48:01.111 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 10:48:01.115 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 10:48:01.133 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:48:01.256 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 10:48:01.264 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "h4cPPWpZVrfOqMdl8wkPTeyEtJFiY9rFN6Fh-Ucc4ak",
+  "code_challenge": "qgLZexMsl0MyCSWwwIIftzA9HH10bUvjRz8caojFYvk",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.w9mTUlDbT6wpUixzVgAaxaBxf_YMRbgNz2hQ1lnG-qGvXKJYm4TI4mkHYcrQa5eWWmI1v4kO44wTV5wHQxTBQuV97f6UFVdCOCsTN-5-E_KSxsyt1UEmwTwd1Aj_udv1kQExmeJ8zTWRKJgFbC2WHLLmoP3zbvzpiV9WV2b9Jh_I1n8MbBijFf45zZxVwQuMNyoB_ILIpiHXy0PTxUo6ZYTjJSlQx-tUflq8bgoTWFNWQN5WxvLv9euAH5cPTy9ryZ2qN3F3cV3qq099Tt_nKPsD9pcyoVtHtWR6atqHgwxlOPwbqgToc1wQxdKOJFNExC8AHYM24Qoe1L6XJEIGrwTz7mQQJ2rY2L1jSweaLXuTBdAvgFcthjzUy4_m5bejntL3e7TwOCagAm76Ew9JC5pdI7ONhg_0U2FXHWfeOpuuapuQ6NFnh-rOo5IlMGn1DTlOMWxrbgvZeS4wnUK1AKklxVdh_rxG4qG0tc7a_Xx40gaq8Q0iQzJUbACb41E79QmoU4NGKzHsXiafry-2kncI1oa4eqmXuTaIiAVlUqhfNXPE23gFN9NOTRltUtK0paEWG5WqAMGiWjLJZyrA2cWvTz7s8m1MmslwbpRdfDX02cqmxJj4QkQk1eheT2GFy8RKdGakKdnlX-0jAgiIyzQ5XlEDI0rwtAXMDTP_6IE.wUHARxQI4nDDAyw8hh9UBg.5F1Y-RbdjemLeiZKo0AYgP8epR60UQJS8h8To-unQfg5LMJMfwtDqcbE5LWh95t-Bi47TAM0Qd6JvP4RZIGCQcmHWY9ZwYM-yHfFeWVcTdOCkSUqGNiPnzRvdKYwEQHNJxGKj9VzCdQy6cPA8xZX-jZ4Q1lN-xfKb-qJvlaILmcrNMqdgABrWzx6lQOBQTsfHhKxkU5WYH_QUfT7OPbHJjZ6gwpjgBtSkRd6x-VABtIMPDOnZKWPwfj6-z7CExV_vIdhCewyHPj_xFxVeqtKmNjGBCh8jlpxEPxZ0ScKxlSM5RSt3sSukUBuemu3SxBwTIgYjqTMJCjUdNeNilu3WYfoPFRLYj40F1i5gv1Fk9hpuYa2tn_9hO_5-VGcpY0Y50MHo1NhZD278AOnbFHohN1Xj2yy8Wt1Ep3ktiWs_Imhj0eES6lRCzGzSsv6qbYTeYo4pLsR_mE8iXi6Vw680o9QmQML6to492hRmvbmwNY4-dIkq1S2vOd1TFcF2nZKeE_KayHSaaKwjeU2_Iacw6Ok0dWsOzEyNTTGobyJnal6UyAJdyT1_VY0Ug5Aulg15BD06dLJZwLtRRuvilXE-7q0V29x5vYQQQKOey2PHDBwNqNWjTb5L1oGhQozvimnt70C40d5Ay7fC-RgZ0dcwNGxhS32lK6Pipn1AKkCztRW1H7VYSo1dzrVhSvicbZprVMmBaKwj4zCGDnpffLY8FWrKEwsPP1xL6nZzx_nAqMSnlZj0pa4RdeXh2gLemJa__QNtdvmnu3GZPhuhwY4zn_bBQDCfPbcWl9TNmMlFTprYGC5018eZ9sHO8ImgPXZJ7fN26_HRVJvp8ZLFshhTStBXfB820B4R59tgSTtelUgBOkYDZQ5wn2gryBKCInbIOfmAEhnIUVVOlDHiDuUgkYaMFsowfyeoi3wlA3ykQ2WglSa1KsGwvgxn4DriP1hjP0plgBge4ROCfhT3TuAFC7voqeo9wK8NY40RZEeAm-OI8lXFm-VKCbVdIGkqNuEwBXYRaOiuLCXuEkQ2nZn29QOAsUwGniWo3dYp8zI8edvzIfNJsSUihBuNcmcflQtnyxZZ7X8eqWYUejtlPRJNqOjk755FIbBqYaZ3HNPVRsDIyodHMjimM7H6Ae6nbNwbnk7f7tZvEdCx0kRFhMNqvH3tl1GbBbV7k8DiC0HCtoFipF6bdVPOTGhNssiTpXehDiZkeu10nS6nfsnCPlO21f0qMx2XWx9mDlPAssyo1bQ0wPa4LGcqvFhEwbN8yW8OmYuiNZlqIvtDuRgn2D4MRJf22sbhRyKklk-DwaeM5UmH6hKQx6lrmNMnRl3ZMby3VdfvuKT9i0J1Mi-dwYPnkkB81PJxiy76tcgiXhMqA0OB1qb5-Xj7jhgs9ch1vlcueYR7vEi7Ira5DxDmpqJfoTrPSvlgqrYJWPShSWT79qKVczgNQ_cGFM1YKnSLXPQ9QMB0Zejrj4fo6EX0QfiowAQXOxV9tRTRijJsxG9lKZA-x7zRZFAY7gSyLEDdAWkhEDUyU5-uUu9_wswICtlTs7atH_4j14R08644FX8OHGaUVZlcNyppocG3JfSwVKYZiB3E1V5FhXRvuqHIYb_kouf-ckkklQfQMLk3aIODHrX7Oqw5JR33aXs1owj6j4s60gBy5amuC6x1Ogey0IiTTNeeFMr2d9kmM3O2bUdB1JKhiz9tf1ztH0QXHvWPh_ROjYNcm_P8c9mKg-P7NYbM3tRjAGAfCf8udGQn92oAzSoknDTCBugrOCvvU-gKMMiJ46be3gMZxLlHlWtloFG79dBqL4onHOgsrd9u_NiSp0FCA9Zk2wAtsYH0sMIzjV7HWw8NX6N0v42-OdXF_wUP_WzjjslyQglzFS7rN8_LUFGb8h8nBJankAmTIFDeBKz6ZbhBnk2wpgZfIAfLWg4vLISDKt3P3_6JUYTBIbmzqZHmPrOWl5AlhjwPKqlX1WdP7U_Pm8oo4PYOviTKZRwDMLVUdgcTYSAt7oUPs987wIbW_rngqRWeVNnPRg0l6aKG9Xn1aXvdsch3Vcj7Xkev-uGtiR4ZUH5PJ0nUI5_vSZskJeDbj-A4VMPMP-mql_P2cEi2pUImjSx3r6rs_6ZXxMOAp_We-yt31LezaLLOCVMyWb9KvLxZCshi9WaZkA4.AVrUU0OF7JYTvhYUf7CAxQz_awRTk8FMkrCHpOxJ-rE"
+}.
+2026-04-14 10:48:01.303 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 10:48:01.322 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 11.3374 ms
+2026-04-14 10:48:03.516 +03:30 [INF] HTTP GET /Account/Login responded 200 in 2181.1090 ms
+2026-04-14 10:48:03.522 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:48:03.529 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:48:03.576 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0093 ms
+2026-04-14 10:48:28.233 +03:30 [INF] User 'admin@bankinggateway.local' logged in successfully.
+2026-04-14 10:48:30.251 +03:30 [INF] HTTP POST /Account/Login responded 302 in 5118.6001 ms
+2026-04-14 10:48:30.269 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 10:48:30.348 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "h4cPPWpZVrfOqMdl8wkPTeyEtJFiY9rFN6Fh-Ucc4ak",
+  "code_challenge": "qgLZexMsl0MyCSWwwIIftzA9HH10bUvjRz8caojFYvk",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.w9mTUlDbT6wpUixzVgAaxaBxf_YMRbgNz2hQ1lnG-qGvXKJYm4TI4mkHYcrQa5eWWmI1v4kO44wTV5wHQxTBQuV97f6UFVdCOCsTN-5-E_KSxsyt1UEmwTwd1Aj_udv1kQExmeJ8zTWRKJgFbC2WHLLmoP3zbvzpiV9WV2b9Jh_I1n8MbBijFf45zZxVwQuMNyoB_ILIpiHXy0PTxUo6ZYTjJSlQx-tUflq8bgoTWFNWQN5WxvLv9euAH5cPTy9ryZ2qN3F3cV3qq099Tt_nKPsD9pcyoVtHtWR6atqHgwxlOPwbqgToc1wQxdKOJFNExC8AHYM24Qoe1L6XJEIGrwTz7mQQJ2rY2L1jSweaLXuTBdAvgFcthjzUy4_m5bejntL3e7TwOCagAm76Ew9JC5pdI7ONhg_0U2FXHWfeOpuuapuQ6NFnh-rOo5IlMGn1DTlOMWxrbgvZeS4wnUK1AKklxVdh_rxG4qG0tc7a_Xx40gaq8Q0iQzJUbACb41E79QmoU4NGKzHsXiafry-2kncI1oa4eqmXuTaIiAVlUqhfNXPE23gFN9NOTRltUtK0paEWG5WqAMGiWjLJZyrA2cWvTz7s8m1MmslwbpRdfDX02cqmxJj4QkQk1eheT2GFy8RKdGakKdnlX-0jAgiIyzQ5XlEDI0rwtAXMDTP_6IE.wUHARxQI4nDDAyw8hh9UBg.5F1Y-RbdjemLeiZKo0AYgP8epR60UQJS8h8To-unQfg5LMJMfwtDqcbE5LWh95t-Bi47TAM0Qd6JvP4RZIGCQcmHWY9ZwYM-yHfFeWVcTdOCkSUqGNiPnzRvdKYwEQHNJxGKj9VzCdQy6cPA8xZX-jZ4Q1lN-xfKb-qJvlaILmcrNMqdgABrWzx6lQOBQTsfHhKxkU5WYH_QUfT7OPbHJjZ6gwpjgBtSkRd6x-VABtIMPDOnZKWPwfj6-z7CExV_vIdhCewyHPj_xFxVeqtKmNjGBCh8jlpxEPxZ0ScKxlSM5RSt3sSukUBuemu3SxBwTIgYjqTMJCjUdNeNilu3WYfoPFRLYj40F1i5gv1Fk9hpuYa2tn_9hO_5-VGcpY0Y50MHo1NhZD278AOnbFHohN1Xj2yy8Wt1Ep3ktiWs_Imhj0eES6lRCzGzSsv6qbYTeYo4pLsR_mE8iXi6Vw680o9QmQML6to492hRmvbmwNY4-dIkq1S2vOd1TFcF2nZKeE_KayHSaaKwjeU2_Iacw6Ok0dWsOzEyNTTGobyJnal6UyAJdyT1_VY0Ug5Aulg15BD06dLJZwLtRRuvilXE-7q0V29x5vYQQQKOey2PHDBwNqNWjTb5L1oGhQozvimnt70C40d5Ay7fC-RgZ0dcwNGxhS32lK6Pipn1AKkCztRW1H7VYSo1dzrVhSvicbZprVMmBaKwj4zCGDnpffLY8FWrKEwsPP1xL6nZzx_nAqMSnlZj0pa4RdeXh2gLemJa__QNtdvmnu3GZPhuhwY4zn_bBQDCfPbcWl9TNmMlFTprYGC5018eZ9sHO8ImgPXZJ7fN26_HRVJvp8ZLFshhTStBXfB820B4R59tgSTtelUgBOkYDZQ5wn2gryBKCInbIOfmAEhnIUVVOlDHiDuUgkYaMFsowfyeoi3wlA3ykQ2WglSa1KsGwvgxn4DriP1hjP0plgBge4ROCfhT3TuAFC7voqeo9wK8NY40RZEeAm-OI8lXFm-VKCbVdIGkqNuEwBXYRaOiuLCXuEkQ2nZn29QOAsUwGniWo3dYp8zI8edvzIfNJsSUihBuNcmcflQtnyxZZ7X8eqWYUejtlPRJNqOjk755FIbBqYaZ3HNPVRsDIyodHMjimM7H6Ae6nbNwbnk7f7tZvEdCx0kRFhMNqvH3tl1GbBbV7k8DiC0HCtoFipF6bdVPOTGhNssiTpXehDiZkeu10nS6nfsnCPlO21f0qMx2XWx9mDlPAssyo1bQ0wPa4LGcqvFhEwbN8yW8OmYuiNZlqIvtDuRgn2D4MRJf22sbhRyKklk-DwaeM5UmH6hKQx6lrmNMnRl3ZMby3VdfvuKT9i0J1Mi-dwYPnkkB81PJxiy76tcgiXhMqA0OB1qb5-Xj7jhgs9ch1vlcueYR7vEi7Ira5DxDmpqJfoTrPSvlgqrYJWPShSWT79qKVczgNQ_cGFM1YKnSLXPQ9QMB0Zejrj4fo6EX0QfiowAQXOxV9tRTRijJsxG9lKZA-x7zRZFAY7gSyLEDdAWkhEDUyU5-uUu9_wswICtlTs7atH_4j14R08644FX8OHGaUVZlcNyppocG3JfSwVKYZiB3E1V5FhXRvuqHIYb_kouf-ckkklQfQMLk3aIODHrX7Oqw5JR33aXs1owj6j4s60gBy5amuC6x1Ogey0IiTTNeeFMr2d9kmM3O2bUdB1JKhiz9tf1ztH0QXHvWPh_ROjYNcm_P8c9mKg-P7NYbM3tRjAGAfCf8udGQn92oAzSoknDTCBugrOCvvU-gKMMiJ46be3gMZxLlHlWtloFG79dBqL4onHOgsrd9u_NiSp0FCA9Zk2wAtsYH0sMIzjV7HWw8NX6N0v42-OdXF_wUP_WzjjslyQglzFS7rN8_LUFGb8h8nBJankAmTIFDeBKz6ZbhBnk2wpgZfIAfLWg4vLISDKt3P3_6JUYTBIbmzqZHmPrOWl5AlhjwPKqlX1WdP7U_Pm8oo4PYOviTKZRwDMLVUdgcTYSAt7oUPs987wIbW_rngqRWeVNnPRg0l6aKG9Xn1aXvdsch3Vcj7Xkev-uGtiR4ZUH5PJ0nUI5_vSZskJeDbj-A4VMPMP-mql_P2cEi2pUImjSx3r6rs_6ZXxMOAp_We-yt31LezaLLOCVMyWb9KvLxZCshi9WaZkA4.AVrUU0OF7JYTvhYUf7CAxQz_awRTk8FMkrCHpOxJ-rE"
+}.
+2026-04-14 10:48:30.390 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 10:48:30.556 +03:30 [INF] An ad hoc authorization was automatically created and associated with the 'banking-gateway' application: 0d984d69-1c74-4386-5fe6-08de99f607cd.
+2026-04-14 10:48:30.696 +03:30 [INF] The authorization response was successfully returned to 'https://localhost:7033/api/auth/callback' using the query response mode: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.w9mTUlDbT6wpUixzVgAaxaBxf_YMRbgNz2hQ1lnG-qGvXKJYm4TI4mkHYcrQa5eWWmI1v4kO44wTV5wHQxTBQuV97f6UFVdCOCsTN-5-E_KSxsyt1UEmwTwd1Aj_udv1kQExmeJ8zTWRKJgFbC2WHLLmoP3zbvzpiV9WV2b9Jh_I1n8MbBijFf45zZxVwQuMNyoB_ILIpiHXy0PTxUo6ZYTjJSlQx-tUflq8bgoTWFNWQN5WxvLv9euAH5cPTy9ryZ2qN3F3cV3qq099Tt_nKPsD9pcyoVtHtWR6atqHgwxlOPwbqgToc1wQxdKOJFNExC8AHYM24Qoe1L6XJEIGrwTz7mQQJ2rY2L1jSweaLXuTBdAvgFcthjzUy4_m5bejntL3e7TwOCagAm76Ew9JC5pdI7ONhg_0U2FXHWfeOpuuapuQ6NFnh-rOo5IlMGn1DTlOMWxrbgvZeS4wnUK1AKklxVdh_rxG4qG0tc7a_Xx40gaq8Q0iQzJUbACb41E79QmoU4NGKzHsXiafry-2kncI1oa4eqmXuTaIiAVlUqhfNXPE23gFN9NOTRltUtK0paEWG5WqAMGiWjLJZyrA2cWvTz7s8m1MmslwbpRdfDX02cqmxJj4QkQk1eheT2GFy8RKdGakKdnlX-0jAgiIyzQ5XlEDI0rwtAXMDTP_6IE.wUHARxQI4nDDAyw8hh9UBg.5F1Y-RbdjemLeiZKo0AYgP8epR60UQJS8h8To-unQfg5LMJMfwtDqcbE5LWh95t-Bi47TAM0Qd6JvP4RZIGCQcmHWY9ZwYM-yHfFeWVcTdOCkSUqGNiPnzRvdKYwEQHNJxGKj9VzCdQy6cPA8xZX-jZ4Q1lN-xfKb-qJvlaILmcrNMqdgABrWzx6lQOBQTsfHhKxkU5WYH_QUfT7OPbHJjZ6gwpjgBtSkRd6x-VABtIMPDOnZKWPwfj6-z7CExV_vIdhCewyHPj_xFxVeqtKmNjGBCh8jlpxEPxZ0ScKxlSM5RSt3sSukUBuemu3SxBwTIgYjqTMJCjUdNeNilu3WYfoPFRLYj40F1i5gv1Fk9hpuYa2tn_9hO_5-VGcpY0Y50MHo1NhZD278AOnbFHohN1Xj2yy8Wt1Ep3ktiWs_Imhj0eES6lRCzGzSsv6qbYTeYo4pLsR_mE8iXi6Vw680o9QmQML6to492hRmvbmwNY4-dIkq1S2vOd1TFcF2nZKeE_KayHSaaKwjeU2_Iacw6Ok0dWsOzEyNTTGobyJnal6UyAJdyT1_VY0Ug5Aulg15BD06dLJZwLtRRuvilXE-7q0V29x5vYQQQKOey2PHDBwNqNWjTb5L1oGhQozvimnt70C40d5Ay7fC-RgZ0dcwNGxhS32lK6Pipn1AKkCztRW1H7VYSo1dzrVhSvicbZprVMmBaKwj4zCGDnpffLY8FWrKEwsPP1xL6nZzx_nAqMSnlZj0pa4RdeXh2gLemJa__QNtdvmnu3GZPhuhwY4zn_bBQDCfPbcWl9TNmMlFTprYGC5018eZ9sHO8ImgPXZJ7fN26_HRVJvp8ZLFshhTStBXfB820B4R59tgSTtelUgBOkYDZQ5wn2gryBKCInbIOfmAEhnIUVVOlDHiDuUgkYaMFsowfyeoi3wlA3ykQ2WglSa1KsGwvgxn4DriP1hjP0plgBge4ROCfhT3TuAFC7voqeo9wK8NY40RZEeAm-OI8lXFm-VKCbVdIGkqNuEwBXYRaOiuLCXuEkQ2nZn29QOAsUwGniWo3dYp8zI8edvzIfNJsSUihBuNcmcflQtnyxZZ7X8eqWYUejtlPRJNqOjk755FIbBqYaZ3HNPVRsDIyodHMjimM7H6Ae6nbNwbnk7f7tZvEdCx0kRFhMNqvH3tl1GbBbV7k8DiC0HCtoFipF6bdVPOTGhNssiTpXehDiZkeu10nS6nfsnCPlO21f0qMx2XWx9mDlPAssyo1bQ0wPa4LGcqvFhEwbN8yW8OmYuiNZlqIvtDuRgn2D4MRJf22sbhRyKklk-DwaeM5UmH6hKQx6lrmNMnRl3ZMby3VdfvuKT9i0J1Mi-dwYPnkkB81PJxiy76tcgiXhMqA0OB1qb5-Xj7jhgs9ch1vlcueYR7vEi7Ira5DxDmpqJfoTrPSvlgqrYJWPShSWT79qKVczgNQ_cGFM1YKnSLXPQ9QMB0Zejrj4fo6EX0QfiowAQXOxV9tRTRijJsxG9lKZA-x7zRZFAY7gSyLEDdAWkhEDUyU5-uUu9_wswICtlTs7atH_4j14R08644FX8OHGaUVZlcNyppocG3JfSwVKYZiB3E1V5FhXRvuqHIYb_kouf-ckkklQfQMLk3aIODHrX7Oqw5JR33aXs1owj6j4s60gBy5amuC6x1Ogey0IiTTNeeFMr2d9kmM3O2bUdB1JKhiz9tf1ztH0QXHvWPh_ROjYNcm_P8c9mKg-P7NYbM3tRjAGAfCf8udGQn92oAzSoknDTCBugrOCvvU-gKMMiJ46be3gMZxLlHlWtloFG79dBqL4onHOgsrd9u_NiSp0FCA9Zk2wAtsYH0sMIzjV7HWw8NX6N0v42-OdXF_wUP_WzjjslyQglzFS7rN8_LUFGb8h8nBJankAmTIFDeBKz6ZbhBnk2wpgZfIAfLWg4vLISDKt3P3_6JUYTBIbmzqZHmPrOWl5AlhjwPKqlX1WdP7U_Pm8oo4PYOviTKZRwDMLVUdgcTYSAt7oUPs987wIbW_rngqRWeVNnPRg0l6aKG9Xn1aXvdsch3Vcj7Xkev-uGtiR4ZUH5PJ0nUI5_vSZskJeDbj-A4VMPMP-mql_P2cEi2pUImjSx3r6rs_6ZXxMOAp_We-yt31LezaLLOCVMyWb9KvLxZCshi9WaZkA4.AVrUU0OF7JYTvhYUf7CAxQz_awRTk8FMkrCHpOxJ-rE",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 10:48:30.707 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 302.0151 ms
+2026-04-14 10:48:30.793 +03:30 [INF] The request URI matched a server endpoint: "Token".
+2026-04-14 10:48:30.800 +03:30 [INF] The token request was successfully extracted: {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "HbtqBRkm7mPK_fL6K8tinuxovyUATlNsq_8F_BJuNu4",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 10:48:30.821 +03:30 [INF] Client authentication failed for banking-gateway.
+2026-04-14 10:48:30.825 +03:30 [INF] The authentication demand was rejected because the confidential application 'banking-gateway' didn't specify valid client credentials.
+2026-04-14 10:48:30.834 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "error": "invalid_client",
+  "error_description": "The specified client credentials are invalid.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2055"
+}.
+2026-04-14 10:51:16.784 +03:30 [FTL] Identity server terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Program.cs:line 167
+2026-04-14 10:51:22.434 +03:30 [INF] Admin user 'admin@bankinggateway.local' created.
+2026-04-14 10:51:22.631 +03:30 [WRN] M2M client 'banking-service-m2m' created with auto-generated secret. Store this secret securely — it will not be shown again: 27754c90a7f24e6bbf3e8c5f8402da30
+2026-04-14 10:51:31.634 +03:30 [INF] HTTP GET / responded 200 in 1824.7752 ms
+2026-04-14 10:51:31.645 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:51:31.651 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:51:31.744 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1892 ms
+2026-04-14 10:51:37.335 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 10:51:37.345 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 10:51:37.349 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 10:51:37.360 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:51:37.430 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 10:51:37.435 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 10:51:37.439 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 10:51:37.456 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:51:37.580 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 10:51:37.588 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "_iyEuBjfjtUUVIKN0JE9u16StveGVXIOMeBnZyUQjbI",
+  "code_challenge": "wkWm8uuiNCUUzdvQL8iEfXpqHkb8KY50SyeKCjEJsX0",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.F4vd1U4w5FDTmk7uE9gMNlTN0VWREm8PCMBaaEBUrfPH7mBokt6xNTYNSxG9iY-1JUOS6HmZFSAVHxo-bFRG0dlJ_qRkLzp8xKaUt23gyiqfjq7PkQl2ElhA5-l1Fqk8ciWOM3BieWWFKr1_iSDOwoRAgWPzSwdl-Tn7QmEWzATWOmMye4jS6KdLyiu-ZStjuRASIt75p9V3Liv2v-1XfheHDAv9-3S0skM9VXWZgmmCV0NLM-9rtFTt58dHo6362EdclNliSZGcHNQyBqcWjqiyPNvp7e0qnvD_nK-SWrjlK6gaVGc8wRQhx7KJApIsHXD59zGcXdejdkZpQchoauyZwY6CJuyUuOzkINHaUHlqZREMM6JINIxmyL-ie9LDF4wKUwPTrFsrAPBQPwdB0Va53LgupW7anGAahwS5LnrB2fOcnY-VeXgVMgXkeyw8OVbZeS6dmbccVpx1ycfVw6gjMGraNhOSrCL8yfM-S_XfXM2yjTa7a8YyABMsX6B_18gjF3OlNDeB_J86oP_f_wC7MIcCXmr6hTSEDMHzB0WgEntDV3RNem4czBGA1k5YDIgDNhp6GmswXwtGDLipfgg2ajSa39kG2i5iFJLOChpOvMLDhqpLYSZBvPLzHM9LpB9s8x3GKZ0SItPyslNkzH0m465_aHh-Awpwf8B2pFQ.Kz-wTLJrETbIdWnq3z4OWA.n_DnD5QRbX0mL0tkB3r-lqfGIevrc3tDVLuHfcL3U-mukVtJHJ0pFW3FemkUCL39xFdA6V-ttuPMhJpQhVc4dkrdS9Fy17o7gPsc0FOyjP_cDzqcLHSq6xizN9mCuSgvQxpgEIflmmO3l0QnD9J2eUtOcdEUtgf_Jl-krlcDjUDqQWo38WPb3HErIXTtREYL-h7ZhyWkl7Ci20qKlllVmNPOS-ScOJiuUWhOh1uoTz87uC2oZ0_ingCRAJ57ZieLH6drIG_hBr8pgOqMdQV--sw-6HjpvREJ3YBAy47qytraeF96cDqbsMn0tiQNHGb6NtFd0fmmdWPNTnVRRuBBV2wi0yRKUXeIg5PmOfpOerSamoWxMSo02zdIl7vB8OmeLlwn_M3Qxn8oXY5UAxfIK8DdTSj47_JpKbcDMmQeIwE6IO4WVtakZz9q_YXychMU-kWAQ5vjt_Tn9_z3Lo5CRMDqbHw6r8_wYRmNINTU4oX75zAnx_XWh_mz2jA_k8rWNBWMSgVNfLwGF88JZoI2qjU4RVLPRTyTPbvhkEb10WP9GS3AhCr11so9U9nHayxC9QpMHk94Vge38vL4d_9hxejCr7v09g6OSPmAxC9uq7TWTnaRCNXe3cwBcfqlK05X96CCoeEFkjK95dK-sttvvjRpJ3iEkWi0PfbEa-fmyl4dfUMtUcSUYe1wI7H2RFsmRLT9vLQbJH8u4J9mTEeVWbdZ2sJcu23b2JY_lr0Rv4KMhlSylDQ3SlwZWpOJnqyd981zKvKlBMfd3AHoFszjpPnrnrLrCnBqAqrz8QfK3RE7QuimHXnfywAjp3X4I8eTu97Ud3IpWZ-2GUVvaITXReSVROtbL_KpZxD3fHrFroRxu42zh8Rxp-FEJ_2d3secs5d16YRwvt3LgsUASJshCQTk8fuh1aUHF7JwdorawKjkuMW3fIyVVwNP8FUiPtyyBynrZufYUg2ClDCOUK-i933kOoZnCvql22QWIn7Is1hvkVmT-0DuX_GeHz6Jy8M3ZHgoQmI38XDewfGJR0uP9eugJCT0RqFf67mUVsrOYL9u_A5Oofhu_WB24MzaYfO_KbQU15SVcotNNr5O4DjWrqYSWqjpHWAzpp9JD-fSP3XfMI0JR0NkGTz92eLgX50Pl5rmqo9XtlFkR_dJw9aHfUNrQgpwpapah6Xq_3QAy-oPVf1pPqgbuN7VyapCPKLDOzk63UPSbQtdbVL4F6k6Rg3EdEZzUPeAsa4yixsRF2AzzAZoT6_HIAzNZT1xMhDhepXOJwP8CPB5-b82kxWUZ7IbH1yeWeXKbbd8tuGlh0SVZ-mS1fPsvKZ3DL29U3B0cEJojwyY8N_8QpAUUKM_O4Dm-BtMoF0-s2MJYSacOWU9n1bG4cQiqMj0Kt5TxEP25WcxsFZ4MxpCqCUO2i2zh8l8M_t_0djul50TvrTCnVO-3hmnq-cjsPtBSmmnIn39FMTd560kZ0YHmAGE6LJ2py77OqonK1ZVFyDtvnnvme1TIpwHYl5TlnpGjH_TG5VBJZvPH5p_YvpxxFdh9GuHsXq3zeHoJpPcqU7AuDBPXPuVTNKDwRv_ZnDeU3Aa56oEoiX31i7qmC-AsNTj8vmI_2tOZZhqt975UhoMEqBeutJ-1a9rTX41dWG8vx_jm3ke7K8HY_34v1Xd-yP_zZlysDigDqZIfT5G_PMwTkRMztVihuJ0on2p6zlI21X7fcyy3_jS2S7lQdWt0-KI4wRQ5sx4tlZ00G9e2Y3Z2ZwYK1aMl4NIRM1XyjvasO_tQ-EekFAq0Z-TAYffPpOp4RtssX5zmSqNcxIjfYKfKLVRtbW2j3fXCFWdJF4u_bi-j6jaTmtcDD2CuuedoRg5yMuVwJj3xaCH_ExOHlFVxz4up0Jrp4rAi7iHbgncDklTLPeMkUw2XCURb4TN-8DGh4p65OB5Kszw5cfZInBbraYAVr1R-Wc0eQdWSBpuDnPWXo7Gn-gUPvQabXuTCnux6wHl21YLyoYmIXNpKb9-qBh-7gyjZja18_RS3IjCOhDTIfgG0JZF-wsIcqurcDJ9GZR-4xsxU10OutjycBD2y4nDcG6B4oXhwseAF5SxQ31WOCLim87x-hZI9oIzgHzsO6QP0P2fvmyDY819Ngw6rOaaBhBC9-4HXTbpYU9bRLrj8E6H.mu0BuFYEGiX5y9tDsYcErRjbSaGcjWi8roA5DVAgzdg"
+}.
+2026-04-14 10:51:37.625 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 10:51:37.691 +03:30 [ERR] HTTP GET /connect/authorize responded 500 in 46.2267 ms
+System.InvalidOperationException: The user details cannot be retrieved.
+   at BankingGateway.IdentityServer.Controllers.AuthorizationController.Authorize() in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Controllers\AuthorizationController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-04-14 10:51:37.705 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The user details cannot be retrieved.
+   at BankingGateway.IdentityServer.Controllers.AuthorizationController.Authorize() in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.IdentityServer\Controllers\AuthorizationController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-04-14 10:51:37.834 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0108 ms

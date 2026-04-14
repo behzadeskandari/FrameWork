@@ -78,8 +78,8 @@ try
         .AddServer(options =>
         {
             // Issuer
-            options.SetIssuer(new Uri(builder.Configuration["OpenIddict:Issuer"]!));
-
+            //options.SetIssuer(new Uri(builder.Configuration["OpenIddict:Issuer"]!));
+            options.SetIssuer(new Uri("https://localhost:65460/"));
             // Endpoints
             options.SetAuthorizationEndpointUris("/connect/authorize")
                    .SetTokenEndpointUris("/connect/token")

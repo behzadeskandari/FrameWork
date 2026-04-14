@@ -1318,3 +1318,1322 @@ System.InvalidOperationException: IDX20803: Unable to obtain configuration from:
 }.
 2026-04-14 10:10:21.424 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
 2026-04-14 10:10:21.433 +03:30 [INF] HTTP GET /api/auth/login responded 400 in 51082.8485 ms
+2026-04-14 10:12:09.182 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:13:06.976 +03:30 [ERR] A network error occured while communicating with the remote HTTP server.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:5010)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenIddict.Client.SystemNetHttp.OpenIddictClientSystemNetHttpHandlers.SendHttpRequest`1.HandleAsync(TContext context)
+2026-04-14 10:13:06.997 +03:30 [ERR] An error occurred while retrieving the configuration of the remote authorization server.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'https://localhost:5010/.well-known/openid-configuration'. Will retry at '01/01/0001 00:00:00 +00:00'. Exception: 'OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while sending the configuration request.\r\n  Error: server_error\r\n  Error description: An error occurred while communicating with the remote HTTP server.\r\n  Error URI: https://documentation.openiddict.com/errors/ID2136\r\n   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__ApplyConfigurationRequestAsync|1>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)\r\n   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)'.
+ ---> OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while sending the configuration request.
+  Error: server_error
+  Error description: An error occurred while communicating with the remote HTTP server.
+  Error URI: https://documentation.openiddict.com/errors/ID2136
+   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__ApplyConfigurationRequestAsync|1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at OpenIddict.Client.OpenIddictClientHandlers.ResolveClientRegistrationFromChallengeContext.HandleAsync(ProcessChallengeContext context)
+2026-04-14 10:13:07.011 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "server_error",
+  "error_description": "The remote authorization server is currently unavailable or returned an invalid configuration.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2170"
+}.
+2026-04-14 10:13:07.020 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:13:07.032 +03:30 [INF] HTTP GET /api/auth/login responded 400 in 39730.7663 ms
+2026-04-14 10:13:07.050 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0618 ms
+2026-04-14 10:15:45.044 +03:30 [FTL] Application terminated unexpectedly
+System.IO.InvalidDataException: Failed to load configuration from file 'D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\appsettings.json'.
+ ---> System.FormatException: Could not parse the JSON file.
+ ---> System.Text.Json.JsonReaderException: 'h' is invalid after a value. Expected either ',', '}', or ']'. LineNumber: 13 | BytePositionInLine: 19.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenUntilAfterAllCommentsAreSkipped(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationFileParser.ParseStream(Stream input)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.AddSource(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationExtensions.Add[TSource](IConfigurationBuilder builder, Action`1 configureSource)
+   at Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(IConfigurationBuilder builder, String path, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ApplyDefaultAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder appConfigBuilder, String[] args)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder..ctor(HostApplicationBuilderSettings settings)
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 33
+2026-04-14 10:16:04.728 +03:30 [FTL] Application terminated unexpectedly
+System.IO.InvalidDataException: Failed to load configuration from file 'D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\appsettings.json'.
+ ---> System.FormatException: Could not parse the JSON file.
+ ---> System.Text.Json.JsonReaderException: 'h' is invalid after a value. Expected either ',', '}', or ']'. LineNumber: 13 | BytePositionInLine: 19.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenUntilAfterAllCommentsAreSkipped(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationFileParser.ParseStream(Stream input)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.AddSource(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationExtensions.Add[TSource](IConfigurationBuilder builder, Action`1 configureSource)
+   at Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(IConfigurationBuilder builder, String path, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ApplyDefaultAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder appConfigBuilder, String[] args)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder..ctor(HostApplicationBuilderSettings settings)
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at Program.<Main>$(String[] args) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Program.cs:line 33
+2026-04-14 10:16:38.620 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:17:11.469 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:17:11.524 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:5010/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:17:11.553 +03:30 [ERR] An error occurred while retrieving the configuration of the remote authorization server.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'https://localhost:65460/.well-known/openid-configuration'. Will retry at '01/01/0001 00:00:00 +00:00'. Exception: 'OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while handling the configuration response.\r\n  Error: server_error\r\n  Error description: The issuer returned in the server configuration doesn't match the value set in the client registration options.\r\n  Error URI: https://documentation.openiddict.com/errors/ID2165\r\n   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__HandleConfigurationResponseAsync|3>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)\r\n   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)'.
+ ---> OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while handling the configuration response.
+  Error: server_error
+  Error description: The issuer returned in the server configuration doesn't match the value set in the client registration options.
+  Error URI: https://documentation.openiddict.com/errors/ID2165
+   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__HandleConfigurationResponseAsync|3>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at OpenIddict.Client.OpenIddictClientHandlers.ResolveClientRegistrationFromChallengeContext.HandleAsync(ProcessChallengeContext context)
+2026-04-14 10:17:11.562 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "server_error",
+  "error_description": "The remote authorization server is currently unavailable or returned an invalid configuration.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2170"
+}.
+2026-04-14 10:17:11.573 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:17:11.578 +03:30 [INF] HTTP GET /api/auth/login responded 400 in 5810.3225 ms
+2026-04-14 10:17:11.607 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0544 ms
+2026-04-14 10:21:25.790 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:21:39.432 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:21:39.472 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:5010/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:21:39.504 +03:30 [ERR] An error occurred while retrieving the configuration of the remote authorization server.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'https://localhost:65460/.well-known/openid-configuration'. Will retry at '01/01/0001 00:00:00 +00:00'. Exception: 'OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while handling the configuration response.\r\n  Error: server_error\r\n  Error description: The issuer returned in the server configuration doesn't match the value set in the client registration options.\r\n  Error URI: https://documentation.openiddict.com/errors/ID2165\r\n   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__HandleConfigurationResponseAsync|3>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)\r\n   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)'.
+ ---> OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while handling the configuration response.
+  Error: server_error
+  Error description: The issuer returned in the server configuration doesn't match the value set in the client registration options.
+  Error URI: https://documentation.openiddict.com/errors/ID2165
+   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__HandleConfigurationResponseAsync|3>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at OpenIddict.Client.OpenIddictClientHandlers.ResolveClientRegistrationFromChallengeContext.HandleAsync(ProcessChallengeContext context)
+2026-04-14 10:21:39.521 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "server_error",
+  "error_description": "The remote authorization server is currently unavailable or returned an invalid configuration.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2170"
+}.
+2026-04-14 10:21:39.534 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:21:39.549 +03:30 [INF] HTTP GET /api/auth/login responded 400 in 2455.9355 ms
+2026-04-14 10:21:39.574 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0770 ms
+2026-04-14 10:24:17.891 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:24:41.453 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:24:41.489 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:5010/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:24:41.520 +03:30 [ERR] An error occurred while retrieving the configuration of the remote authorization server.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'https://localhost:65460/.well-known/openid-configuration'. Will retry at '01/01/0001 00:00:00 +00:00'. Exception: 'OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while handling the configuration response.\r\n  Error: server_error\r\n  Error description: The issuer returned in the server configuration doesn't match the value set in the client registration options.\r\n  Error URI: https://documentation.openiddict.com/errors/ID2165\r\n   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__HandleConfigurationResponseAsync|3>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)\r\n   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)'.
+ ---> OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while handling the configuration response.
+  Error: server_error
+  Error description: The issuer returned in the server configuration doesn't match the value set in the client registration options.
+  Error URI: https://documentation.openiddict.com/errors/ID2165
+   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__HandleConfigurationResponseAsync|3>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at OpenIddict.Client.OpenIddictClientHandlers.ResolveClientRegistrationFromChallengeContext.HandleAsync(ProcessChallengeContext context)
+2026-04-14 10:24:41.531 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "server_error",
+  "error_description": "The remote authorization server is currently unavailable or returned an invalid configuration.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2170"
+}.
+2026-04-14 10:24:41.545 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:24:41.557 +03:30 [INF] HTTP GET /api/auth/login responded 400 in 2447.0207 ms
+2026-04-14 10:24:41.677 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1036 ms
+2026-04-14 10:29:09.529 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:29:34.649 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:29:59.084 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:29:59.158 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:5010/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:29:59.189 +03:30 [ERR] An error occurred while retrieving the configuration of the remote authorization server.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'https://localhost:65460/.well-known/openid-configuration'. Will retry at '01/01/0001 00:00:00 +00:00'. Exception: 'OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while handling the configuration response.\r\n  Error: server_error\r\n  Error description: The issuer returned in the server configuration doesn't match the value set in the client registration options.\r\n  Error URI: https://documentation.openiddict.com/errors/ID2165\r\n   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__HandleConfigurationResponseAsync|3>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)\r\n   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)'.
+ ---> OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while handling the configuration response.
+  Error: server_error
+  Error description: The issuer returned in the server configuration doesn't match the value set in the client registration options.
+  Error URI: https://documentation.openiddict.com/errors/ID2165
+   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__HandleConfigurationResponseAsync|3>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at OpenIddict.Client.OpenIddictClientHandlers.ResolveClientRegistrationFromChallengeContext.HandleAsync(ProcessChallengeContext context)
+2026-04-14 10:29:59.202 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "server_error",
+  "error_description": "The remote authorization server is currently unavailable or returned an invalid configuration.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2170"
+}.
+2026-04-14 10:29:59.212 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:29:59.229 +03:30 [INF] HTTP GET /api/auth/login responded 400 in 3103.8113 ms
+2026-04-14 10:29:59.245 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0683 ms
+2026-04-14 10:32:27.602 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:32:45.357 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:32:45.399 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:32:45.467 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 10:32:45.476 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:32:45.519 +03:30 [ERR] HTTP GET /api/auth/login responded 500 in 2471.5073 ms
+System.InvalidOperationException: The core services must be registered when enabling the OpenIddict client feature.
+To register the OpenIddict core services, reference the 'OpenIddict.Core' package and call 'services.AddOpenIddict().AddCore()' from 'ConfigureServices'.
+Alternatively, you can disable the token storage feature by calling 'services.AddOpenIddict().AddClient().DisableTokenStorage()'.
+   at OpenIddict.Client.OpenIddictClientHandlers.Protection.CreateTokenEntry..ctor()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at OpenIddict.Client.OpenIddictClientDispatcher.<>c__DisplayClass4_0`1.<<DispatchAsync>g__GetHandlersAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientDispatcher.<>c__DisplayClass4_0`1.<<DispatchAsync>g__GetHandlersAsync|0>d.System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult(Int16 token)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientHandlers.GenerateLoginStateToken.HandleAsync(ProcessChallengeContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ChallengeResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-04-14 10:32:45.736 +03:30 [ERR] Unhandled exception. CorrelationId=26df81043f2d4661b48ba1b5b1510733
+System.InvalidOperationException: The core services must be registered when enabling the OpenIddict client feature.
+To register the OpenIddict core services, reference the 'OpenIddict.Core' package and call 'services.AddOpenIddict().AddCore()' from 'ConfigureServices'.
+Alternatively, you can disable the token storage feature by calling 'services.AddOpenIddict().AddClient().DisableTokenStorage()'.
+   at OpenIddict.Client.OpenIddictClientHandlers.Protection.CreateTokenEntry..ctor()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at OpenIddict.Client.OpenIddictClientDispatcher.<>c__DisplayClass4_0`1.<<DispatchAsync>g__GetHandlersAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientDispatcher.<>c__DisplayClass4_0`1.<<DispatchAsync>g__GetHandlersAsync|0>d.System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult(Int16 token)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientHandlers.GenerateLoginStateToken.HandleAsync(ProcessChallengeContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ChallengeResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at BankingGateway.Api.Middleware.RequestSizeLimitMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\RequestSizeLimitMiddleware.cs:line 32
+   at BankingGateway.Api.Middleware.IpFilteringMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\IpFilteringMiddleware.cs:line 25
+   at BankingGateway.Api.Middleware.SecurityHeadersMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\SecurityHeadersMiddleware.cs:line 35
+   at BankingGateway.Api.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context, ICorrelationIdProvider correlationIdProvider) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\CorrelationIdMiddleware.cs:line 29
+   at BankingGateway.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, ICorrelationIdProvider correlationIdProvider) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+2026-04-14 10:32:45.808 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0746 ms
+2026-04-14 10:35:15.566 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:35:36.543 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:35:36.574 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:35:36.618 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 10:35:36.626 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:35:36.657 +03:30 [ERR] HTTP GET /api/auth/login responded 500 in 2227.8746 ms
+System.InvalidOperationException: The core services must be registered when enabling the OpenIddict client feature.
+To register the OpenIddict core services, reference the 'OpenIddict.Core' package and call 'services.AddOpenIddict().AddCore()' from 'ConfigureServices'.
+Alternatively, you can disable the token storage feature by calling 'services.AddOpenIddict().AddClient().DisableTokenStorage()'.
+   at OpenIddict.Client.OpenIddictClientHandlers.Protection.CreateTokenEntry..ctor()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at OpenIddict.Client.OpenIddictClientDispatcher.<>c__DisplayClass4_0`1.<<DispatchAsync>g__GetHandlersAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientDispatcher.<>c__DisplayClass4_0`1.<<DispatchAsync>g__GetHandlersAsync|0>d.System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult(Int16 token)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientHandlers.GenerateLoginStateToken.HandleAsync(ProcessChallengeContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ChallengeResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-04-14 10:35:36.851 +03:30 [ERR] Unhandled exception. CorrelationId=05f4acfdfc3545a783d33b16f8b77872
+System.InvalidOperationException: The core services must be registered when enabling the OpenIddict client feature.
+To register the OpenIddict core services, reference the 'OpenIddict.Core' package and call 'services.AddOpenIddict().AddCore()' from 'ConfigureServices'.
+Alternatively, you can disable the token storage feature by calling 'services.AddOpenIddict().AddClient().DisableTokenStorage()'.
+   at OpenIddict.Client.OpenIddictClientHandlers.Protection.CreateTokenEntry..ctor()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at OpenIddict.Client.OpenIddictClientDispatcher.<>c__DisplayClass4_0`1.<<DispatchAsync>g__GetHandlersAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientDispatcher.<>c__DisplayClass4_0`1.<<DispatchAsync>g__GetHandlersAsync|0>d.System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult(Int16 token)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientHandlers.GenerateLoginStateToken.HandleAsync(ProcessChallengeContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ChallengeResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at BankingGateway.Api.Middleware.RequestSizeLimitMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\RequestSizeLimitMiddleware.cs:line 32
+   at BankingGateway.Api.Middleware.IpFilteringMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\IpFilteringMiddleware.cs:line 25
+   at BankingGateway.Api.Middleware.SecurityHeadersMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\SecurityHeadersMiddleware.cs:line 35
+   at BankingGateway.Api.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context, ICorrelationIdProvider correlationIdProvider) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\CorrelationIdMiddleware.cs:line 29
+   at BankingGateway.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, ICorrelationIdProvider correlationIdProvider) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+2026-04-14 10:35:36.901 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0858 ms
+2026-04-14 10:37:03.152 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:37:31.721 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:37:31.756 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:37:31.804 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 10:37:31.812 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:37:31.901 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:37:31.916 +03:30 [INF] HTTP GET /api/auth/login responded 302 in 2840.0204 ms
+2026-04-14 10:40:55.056 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:41:13.332 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:41:13.397 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:41:13.447 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 10:41:13.455 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:41:13.532 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:41:13.542 +03:30 [INF] HTTP GET /api/auth/login responded 302 in 2218.8081 ms
+2026-04-14 10:42:49.427 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:43:01.187 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:43:01.230 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:43:01.297 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 10:43:01.306 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:43:01.385 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:43:01.394 +03:30 [INF] HTTP GET /api/auth/login responded 302 in 2528.0940 ms
+2026-04-14 10:43:31.719 +03:30 [INF] The redirection request was successfully extracted: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.gReDf_4ClM0CSsUq7Lu0US7O0nM3fvJwm2E6h5XGegnerVmOqj9N-jocK_O56wbM7Z8oZRM_amqypc90u-h597FO1AWNZUWwWAsinQoOUJnq66gNzH6MJfaVAjYMsP2LA6W6UEwThhCUI3-GrWHymHGyPYVzrcNDQTXL3hYw_mn_9NCPle07lXKp0onl8LyHyF-LomqVa1N1njEh8HCiXblS5GJChyGlRMOwi49ewJhyjXAHeuBuaSmD-df4N_NeCdDV9HKayE975owQVtu69mbtZilKdCX3tKtv8vJrZqKzvBPZSWcxFn92L2_jd4_iLGQHYUFrqoKAtntxuB_c6OwJ3uC_YNkFBDlqHkZyZIanFCTGaCPRnmX7oM0MelHKiEHczTF05nHSjWLo1MCkAfae6JK2bqPDUlAbh2IaTHX1v4cSWW608HEY2IPRX43nmbghhwLEGS_iCUd4F3jVvSai4A_UUlcLsKoUcx3aFdQLsDC4RxEEVf-rWhDEOS4Vx18GA4JgPfUnfRgRV_WqanxAKB4ATKwRjivqdFjosKvmgxMv7JqdvlLjoG8QUFCEcl8TlgsVR4oN_oXWm2mq27nAGehKRhOnnMv_Azpxl4mubr_6m-WEiTqNakCcPFIwRzuPsiZoG45ZpaXeeKygodTe-fPsBaQIjFClG3sdgYU.uebYYck3QxRtkoZf2IFj6g.q9QKGnQXsTmS4-bJ0PHDw76MekK5T5X42cJzKm_kGYF-3RY0c-riza-cxQFIoOKpViLLKreKPqxPdkOo7UNgtlc-fbyAOB9l77NhhR9IQACfwsD6iocVc88GVsnTlMw0GUYVED9FXs9vpdo5MkJattrOAfUdve3u9Gky6P7RarCdQB-uOvw1TSJ7cVNK9KKYL65UVG7KfeLTVpLBYMGIlI7hn8RbRpodZwpDVxd7ug6SdykOTjvkmwrXp3hYvsBaxTQmCxAvOtFSuAgqg7gNtG6PHHiqNMal-zAhxKS_Z9RJ0W0Ud6uOixoL5UvSSgvKtCTLjuhGtae5zoFiB2nsANCTWt-CZbm3mTInaM8igExTB7J7VYniqDzHga8-qvDcRQEQFMmm8pzyEcKiVQSMD5BwqMtwnnllGMvzy5EyWbSgvm4qK_LPRMw9Hc28PNihh6B2nZBxM0x1sA3btf3abw0_7IPh5zyzLuyVa2r2x9jmHfv8uzKZ_MS96FWpS-fiR_UQ4Psw85SkXzpI7M0K0t4JrNfafNiFC7AEbc_ijtK1u_d8NiWT4LzGHR6lBpv-ATBWEdzeg6P9KOorHt6oHlDsg_-jTG9u8961JJY-pqaQ2bpJCl4MRtSiijENhiuN22FApHd1exBcvF5i1JTKKcORVa0Ifz09NWbPKNvf2OhTUgU6rmdzujKci7PQZ5dMZcrLWPjg305TzQQETPe1g02JAFGnNJzuXYQWQbwa-KYOBuQBg2jxGZEfBirVDMbunbs_Do5cbFrh_L1EJ8d31SuVywoMGPCwoy4m9nbvmp7r--xZ4VaNXmKhvlGSlogIHs2s7nZyake0G7tkPHPIJAa__MRLxlxuZsiGZsBBAoxIRdeSD87-XCm8ZInytk3mUpKeZEAqWe0m2VTaY_fd7JYo32Wi0331240-UUgffH_2J2Y9cbaC65bryoCpYSMjko_hYXUNOHKrded7jqJ0aXlecMeI9GfQsl139S6YnwmfuwA5I-Gvbjxcq6eflu8AxYBukS2YIj_fH5pzQdCvvbitln2Qu3R6kMdUZlJnc43Ix7moN6RJ_HcLj8JKz6l-2FSrFjGfAi9IY1qxZBc-fsjs2j2HIIB-Nn2c2V0uy7wodScAxwV-i8INXNg6-srZ6eUUtqjfiblb6bhF8i4RyGSVulXwuyGkEtdfOSp_xpYcio6bbSIZRj_oGspSz3Atylf_lKoKWR_Q9OBVhtdcl979zzMzuoaRKozovp5IHfgvhtRek0t-Xphkb-Gw-o4EWPYJ-KonX-lRLQ_6LB6TC0Zx7dmByAtm2tynbesZggbdH16-LnTJ8TFRr15wntPpSqHAmBC0l2RbSDY8bXmnRZaV6bd8xzz_zjvSP-KM3168dbOAcNSn69d3rcdhwQJlfylaFQIfk0V1sbaeogADj7SjQg6vCHGqDfSu9AFfm1FYzff8l7zLVnkQkJ0qtEbYlM12dSUM6o12ODlRzpVfFDocM3rP8tKQahX0nJvA282j__c--7b86MJay9bwXwNAX1fHzKG3jcB352HZbXQK-5VAfxzuv8imHoUFe2eWDCkfKe6Pv5yno7uAFM70FgW0M3QFByZPYbDl4jYVYaSlmewTxWlEmmXOiqJN238gX_gLc10DA_ptE924AkVSIc_8QswA-93XWg9kM3FXe1PeUo7IufXNvb5e6VtqFJUYEpUELDWg7PJFRoxm0xApYwwS3yKKedoiTdY02JLwljiOqtF-z-AauNzOUnpunI5BERnw1Oe3oTn9yfTnJSA0dRLUi2MJCtS3KK1ZIaxoMy1-VK8ib9fYYgflBdLbzqfCrj0TIDh13r1o-W_yPmSKJWR8atUwE0vedpYN3fhc0Aod_dgKQXPFOwglZrR9z9lbzTQXq8AqWMbqCTwOyJtyC5wU4ih2a49GwcYn-JrbeKtUBfuVKuWncP8f_E5i8-cD4n6FPvuzpaO1IVwHktDTUs-ZN-kiHlqWQkV7BsnVoC5A9LZcj-7NvZ26HRaQGl03I3F6uXexm7FvLDO-u26bHWdW2qoYCyxMsT5v7pnqfxvbnl5RUKwimjGDP73oH1eGduJx_IqenLWrKc6aRrrVylyDtvRGWmcqGTDpX5PvTXW_kUV03jhU8rCWK8QxLaWcd64Tx09aEXVnVmVRAU4wKdfV.ZYNb2eAQ8sukBAzj0CfNd07MH7Y0gGsw11N5Tw83gq0",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 10:43:31.815 +03:30 [INF] The token request was successfully sent to "https://localhost:65460/connect/token": {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "2atS87Kwt70qBKhSGSyAv4Bvlen-TydH8f0AzjXI7CM",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 10:43:31.823 +03:30 [INF] The token response returned by "https://localhost:65460/connect/token" was successfully extracted: {
+  "error": "invalid_client",
+  "error_description": "The specified client credentials are invalid.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2055"
+}.
+2026-04-14 10:43:31.831 +03:30 [INF] The token request was rejected by the remote authorization server: {
+  "error": "invalid_client",
+  "error_description": "The specified client credentials are invalid.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2055"
+}.
+2026-04-14 10:43:31.839 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "invalid_client",
+  "error_description": "The token request was rejected by the remote server.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2147"
+}.
+2026-04-14 10:43:31.868 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0706 ms
+2026-04-14 10:47:41.681 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:48:01.044 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:48:01.085 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:48:01.138 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 10:48:01.144 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:48:01.230 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:48:01.242 +03:30 [INF] HTTP GET /api/auth/login responded 302 in 1915.5300 ms
+2026-04-14 10:48:30.721 +03:30 [INF] The redirection request was successfully extracted: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.w9mTUlDbT6wpUixzVgAaxaBxf_YMRbgNz2hQ1lnG-qGvXKJYm4TI4mkHYcrQa5eWWmI1v4kO44wTV5wHQxTBQuV97f6UFVdCOCsTN-5-E_KSxsyt1UEmwTwd1Aj_udv1kQExmeJ8zTWRKJgFbC2WHLLmoP3zbvzpiV9WV2b9Jh_I1n8MbBijFf45zZxVwQuMNyoB_ILIpiHXy0PTxUo6ZYTjJSlQx-tUflq8bgoTWFNWQN5WxvLv9euAH5cPTy9ryZ2qN3F3cV3qq099Tt_nKPsD9pcyoVtHtWR6atqHgwxlOPwbqgToc1wQxdKOJFNExC8AHYM24Qoe1L6XJEIGrwTz7mQQJ2rY2L1jSweaLXuTBdAvgFcthjzUy4_m5bejntL3e7TwOCagAm76Ew9JC5pdI7ONhg_0U2FXHWfeOpuuapuQ6NFnh-rOo5IlMGn1DTlOMWxrbgvZeS4wnUK1AKklxVdh_rxG4qG0tc7a_Xx40gaq8Q0iQzJUbACb41E79QmoU4NGKzHsXiafry-2kncI1oa4eqmXuTaIiAVlUqhfNXPE23gFN9NOTRltUtK0paEWG5WqAMGiWjLJZyrA2cWvTz7s8m1MmslwbpRdfDX02cqmxJj4QkQk1eheT2GFy8RKdGakKdnlX-0jAgiIyzQ5XlEDI0rwtAXMDTP_6IE.wUHARxQI4nDDAyw8hh9UBg.5F1Y-RbdjemLeiZKo0AYgP8epR60UQJS8h8To-unQfg5LMJMfwtDqcbE5LWh95t-Bi47TAM0Qd6JvP4RZIGCQcmHWY9ZwYM-yHfFeWVcTdOCkSUqGNiPnzRvdKYwEQHNJxGKj9VzCdQy6cPA8xZX-jZ4Q1lN-xfKb-qJvlaILmcrNMqdgABrWzx6lQOBQTsfHhKxkU5WYH_QUfT7OPbHJjZ6gwpjgBtSkRd6x-VABtIMPDOnZKWPwfj6-z7CExV_vIdhCewyHPj_xFxVeqtKmNjGBCh8jlpxEPxZ0ScKxlSM5RSt3sSukUBuemu3SxBwTIgYjqTMJCjUdNeNilu3WYfoPFRLYj40F1i5gv1Fk9hpuYa2tn_9hO_5-VGcpY0Y50MHo1NhZD278AOnbFHohN1Xj2yy8Wt1Ep3ktiWs_Imhj0eES6lRCzGzSsv6qbYTeYo4pLsR_mE8iXi6Vw680o9QmQML6to492hRmvbmwNY4-dIkq1S2vOd1TFcF2nZKeE_KayHSaaKwjeU2_Iacw6Ok0dWsOzEyNTTGobyJnal6UyAJdyT1_VY0Ug5Aulg15BD06dLJZwLtRRuvilXE-7q0V29x5vYQQQKOey2PHDBwNqNWjTb5L1oGhQozvimnt70C40d5Ay7fC-RgZ0dcwNGxhS32lK6Pipn1AKkCztRW1H7VYSo1dzrVhSvicbZprVMmBaKwj4zCGDnpffLY8FWrKEwsPP1xL6nZzx_nAqMSnlZj0pa4RdeXh2gLemJa__QNtdvmnu3GZPhuhwY4zn_bBQDCfPbcWl9TNmMlFTprYGC5018eZ9sHO8ImgPXZJ7fN26_HRVJvp8ZLFshhTStBXfB820B4R59tgSTtelUgBOkYDZQ5wn2gryBKCInbIOfmAEhnIUVVOlDHiDuUgkYaMFsowfyeoi3wlA3ykQ2WglSa1KsGwvgxn4DriP1hjP0plgBge4ROCfhT3TuAFC7voqeo9wK8NY40RZEeAm-OI8lXFm-VKCbVdIGkqNuEwBXYRaOiuLCXuEkQ2nZn29QOAsUwGniWo3dYp8zI8edvzIfNJsSUihBuNcmcflQtnyxZZ7X8eqWYUejtlPRJNqOjk755FIbBqYaZ3HNPVRsDIyodHMjimM7H6Ae6nbNwbnk7f7tZvEdCx0kRFhMNqvH3tl1GbBbV7k8DiC0HCtoFipF6bdVPOTGhNssiTpXehDiZkeu10nS6nfsnCPlO21f0qMx2XWx9mDlPAssyo1bQ0wPa4LGcqvFhEwbN8yW8OmYuiNZlqIvtDuRgn2D4MRJf22sbhRyKklk-DwaeM5UmH6hKQx6lrmNMnRl3ZMby3VdfvuKT9i0J1Mi-dwYPnkkB81PJxiy76tcgiXhMqA0OB1qb5-Xj7jhgs9ch1vlcueYR7vEi7Ira5DxDmpqJfoTrPSvlgqrYJWPShSWT79qKVczgNQ_cGFM1YKnSLXPQ9QMB0Zejrj4fo6EX0QfiowAQXOxV9tRTRijJsxG9lKZA-x7zRZFAY7gSyLEDdAWkhEDUyU5-uUu9_wswICtlTs7atH_4j14R08644FX8OHGaUVZlcNyppocG3JfSwVKYZiB3E1V5FhXRvuqHIYb_kouf-ckkklQfQMLk3aIODHrX7Oqw5JR33aXs1owj6j4s60gBy5amuC6x1Ogey0IiTTNeeFMr2d9kmM3O2bUdB1JKhiz9tf1ztH0QXHvWPh_ROjYNcm_P8c9mKg-P7NYbM3tRjAGAfCf8udGQn92oAzSoknDTCBugrOCvvU-gKMMiJ46be3gMZxLlHlWtloFG79dBqL4onHOgsrd9u_NiSp0FCA9Zk2wAtsYH0sMIzjV7HWw8NX6N0v42-OdXF_wUP_WzjjslyQglzFS7rN8_LUFGb8h8nBJankAmTIFDeBKz6ZbhBnk2wpgZfIAfLWg4vLISDKt3P3_6JUYTBIbmzqZHmPrOWl5AlhjwPKqlX1WdP7U_Pm8oo4PYOviTKZRwDMLVUdgcTYSAt7oUPs987wIbW_rngqRWeVNnPRg0l6aKG9Xn1aXvdsch3Vcj7Xkev-uGtiR4ZUH5PJ0nUI5_vSZskJeDbj-A4VMPMP-mql_P2cEi2pUImjSx3r6rs_6ZXxMOAp_We-yt31LezaLLOCVMyWb9KvLxZCshi9WaZkA4.AVrUU0OF7JYTvhYUf7CAxQz_awRTk8FMkrCHpOxJ-rE",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 10:48:30.840 +03:30 [INF] The token request was successfully sent to "https://localhost:65460/connect/token": {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "HbtqBRkm7mPK_fL6K8tinuxovyUATlNsq_8F_BJuNu4",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 10:48:30.846 +03:30 [INF] The token response returned by "https://localhost:65460/connect/token" was successfully extracted: {
+  "error": "invalid_client",
+  "error_description": "The specified client credentials are invalid.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2055"
+}.
+2026-04-14 10:48:30.851 +03:30 [INF] The token request was rejected by the remote authorization server: {
+  "error": "invalid_client",
+  "error_description": "The specified client credentials are invalid.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2055"
+}.
+2026-04-14 10:48:30.860 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "invalid_client",
+  "error_description": "The token request was rejected by the remote server.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2147"
+}.
+2026-04-14 10:48:30.889 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0506 ms
+2026-04-14 10:51:11.762 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:51:21.388 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:51:37.374 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 10:51:37.412 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 10:51:37.462 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 10:51:37.471 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 10:51:37.550 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:51:37.564 +03:30 [INF] HTTP GET /api/auth/login responded 302 in 2769.6343 ms

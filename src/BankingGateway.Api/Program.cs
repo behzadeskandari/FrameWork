@@ -87,6 +87,8 @@ try
         {
             options.AllowAuthorizationCodeFlow();
 
+            options.DisableTokenStorage();
+
             // Development keys - REQUIRED for interactive login
             options.AddDevelopmentEncryptionCertificate();
             options.AddDevelopmentSigningCertificate();
@@ -94,7 +96,9 @@ try
             options.UseSystemNetHttp().ConfigureHttpClientHandler(handler =>
             {
                 // Only for local development to bypass SSL certificate validation
-                handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+                  handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+
+                //handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
             });
 
             options.UseAspNetCore()
@@ -104,12 +108,13 @@ try
 
             options.AddRegistration(new OpenIddictClientRegistration
             {
-                Issuer = new Uri(builder.Configuration["Jwt:Authority"] ?? "https://localhost:5010"),
+                //Issuer = new Uri(builder.Configuration["Jwt:Authority"] ?? "https://localhost:5010"),
+                Issuer = new Uri("https://localhost:65460/"),
                 //   Issuer = new Uri(builder.Configuration["OpenIddict:Issuer"] ?? "https://localhost:7001"),
-                ClientId = "bankinggateway-api",
-                ClientSecret = builder.Configuration["OpenIddict:Clients:BankingGatewayApi:Secret"]
-                    ?? "super-strong-secret-change-in-production",
-
+                ClientId = "banking-gateway",
+                //ClientSecret = builder.Configuration["OpenIddict:Clients:BankingGatewayApi:Secret"]
+                //    ?? "super-strong-secret-change-in-production",
+                ClientSecret = builder.Configuration["OpenIddict:GatewayClientSecret"],
                 RedirectUri = new Uri("https://localhost:7033/api/auth/callback"),
 
                 Scopes =
