@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace BankingGateway.IdentityServer.Controllers;
 
@@ -51,6 +52,9 @@ public sealed class AccountController : Controller
         if (!ModelState.IsValid)
             return View(model);
 
+        // Prevent open redirect attacks
+        returnUrl = Url.IsLocalUrl(returnUrl) ? returnUrl : "/";
+
         var result = await _signInManager.PasswordSignInAsync(
             model.Email,
             model.Password,
@@ -60,26 +64,42 @@ public sealed class AccountController : Controller
         if (result.Succeeded)
         {
             var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user is not null)
+            if (user != null)
             {
                 user.LastLoginAt = DateTimeOffset.UtcNow;
                 await _userManager.UpdateAsync(user);
             }
 
-            _logger.LogInformation("User '{Email}' logged in.", model.Email);
-            return LocalRedirect(returnUrl ?? "/");
+            _logger.LogInformation("User '{Email}' logged in successfully.", model.Email);
+            //return LocalRedirect(returnUrl);
+            returnUrl = Url.IsLocalUrl(returnUrl) ? returnUrl : Url.Content("~/");
+            return LocalRedirect(returnUrl);
         }
 
         if (result.IsLockedOut)
         {
             _logger.LogWarning("User '{Email}' account locked out.", model.Email);
-            ModelState.AddModelError(string.Empty, "Your account has been locked due to multiple failed login attempts. Please try again later.");
-            return View(model);
+            ModelState.AddModelError(string.Empty, "Your account has been locked out due to multiple failed attempts.");
+        }
+        else
+        {
+            ModelState.AddModelError(string.Empty, "Invalid email or password.");
         }
 
-        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
         return View(model);
     }
+
+
+    [HttpPost("activate/{userId}")]
+    public async Task<IActionResult> ActivateUser(string userId)
+    {
+        var user = await _userManager.FindByIdAsync(userId);
+        user.IsActive = true;
+        await _userManager.UpdateAsync(user);
+
+        return Ok();
+    }
+
 
     // ── POST /account/logout ───────────────────────────────────────────
 
@@ -98,12 +118,12 @@ public sealed class AccountController : Controller
 /// </summary>
 public sealed class LoginViewModel
 {
-    [System.ComponentModel.DataAnnotations.Required]
-    [System.ComponentModel.DataAnnotations.EmailAddress]
+    [Required(ErrorMessage = "Email is required")]
+    [EmailAddress(ErrorMessage = "Invalid email address")]
     public string Email { get; set; } = string.Empty;
 
-    [System.ComponentModel.DataAnnotations.Required]
-    [System.ComponentModel.DataAnnotations.DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
+    [Required(ErrorMessage = "Password is required")]
+    [DataType(DataType.Password)]
     public string Password { get; set; } = string.Empty;
 
     public bool RememberMe { get; set; }

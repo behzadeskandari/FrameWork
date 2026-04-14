@@ -149,7 +149,10 @@ try
     // ── MVC + Razor Pages ────────────────────────────────────────────
     builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
     builder.Services.AddRazorPages();
-
+    builder.Services.Configure<IdentityOptions>(options =>
+    {
+        options.SignIn.RequireConfirmedAccount = false;
+    });
     // ── Authorization policies ───────────────────────────────────────
     builder.Services.AddAuthorization(options =>
     {

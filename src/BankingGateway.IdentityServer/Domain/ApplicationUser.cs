@@ -21,11 +21,13 @@ public sealed class ApplicationUser : IdentityUser<Guid>
     [MaxLength(20)]
     public string? NationalId { get; set; }
 
-    public bool IsActive { get; set; } = true;
+    public bool IsActive { get; set; } = false;
 
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
 
     public DateTimeOffset? LastLoginAt { get; set; }
+
+    public string? OrganizationId { get; set; }
 
     public int FailedLoginCount { get; set; }
 
