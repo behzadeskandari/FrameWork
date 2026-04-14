@@ -3236,3 +3236,241 @@ Alternatively, you can disable the token storage feature by calling 'services.Ad
   "name": "admin@bankinggateway.local"
 }.
 2026-04-14 11:09:33.695 +03:30 [INF] The redirection request was successfully validated.
+2026-04-14 11:14:23.513 +03:30 [INF] Loading proxy data from config.
+2026-04-14 11:14:34.360 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 11:14:34.392 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 11:14:34.452 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 11:14:34.464 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 11:14:34.562 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 11:14:34.573 +03:30 [INF] HTTP GET /api/auth/login responded 302 in 1819.7202 ms
+2026-04-14 11:15:03.685 +03:30 [INF] The redirection request was successfully extracted: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.vpkPbGzWPv0kiEeqPTe06ks-w6y_2ZSMUMd1kprg0biodOGCk1DJM9lcCUUhdiUuIsnVb76xLLRbw_rResK_A3LumI5rR4_l_jMey9n27x_ZYgrIawPlWN4iT7L9d9yOwvYe5kI2j-gcKGbNDGLRQcWk78V5jygS8Li3cW3Xk8SfFE-dPxuhzk3xzJtn-FJDHLYXQyE_3iM_BtQxZqE4FFdgFzVNY6mNxOxvI6hRvXFIs2KESlJ6wdUXes5eQUkSdZEDFKnlHCwvkw9X-Aki3j8UouiFuIePPtGCPUo2-WyiuEY4887-zkzOTxHibGQzdLpWw0aELdD9GQlxcAIAqAJa1Fc-VIMB0DGnxq4G6gC9nKsfLoA3CK-lmaotqNBgaG_OJNy3jgldk6k5zaDWiJq1yG83EHMzxQMDIidWdrkbfgT7CPYcUZhoYjdDcKbvwrPhJhauv_MfeZbXQ7EjY8lWcThWm1qj_GheDesBlMV-Q7IHhdWeFxzVfxYIE6WxHKu9NtOQLUjxQbZb4Z2nfkZJypx1rAirie2xHCBNIphA1mwB5T8ZyM14pOqoIUGaoiumDkjyDmN9Ybtepp5bHkKecVOo6txBeH9WHusze3B4CLuRDUaAH6ZDEwnfremjxNJnOSJ2ZAQ_K3pNZPyNqO7O_n_LIRc3WFtumA3A7KM.GUJ1phoAcCHelOfF9s1Oyw.rErSp9bCUIwYJbtoVwgytZ_7pW3vRLb1KaQhTADlYuwwP2B0L7y8V0iDxM83z7_7nHDUMljXrstGTRLXvA-NW8yOW9IgWXinnmlbq4B05n-QorLjFMaedljydzgiuo6NNSML0iS6UIauAhAyYLsMBkrALC7NSNnF5fwIQT3hX-_EswZtfykfKy1rObOejG1Ux0ZTQK5gkOHd8ugRlVQELuqCdABLiVITN0VQzdPmKq2diD6njRiKjywYaajAHVbmX7qca7TLNZUpduNVZv_Or_F6BD5LwWqDpIq7Id3DSnifqdEVBAUIkSgXa2RqBymp2K-Jb3WXEiHo6y8AvbckV8eYnipO9x8dfL6juc6Km14yjNPG8qQU1RcsOONEO7Fa7q1WBydOK8f401Y7c8xmS7R3SaLiTMsEaKAdEF2nPcMxRNHJgktzj2HyoiHRrJM-Z8MeWjwCZ6I1e3WXkGzgv8XPfKe_7NuZ-RPvQyRpoTPD6XWn6BYW3SdB4dXtt2UzSsR1bdz3StYuavTfBkc4rE5F3eub1iQ_KXKYtwLxamvco8HgireDPXbyIfGnwTgT_LwCItq8-igkfpAh_9BTNEKT_Vhzd4Jz11W0HQQOJXqbuIZyE_B4IimNQ25x5IVUhpVPvgvjjSbD3A2DkF6L69uycYL12-0em132jZmm5R6ISEmXr50Rt8d_y36lifuHEif30b-x5s4_BJteiiOrLMusZR0x1Fqidf9gsLKo9hRdtlmePNAoSH-QphPuxWWkBZJ-w1rgLXiqivr5w0JbYNVPMEr-7PDZM1PD2j3dIXEKBOUxBDKtn-btSzpgPzwl8S1zdYQ6MEGWoQ_f4ceTJBcozLQloDmydooGulkygcfcpQMBbh1wEh96pi7zda2SxZxMR3_Xo07PzKI-jbJKjNwmVTRFaCnK_wycv2UjoceqQlYUeZsc__nZX5_L0U8kDuNzq2ZP7gHk9FHHqMayrrJCaaDxMHFJspH9tWfQ_ZXcbXU57NH3pCGxbj--NNSmhJaDx6CJfgZYntZFH9jTd04x4fhgD9U36PeBBF3-KunRQg8BNf21YKg7wO12ZzSGfFQ3UJ6Ct_43YPJ8SqeKploY649ozzAfzubOTNLDNPnFWqMujNa1YlM_RUqjgcRBYO2tV0g5Hhg995Dhph4P_gxoQdNT7iUtRSNUfjZkwq4IvYMuwVlUxnJUOKCJ-f68rR2uLJU7qpCX0i6A6sGy4sFZP2-6Ap-kzyxSDypKTgdioK_QSuRfyl5BHpkRr9yAYzJI0uxdYFKry0ZEI8eoHix9Qk7aUwP7PYnXLWdWLZft2jQfotqJ4f8B50NNeKHxm5SY1znUvi6pvGoBortKpN94VI40b7OcUpRHo2TSeUtP4OqMity-78g0e_-NGO2A5895AX_xaHXx19I_xkfSe65gXDAM9VMtVJUzBRWwUPppW3U657Qj1laHcTnriYrP0bkLMJlKCymGL5GqJZSUH2auqmBSiDUbJ9jskb6ymGGVNH698VrwhGOwUy6sSy51AwhN8bjvasAV2pozovPsQwPRfmThBBOGSZe07HffOQBGzElEaY777Pf3_qXnXguhW7a1WQU0fb2CEvqt-Jr57k1mxrY0KcnZ_GF6DR5CedzVXnlA3auYe-UfWjwANUi8pLVAtyBuI7ZMM4EYqSxf-0ONi1T43j1wcsn7XXA6aaIP1En2hnAFdNKF1ZJuMLsj1xNse-0_F4sh56Lw24PmDaHz299afqClKqFxD8wGvEYJky9uhf03a3f3kNgs3rJqNEKFInN0xxGuNsYMB_Bd-OzqLOMCZNEqj9yLO2fN-erOSUFpFRnfDqyPvU25ZSoMnRerC--_ICf0w3P2Sd9xl42uGxjoW1s0L8KRqTUqTmSW0kbBcRmKnkS1wHuFLoeys0U1SucCYAbtsgX6i2acdaXCVGQmZhYVhE7Q9GRrNxDRD18YN8fJwcW8NeczJTwOgf1yxqQqu_KCzvzRKIxN2EHlwI9peufl4Yg09geBye3igoFSJPIGARbDoRsud5Rn-v5jTOsTX7F0nv1ZJ5kt6a7lkJKJQl53aD0YmhTD2Zw0-_wWBKQF43or-jxzlr4teAAK3VLuVcjXnxZtwgDPXGtvbo_b1bLGzU1x2LjZuk8qllFrTmPw3EVchnCDnibi.NXixKt51aS8VS_DdpMBp1yyTYc-ha-R3uPLCxegdOA4",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 11:15:03.913 +03:30 [INF] The token request was successfully sent to "https://localhost:65460/connect/token": {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "TPme_0nFWX9z4XQsJ_fogWxAO-S1V1QAArWr7H3v0cE",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 11:15:03.920 +03:30 [INF] The token response returned by "https://localhost:65460/connect/token" was successfully extracted: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 899,
+  "scope": "openid profile email offline_access banking_api",
+  "id_token": "[redacted]",
+  "refresh_token": "[redacted]"
+}.
+2026-04-14 11:15:03.983 +03:30 [INF] The userinfo request was successfully sent to "https://localhost:65460/connect/userinfo": {}.
+2026-04-14 11:15:03.990 +03:30 [INF] The userinfo response returned by "https://localhost:65460/connect/userinfo" was successfully extracted: {
+  "sub": "844b4330-b01a-401a-8d39-08de99f74dae",
+  "email": "admin@bankinggateway.local",
+  "email_verified": true,
+  "name": "admin@bankinggateway.local"
+}.
+2026-04-14 11:15:04.010 +03:30 [INF] The redirection request was successfully validated.
+2026-04-14 11:15:27.494 +03:30 [INF] HTTP GET /api/auth/callback responded 400 in 23471.6081 ms
+2026-04-14 11:15:27.526 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0785 ms
+2026-04-14 11:17:30.003 +03:30 [INF] Loading proxy data from config.
+2026-04-14 11:17:37.777 +03:30 [INF] The configuration request was successfully sent to "https://localhost:65460/.well-known/openid-configuration": {}.
+2026-04-14 11:17:37.848 +03:30 [INF] The configuration response returned by "https://localhost:65460/.well-known/openid-configuration" was successfully extracted: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 11:17:37.923 +03:30 [INF] The JSON Web Key Set request was successfully sent to "https://localhost:65460/.well-known/jwks": {}.
+2026-04-14 11:17:37.934 +03:30 [INF] The JSON Web Key Set response returned by "https://localhost:65460/.well-known/jwks" was successfully extracted: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 11:17:38.045 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 11:17:38.057 +03:30 [INF] HTTP GET /api/auth/login responded 302 in 2004.2881 ms
+2026-04-14 11:17:58.668 +03:30 [INF] The redirection request was successfully extracted: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.LS-O4Rt54jVbW8HRb3cnrXKc_8-oAOxAVPAem7yjz3RlGPMLkSCVyc0PtA9g0tkkt_1t1Pdg1GYL5_aU6_IBH4v3U1SDVj6NtOpyXF1tSX1QmaPTK_PHMewF9NJuLHjexpXXT8yh35Q5reyPaKnr3xAf1SWKr7Wz4Ul_TOrEuChxyBMswa4mXffgAKAiyvk_NfC63dx-iV2Y8h8Ui8s4hG_Ttra6QVPs5-vcZlRsGunRESloVgB384gj0WWUlAkO_mIsiKHT5kFPwZU2DWpZIuj0oGZyzHEKmGrNw0q5gFurKz322ybWruXxS4mYf_I8mL-Jr8fIL5RsjpoXz45PrOBRjVsSVHt5S379Q8aR4UdDzRldsILAJLaOd-5Ns6r1V-ZmvHLj-72y3uO4x7Z_jHzaqKMlLojgCuMb1SaepDnkd9zkUXtxsm8mTlMLsIgFCLm2lksAg0m7c9G2hFPqrflM4i_LbFrSM028XT1LM4Vci0rRsHmAzAPyPclbMZJgkX6vIWyJupAQjoS-mULHnigwRcR4ZnbSvvEKYxlw6_h2x9CxuATr1ooJlfOAQAl4eOnCyuS0NlsnAD_-kaATVE0ZhxdQ-6iFarhhjjswjEMD4isDec9X784UA3lPd30hOkS0wxZdW5FZ7hCDFXGpqWQ1qv4-7MGkk703M6VKUZc.sTjeMU8Br-sJt7PzS1CLEw.cHjo7tRQ47btd-FMoZcY3ynQaz-mbg0GFDnWpY95K5tJkbhYQkGy748RGMoOXxq8VQFGb_TOj7us6Yw62zhwjkOu8yKKQT492NrheriVRpR7AhDoqFMdBSMo6VyVOytMHfNaM3WjgX8n5BYuKVlY3J-z2KM6nOkNiY3vAkM2xqsCxr4LdavdvU2C01hzb5irBgNzD_6Pek_rT-hCug3KQZn3lCiZbOBKv98t2Afm2aWTXwDRNcSduraHUUufun2NsRUFBDIlmcnH1ab5mlEguR-p2OBC_fl49oxpuxswETqCggbuf0kz7SFKbGvZOZ1nGgsIYh6m6akyLRRHQSqb0HG8-yB9pzzBau3KNu5qwcOXsgulXElNYb6wKsIKZpD-uMJrfD2WDxwmgjeQ-UtAc0ADdESao42h2pCTz-VAUj64mIGFRJeyFMEwIQbUlmVZPAF0Gbw6zx5PEgnIzHGzwNqKB4MdsWBvN_u56io23aPInXQwo9VJ6Qk1YVc9n0ob-SpLV8v7Fh4Rz-lkr3D81ZLgcwAC3_dSJYhKHFM6kFIUQYT7B4rOhTNLNlsDik84yATN6aMQBWsSayEqZKXxZowD3vQgUWRg_NirlKGpWBtZ9HyGzKRQSn7yEBBclbMky8qNRXDvhup4I1FYA2CDWfOgeqhYJSvXIKAmDm9H2_wLdnB76HkPLQzpQa3zMYY2G1LeozijtOsySHIpKE414TDXnzMk5Mm_IM70oCWIfRq7mu-AVbA4OD8pB_c5x38_Hq_xto3adssHDiIyb8URo5H4zCGgcrkD9n_YHIB7x-pHTDYLwu2496KlDZgmSYdLpZyBU-VTHueO2NJo5iOm_6EQGu1j80xsZuO6oDSRJ-PuulBVK6j80vkio9b1ILb8k9jEMVkjrm24GxqRlTyUzXSuW1IiQphnSAHWpRm1vgGNAvnUCfyI8Tkjo0UoKjTFf5KW6sV4Q69RXTtioHSS7TXtsYQo6uh68cLu3xcJhTgX7teg2SjjukFnN8b72OzJLPoUhZ6f8f4TOb5MtmOpuyswRlWyx57QtFIgfNywpVVUfJRhLmLmzJgptVsPPpsl7G-bXc-OgrCIUVOcNqtCwj-kGAQG4HpC0bRZusQWYYmiN_mKiQrA2ln8y9QTE4iK04RTbrOeX_p4Fhd0gONnzxr_CcSS1MHWPTxENzrb6IxCQsMFsS49tyr_mVsdqnkGXiF955eQFgWJf5uZknuSuX8DMAohZdQv6Kuliy94Zsf5owO-aBnqLg_xhDktJPCHhy3yr1u5-2kGHOVP7caLb1dEFVFS34rTE2nXLfy7_n8G-k6oRPnyxGPGfXB3ptSsPdhhN1QVLf6uLUlybkirOBAARqXOT--_Cav8WTx20tfDUGtll-cBHE03RaLvDFDHEnkwZ8_ut_8hebdJ9y0LcxxJTipOxapaN9Zn_OewK0ql9sF5zcF1Q0vkbAymBdDAexTpz5QzqeXxfRS2QbocfDBrvCL21fvySoxu1-zjlWf-V-Z9poWcr3FBcYcQHMN0TYp7g_gFYYfCKsD4ouumcOil0JDbh2dp4ttXsHep_hKvXZHpxqfJODRap8oHtiyeyddX2tzH4lQTuhXfoKrflb14UgFMzO2BN6emQmBGvQWExnaPWcFpIzR3WFJ6UND0mcTlw_yXb65rrfD9oBMLgfn4jVk8kMgtA5vAPBMZbhnlf2bRvlr9Q0XlFzZiUsOj6gNvYZQCPKDiD6109QYbFsoQ5AQzm9CDSMXKVQdQ2aDtvZI1kyPZJfnwRUU4Ekdo8_6XXnLHw80Jsb9iK7jilWh94PZaWLe-dQxLRhxs77vhvGAAIzf72jueGDiMBUbsfDQch1DYd-F-TUI9lTGLSb9s-agNLVJM4ZLiu27xmmd-t0Ki71GqtEJzU_fxSGwKJGyzcnYVe0euUFQeGRMTGocf8PyyhP_xnssO5GNWvSVKEIAhXA5Sn1lzAId0XQjNoSJefzmgcGUazCkgjdjYrPlDkVQ7U6ucFxQ7tQphcnyFdQPWDYCVeIrK76N-Q26j8cRRQCyxI61LQb2EqT63dVe_FiRBNSyra2ZrIph6igmSURUeUFT0JJ_NJpLelPCbawLkjQpP2LA8qGRTVpYYfRqnW_ZgrpmlQxOdrA_1xYMAgUEQ7gMm1Ml0GlyuT4Qh.cD4YHTNU9c6zAY1Ys_qQXZcOtIeT2WrmeEYLlJ5D4SE",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 11:17:58.946 +03:30 [INF] The token request was successfully sent to "https://localhost:65460/connect/token": {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "KThe2eBFT7DXmNb_3ZokGmJNB5kF_eeyZODLfPzcnOE",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 11:17:58.951 +03:30 [INF] The token response returned by "https://localhost:65460/connect/token" was successfully extracted: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 899,
+  "scope": "openid profile email offline_access banking_api",
+  "id_token": "[redacted]",
+  "refresh_token": "[redacted]"
+}.
+2026-04-14 11:17:59.028 +03:30 [INF] The userinfo request was successfully sent to "https://localhost:65460/connect/userinfo": {}.
+2026-04-14 11:17:59.040 +03:30 [INF] The userinfo response returned by "https://localhost:65460/connect/userinfo" was successfully extracted: {
+  "sub": "844b4330-b01a-401a-8d39-08de99f74dae",
+  "email": "admin@bankinggateway.local",
+  "email_verified": true,
+  "name": "admin@bankinggateway.local"
+}.
+2026-04-14 11:17:59.053 +03:30 [INF] The redirection request was successfully validated.
+2026-04-14 11:18:04.378 +03:30 [INF] HTTP GET /api/auth/callback responded 400 in 5316.6621 ms
+2026-04-14 11:18:04.417 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0616 ms

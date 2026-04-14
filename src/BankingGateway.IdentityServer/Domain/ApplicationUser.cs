@@ -27,7 +27,6 @@ public sealed class ApplicationUser : IdentityUser<Guid>
 
     public DateTimeOffset? LastLoginAt { get; set; }
 
-    public string? OrganizationId { get; set; }
 
     public int FailedLoginCount { get; set; }
 
