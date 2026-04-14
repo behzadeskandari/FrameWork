@@ -91,7 +91,11 @@ try
             options.AddDevelopmentEncryptionCertificate();
             options.AddDevelopmentSigningCertificate();
 
-            options.UseSystemNetHttp();
+            options.UseSystemNetHttp().ConfigureHttpClientHandler(handler =>
+            {
+                // Only for local development to bypass SSL certificate validation
+                handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
+            });
 
             options.UseAspNetCore()
                    .EnableRedirectionEndpointPassthrough()
@@ -100,13 +104,13 @@ try
 
             options.AddRegistration(new OpenIddictClientRegistration
             {
-                Issuer = new Uri(builder.Configuration["Jwt:Authority"] ?? "https://localhost:7001"),
+                Issuer = new Uri(builder.Configuration["Jwt:Authority"] ?? "https://localhost:5010"),
                 //   Issuer = new Uri(builder.Configuration["OpenIddict:Issuer"] ?? "https://localhost:7001"),
                 ClientId = "bankinggateway-api",
                 ClientSecret = builder.Configuration["OpenIddict:Clients:BankingGatewayApi:Secret"]
                     ?? "super-strong-secret-change-in-production",
 
-                RedirectUri = new Uri("https://localhost:5001/api/auth/callback"),
+                RedirectUri = new Uri("https://localhost:7033/api/auth/callback"),
 
                 Scopes =
                 {
