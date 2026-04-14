@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using OpenIddict.Abstractions;
 using OpenIddict.Server.AspNetCore;
 using System.Security.Claims;
+using static OpenIddict.Abstractions.OpenIddictConstants;
 
 namespace BankingGateway.IdentityServer.Controllers;
 
@@ -179,50 +180,84 @@ public sealed class AuthorizationController : Controller
 
     // ── /connect/userinfo ──────────────────────────────────────────────
 
+    //[Authorize(AuthenticationSchemes = OpenIddictServerAspNetCoreDefaults.AuthenticationScheme)]
+    //[HttpGet("~/connect/userinfo")]
+    //[HttpPost("~/connect/userinfo")]
+    //[IgnoreAntiforgeryToken]
+    //public async Task<IActionResult> Userinfo()
+    //{
+    //    var user = await _userManager.GetUserAsync(User);
+    //    if (user is null)
+    //    {
+    //        return Challenge(
+    //            authenticationSchemes: OpenIddictServerAspNetCoreDefaults.AuthenticationScheme,
+    //            properties: new AuthenticationProperties(new Dictionary<string, string?>
+    //            {
+    //                [OpenIddictServerAspNetCoreConstants.Properties.Error] = OpenIddictConstants.Errors.InvalidToken,
+    //                [OpenIddictServerAspNetCoreConstants.Properties.ErrorDescription] = "The specified access token is bound to an account that no longer exists."
+    //            }));
+    //    }
+
+    //    var claims = new Dictionary<string, object>(StringComparer.Ordinal)
+    //    {
+    //        [OpenIddictConstants.Claims.Subject] = await _userManager.GetUserIdAsync(user)
+    //    };
+
+    //    if (User.HasScope(OpenIddictConstants.Scopes.Email))
+    //    {
+    //        claims[OpenIddictConstants.Claims.Email] = await _userManager.GetEmailAsync(user) ?? string.Empty;
+    //        claims[OpenIddictConstants.Claims.EmailVerified] = user.EmailConfirmed;
+    //    }
+
+    //    if (User.HasScope(OpenIddictConstants.Scopes.Profile))
+    //    {
+    //        claims[OpenIddictConstants.Claims.Name] = user.UserName ?? string.Empty;
+    //        claims["given_name"] = user.FirstName;
+    //        claims["family_name"] = user.LastName;
+    //    }
+
+    //    if (User.HasScope(OpenIddictConstants.Scopes.Roles))
+    //    {
+    //        claims[OpenIddictConstants.Claims.Role] = await _userManager.GetRolesAsync(user);
+    //    }
+
+    //    return Ok(claims);
+    //}
+
+
     [Authorize(AuthenticationSchemes = OpenIddictServerAspNetCoreDefaults.AuthenticationScheme)]
-    [HttpGet("~/connect/userinfo")]
-    [HttpPost("~/connect/userinfo")]
+    [HttpGet("~/connect/userinfo"), HttpPost("~/connect/userinfo")]
     [IgnoreAntiforgeryToken]
+    [Produces("application/json")]
     public async Task<IActionResult> Userinfo()
     {
         var user = await _userManager.GetUserAsync(User);
-        if (user is null)
-        {
-            return Challenge(
-                authenticationSchemes: OpenIddictServerAspNetCoreDefaults.AuthenticationScheme,
-                properties: new AuthenticationProperties(new Dictionary<string, string?>
-                {
-                    [OpenIddictServerAspNetCoreConstants.Properties.Error] = OpenIddictConstants.Errors.InvalidToken,
-                    [OpenIddictServerAspNetCoreConstants.Properties.ErrorDescription] = "The specified access token is bound to an account that no longer exists."
-                }));
-        }
+        if (user == null) return Challenge(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
 
         var claims = new Dictionary<string, object>(StringComparer.Ordinal)
         {
-            [OpenIddictConstants.Claims.Subject] = await _userManager.GetUserIdAsync(user)
+            [Claims.Subject] = await _userManager.GetUserIdAsync(user)
         };
 
-        if (User.HasScope(OpenIddictConstants.Scopes.Email))
+        if (User.HasScope(Scopes.Email))
         {
-            claims[OpenIddictConstants.Claims.Email] = await _userManager.GetEmailAsync(user) ?? string.Empty;
-            claims[OpenIddictConstants.Claims.EmailVerified] = user.EmailConfirmed;
+            claims[Claims.Email] = await _userManager.GetEmailAsync(user) ?? string.Empty;
+            claims[Claims.EmailVerified] = await _userManager.IsEmailConfirmedAsync(user);
         }
 
-        if (User.HasScope(OpenIddictConstants.Scopes.Profile))
+        if (User.HasScope(Scopes.Profile))
         {
-            claims[OpenIddictConstants.Claims.Name] = user.UserName ?? string.Empty;
-            claims["given_name"] = user.FirstName;
-            claims["family_name"] = user.LastName;
+            claims[Claims.Name] = user.UserName ?? string.Empty;
+            // Include any custom profile data here
         }
 
-        if (User.HasScope(OpenIddictConstants.Scopes.Roles))
+        if (User.HasScope(Scopes.Roles))
         {
-            claims[OpenIddictConstants.Claims.Role] = await _userManager.GetRolesAsync(user);
+            claims[Claims.Role] = await _userManager.GetRolesAsync(user);
         }
 
         return Ok(claims);
     }
-
     // ── /connect/logout ────────────────────────────────────────────────
 
     [HttpGet("~/connect/logout")]

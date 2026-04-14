@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using OpenIddict.Abstractions;
 using Serilog;
 using System.Security.Cryptography.X509Certificates;
+using static OpenIddict.Abstractions.OpenIddictConstants;
 
 // ── Serilog bootstrap ──────────────────────────────────────────────
 Log.Logger = new LoggerConfiguration()
@@ -152,6 +153,9 @@ try
     builder.Services.Configure<IdentityOptions>(options =>
     {
         options.SignIn.RequireConfirmedAccount = false;
+        options.ClaimsIdentity.UserIdClaimType = Claims.Subject;
+        options.ClaimsIdentity.UserNameClaimType = Claims.Name;
+        options.ClaimsIdentity.RoleClaimType = Claims.Role;
     });
     // ── Authorization policies ───────────────────────────────────────
     builder.Services.AddAuthorization(options =>
