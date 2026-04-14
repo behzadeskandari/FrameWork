@@ -48,32 +48,22 @@ public sealed class AccountController : Controller
     public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl = null)
     {
         ViewData["ReturnUrl"] = returnUrl;
+        if (!ModelState.IsValid) return View(model);
 
-        if (!ModelState.IsValid)
-            return View(model);
-
-        // Prevent open redirect attacks
-        returnUrl = Url.IsLocalUrl(returnUrl) ? returnUrl : "/";
-
-        var result = await _signInManager.PasswordSignInAsync(
-            model.Email,
-            model.Password,
-            model.RememberMe,
-            lockoutOnFailure: true);
+        var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, true);
 
         if (result.Succeeded)
         {
-            var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user != null)
+            _logger.LogInformation("User '{Email}' logged in successfully.", model.Email);
+
+            // FIX: Allow the OIDC authorize path even if IsLocalUrl fails due to absolute paths
+            if (!string.IsNullOrEmpty(returnUrl) &&
+               (Url.IsLocalUrl(returnUrl) || returnUrl.Contains("/connect/authorize")))
             {
-                user.LastLoginAt = DateTimeOffset.UtcNow;
-                await _userManager.UpdateAsync(user);
+                return Redirect(returnUrl);
             }
 
-            _logger.LogInformation("User '{Email}' logged in successfully.", model.Email);
-            //return LocalRedirect(returnUrl);
-            returnUrl = Url.IsLocalUrl(returnUrl) ? returnUrl : Url.Content("~/");
-            return LocalRedirect(returnUrl);
+            return RedirectToAction("Index", "Home");
         }
 
         if (result.IsLockedOut)

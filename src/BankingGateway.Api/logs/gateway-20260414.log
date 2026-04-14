@@ -1172,3 +1172,149 @@ System.InvalidOperationException: IDX20803: Unable to obtain configuration from:
   "error_description": "The mandatory 'Content-Type' header is missing.",
   "error_uri": "https://documentation.openiddict.com/errors/ID2081"
 }.
+2026-04-14 10:01:46.430 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:02:09.286 +03:30 [INF] The redirection request was successfully extracted: {}.
+2026-04-14 10:02:09.305 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "missing_token",
+  "error_description": "The security token is missing.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2000"
+}.
+2026-04-14 10:02:16.732 +03:30 [INF] The request was rejected because the mandatory 'Content-Type' header was missing.
+2026-04-14 10:02:16.739 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "invalid_request",
+  "error_description": "The mandatory 'Content-Type' header is missing.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2081"
+}.
+2026-04-14 10:08:19.208 +03:30 [ERR] HTTP GET /api/auth/login responded 500 in 11939.7527 ms
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at OpenIddict.Client.OpenIddictClientHandlers.ResolveClientRegistrationFromChallengeContext.HandleAsync(ProcessChallengeContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ChallengeResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-04-14 10:08:19.347 +03:30 [ERR] Unhandled exception. CorrelationId=5ae05619d60e4011afdfbc539f3954c3
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at OpenIddict.Client.OpenIddictClientHandlers.ResolveClientRegistrationFromChallengeContext.HandleAsync(ProcessChallengeContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ChallengeResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|28_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at BankingGateway.Api.Middleware.RequestSizeLimitMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\RequestSizeLimitMiddleware.cs:line 32
+   at BankingGateway.Api.Middleware.IpFilteringMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\IpFilteringMiddleware.cs:line 25
+   at BankingGateway.Api.Middleware.SecurityHeadersMiddleware.InvokeAsync(HttpContext context) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\SecurityHeadersMiddleware.cs:line 35
+   at BankingGateway.Api.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context, ICorrelationIdProvider correlationIdProvider) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\CorrelationIdMiddleware.cs:line 29
+   at BankingGateway.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, ICorrelationIdProvider correlationIdProvider) in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23
+2026-04-14 10:08:42.803 +03:30 [ERR] A network error occured while communicating with the remote HTTP server.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:5010)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenIddict.Client.SystemNetHttp.OpenIddictClientSystemNetHttpHandlers.SendHttpRequest`1.HandleAsync(TContext context)
+2026-04-14 10:08:52.941 +03:30 [INF] Loading proxy data from config.
+2026-04-14 10:09:18.697 +03:30 [INF] The request was rejected because the mandatory 'Content-Type' header was missing.
+2026-04-14 10:09:18.714 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "invalid_request",
+  "error_description": "The mandatory 'Content-Type' header is missing.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2081"
+}.
+2026-04-14 10:09:25.369 +03:30 [INF] The redirection request was successfully extracted: {}.
+2026-04-14 10:09:25.380 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "missing_token",
+  "error_description": "The security token is missing.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2000"
+}.
+2026-04-14 10:10:21.385 +03:30 [ERR] A network error occured while communicating with the remote HTTP server.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:5010)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenIddict.Client.SystemNetHttp.OpenIddictClientSystemNetHttpHandlers.SendHttpRequest`1.HandleAsync(TContext context)
+2026-04-14 10:10:21.409 +03:30 [ERR] An error occurred while retrieving the configuration of the remote authorization server.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'https://localhost:5010/.well-known/openid-configuration'. Will retry at '01/01/0001 00:00:00 +00:00'. Exception: 'OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while sending the configuration request.\r\n  Error: server_error\r\n  Error description: An error occurred while communicating with the remote HTTP server.\r\n  Error URI: https://documentation.openiddict.com/errors/ID2136\r\n   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__ApplyConfigurationRequestAsync|1>d.MoveNext()\r\n--- End of stack trace from previous location ---\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)\r\n   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)\r\n   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)'.
+ ---> OpenIddict.Abstractions.OpenIddictExceptions+ProtocolException: An error occurred while sending the configuration request.
+  Error: server_error
+  Error description: An error occurred while communicating with the remote HTTP server.
+  Error URI: https://documentation.openiddict.com/errors/ID2136
+   at OpenIddict.Client.OpenIddictClientService.<>c__DisplayClass20_0.<<GetConfigurationAsync>g__ApplyConfigurationRequestAsync|1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientService.GetConfigurationAsync(OpenIddictClientRegistration registration, Uri uri, CancellationToken cancellationToken)
+   at OpenIddict.Client.OpenIddictClientRetriever.Microsoft.IdentityModel.Protocols.IConfigurationRetriever<OpenIddict.Abstractions.OpenIddictConfiguration>.GetConfigurationAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationNonBlockingAsync(CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at OpenIddict.Client.OpenIddictClientHandlers.ResolveClientRegistrationFromChallengeContext.HandleAsync(ProcessChallengeContext context)
+2026-04-14 10:10:21.416 +03:30 [INF] The response was successfully returned as a plain-text document: {
+  "error": "server_error",
+  "error_description": "The remote authorization server is currently unavailable or returned an invalid configuration.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2170"
+}.
+2026-04-14 10:10:21.424 +03:30 [INF] AuthenticationScheme: OpenIddict.Client.AspNetCore was challenged.
+2026-04-14 10:10:21.433 +03:30 [INF] HTTP GET /api/auth/login responded 400 in 51082.8485 ms

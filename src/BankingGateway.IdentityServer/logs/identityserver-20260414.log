@@ -757,3 +757,27 @@ Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
 2026-04-14 09:59:41.640 +03:30 [INF] HTTP GET / responded 200 in 1.4699 ms
 2026-04-14 09:59:41.646 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
 2026-04-14 09:59:41.651 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:01:52.863 +03:30 [INF] HTTP GET / responded 200 in 1599.2913 ms
+2026-04-14 10:01:52.914 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:01:52.935 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:01:52.951 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1291 ms
+2026-04-14 10:01:58.527 +03:30 [INF] HTTP GET /Account/Login responded 200 in 2789.5992 ms
+2026-04-14 10:01:58.531 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:01:58.536 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:02:02.703 +03:30 [INF] User 'admin@bankinggateway.local' logged in successfully.
+2026-04-14 10:02:02.716 +03:30 [INF] HTTP POST /Account/Login responded 302 in 1831.4785 ms
+2026-04-14 10:02:02.733 +03:30 [INF] HTTP GET / responded 200 in 1.5026 ms
+2026-04-14 10:02:02.737 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:02:02.743 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:09:02.509 +03:30 [INF] HTTP GET / responded 200 in 1691.0282 ms
+2026-04-14 10:09:02.575 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:09:02.582 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:09:02.601 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1147 ms
+2026-04-14 10:09:08.601 +03:30 [INF] HTTP GET /Account/Login responded 200 in 2443.5630 ms
+2026-04-14 10:09:08.605 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:09:08.609 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 10:09:11.963 +03:30 [INF] User 'admin@bankinggateway.local' logged in successfully.
+2026-04-14 10:09:11.973 +03:30 [INF] HTTP POST /Account/Login responded 302 in 1577.3543 ms
+2026-04-14 10:09:11.985 +03:30 [INF] HTTP GET / responded 200 in 1.0266 ms
+2026-04-14 10:09:11.988 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 10:09:11.991 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
