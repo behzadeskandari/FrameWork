@@ -22,10 +22,11 @@ namespace BankingGateway.Api.Controllers
         }
 
 
-        [HttpGet("callback"), HttpPost("callback")]
-        [IgnoreAntiforgeryToken]
+        [HttpGet("callback")]
+        [HttpPost("callback")]
         public async Task<IActionResult> Callback()
         {
+            _logger.LogInformation("Callback hit. Path: {Path}", HttpContext.Request.Path);
             // If this is null, the request didn't come from the Auth Server or was invalid.
             var response = HttpContext.GetOpenIddictClientResponse();
             if (response is null)

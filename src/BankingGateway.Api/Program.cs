@@ -67,7 +67,7 @@ try
         options.SlidingExpiration = true;
         options.Cookie.HttpOnly = true;
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-        options.Cookie.SameSite = SameSiteMode.Strict;
+        options.Cookie.SameSite = SameSiteMode.Lax;
     });
 
     // ── OpenTelemetry ───────────────────────────────────────────────
@@ -189,18 +189,30 @@ try
     {
         options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
     });
+    builder.Services.Configure<CookiePolicyOptions>(options =>
+    {
+        // This allows the correlation cookie to be sent back after 
+        // the redirect from the Identity Server.
+        options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
+        options.OnAppendCookie = cookieContext =>
+          new Helper().CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
+        options.OnDeleteCookie = cookieContext =>
+          new Helper().CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
+    });
+
 
     // ═════════════════════════════════════════════════════════════════
     var app = builder.Build();
 
     // ── Middleware Pipeline ─────────────────────────────────────────
     app.UseForwardedHeaders();
+    app.UseHttpsRedirection();
     app.UseMiddleware<ExceptionHandlingMiddleware>();
     app.UseMiddleware<CorrelationIdMiddleware>();
     app.UseWhen(ctx => !ctx.Request.Path.StartsWithSegments("/swagger"),
         appBuilder => appBuilder.UseMiddleware<SecurityHeadersMiddleware>());
 
-
+    // ... and in the middleware pipeline:
     app.UseRouting();
     app.UseCors(); // If needed
 
@@ -210,14 +222,13 @@ try
     if (!app.Environment.IsDevelopment())
         app.UseHsts();
 
-    app.UseHttpsRedirection();
 
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
+    app.UseCookiePolicy();
     app.UseRateLimiter();
     app.UseAuthentication();
     app.UseAuthorization();
@@ -470,3 +481,16 @@ public partial class Program { }
 //}
 
 //public partial class Program { }
+
+public class Helper
+{
+    public void CheckSameSite(HttpContext httpContext, CookieOptions options)
+    {
+        if (options.SameSite == SameSiteMode.None)
+        {
+            var userAgent = httpContext.Request.Headers["User-Agent"].ToString();
+            options.Secure = true;
+            // Add logic here to check if browser supports SameSite=None if necessary
+        }
+    }
+}
