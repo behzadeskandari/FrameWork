@@ -20,6 +20,7 @@ using OpenTelemetry.Trace;
 using Serilog;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.HttpOverrides;
 
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
@@ -94,11 +95,13 @@ try
 
             options.UseAspNetCore()
                    .EnableRedirectionEndpointPassthrough()
+                   .EnablePostLogoutRedirectionEndpointPassthrough()
                    .DisableTransportSecurityRequirement(); // Only for development
 
             options.AddRegistration(new OpenIddictClientRegistration
             {
-                Issuer = new Uri(builder.Configuration["OpenIddict:Issuer"] ?? "https://localhost:7001"),
+                Issuer = new Uri(builder.Configuration["Jwt:Authority"] ?? "https://localhost:7001"),
+                //   Issuer = new Uri(builder.Configuration["OpenIddict:Issuer"] ?? "https://localhost:7001"),
                 ClientId = "bankinggateway-api",
                 ClientSecret = builder.Configuration["OpenIddict:Clients:BankingGatewayApi:Secret"]
                     ?? "super-strong-secret-change-in-production",
@@ -172,10 +175,17 @@ try
         name: "identityserver",
         failureStatus: Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Degraded);
 
+
+    builder.Services.Configure<ForwardedHeadersOptions>(options =>
+    {
+        options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    });
+
     // ═════════════════════════════════════════════════════════════════
     var app = builder.Build();
 
     // ── Middleware Pipeline ─────────────────────────────────────────
+    app.UseForwardedHeaders();
     app.UseMiddleware<ExceptionHandlingMiddleware>();
     app.UseMiddleware<CorrelationIdMiddleware>();
     app.UseWhen(ctx => !ctx.Request.Path.StartsWithSegments("/swagger"),

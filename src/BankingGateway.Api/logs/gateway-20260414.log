@@ -1040,3 +1040,75 @@ System.InvalidOperationException: A grant type must be specified when triggering
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
    at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-04-14 09:40:08.412 +03:30 [ERR] Unhandled exception. CorrelationId=00df258198404b97bb4a1b429e2fb0f5
+System.InvalidOperationException: A grant type must be specified when triggering authentication demands from endpoints that are not managed by the OpenIddict client stack. This error may also indicate that the redirection endpoint was not correctly enabled in the OpenIddict client options.
+   at OpenIddict.Client.OpenIddictClientHandlers.ValidateAuthenticationDemand.HandleAsync(ProcessAuthenticationContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at BankingGateway.Api.Controllers.AuthController.Callback()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at BankingGateway.Api.Middleware.RequestSizeLimitMiddleware.InvokeAsync(HttpContext context)
+   at BankingGateway.Api.Middleware.IpFilteringMiddleware.InvokeAsync(HttpContext context)
+   at BankingGateway.Api.Middleware.SecurityHeadersMiddleware.InvokeAsync(HttpContext context)
+   at BankingGateway.Api.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context, ICorrelationIdProvider correlationIdProvider)
+   at BankingGateway.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, ICorrelationIdProvider correlationIdProvider)
+2026-04-14 09:40:53.098 +03:30 [INF] Loading proxy data from config.
+2026-04-14 09:41:24.759 +03:30 [ERR] HTTP POST /api/auth/callback responded 500 in 3395.2653 ms
+System.InvalidOperationException: A grant type must be specified when triggering authentication demands from endpoints that are not managed by the OpenIddict client stack. This error may also indicate that the redirection endpoint was not correctly enabled in the OpenIddict client options.
+   at OpenIddict.Client.OpenIddictClientHandlers.ValidateAuthenticationDemand.HandleAsync(ProcessAuthenticationContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at BankingGateway.Api.Controllers.AuthController.Callback() in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Controllers\HomeController.cs:line 67
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-04-14 09:43:13.924 +03:30 [INF] Loading proxy data from config.
+2026-04-14 09:44:02.313 +03:30 [INF] HTTP GET /api/auth/login responded 404 in 0.4555 ms
+2026-04-14 09:44:17.163 +03:30 [ERR] HTTP POST /api/auth/callback responded 500 in 3821.7587 ms
+System.InvalidOperationException: A grant type must be specified when triggering authentication demands from endpoints that are not managed by the OpenIddict client stack. This error may also indicate that the redirection endpoint was not correctly enabled in the OpenIddict client options.
+   at OpenIddict.Client.OpenIddictClientHandlers.ValidateAuthenticationDemand.HandleAsync(ProcessAuthenticationContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.OpenIddictClientDispatcher.DispatchAsync[TContext](TContext context)
+   at OpenIddict.Client.AspNetCore.OpenIddictClientAspNetCoreHandler.HandleAuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at BankingGateway.Api.Controllers.AuthController.Callback() in D:\repo\FrameWorkl\FrameWork\src\BankingGateway.Api\Controllers\HomeController.cs:line 79
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)

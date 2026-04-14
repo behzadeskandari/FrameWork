@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -64,25 +65,30 @@ namespace BankingGateway.Api.Controllers
             //return Redirect("/api/auth/success");
             //// Alternative for API-only: return Ok(new { message = "Login successful", claims });
             // Retrieve the result specifically from the OpenIddict Client handler
+            var response = HttpContext.GetOpenIddictClientResponse();
+            if (response is not null && !string.IsNullOrEmpty(response.Error))
+            {
+                return BadRequest(new
+                {
+                    error = response.Error,
+                    description = response.ErrorDescription
+                });
+            }
+
+            // 2. Attempt authentication
             var result = await HttpContext.AuthenticateAsync(OpenIddictClientAspNetCoreDefaults.AuthenticationScheme);
 
-            if (result.Principal is null) return BadRequest("Invalid login.");
-
-            // Task 3: Capture tokens to pass to other apps
-            var props = new AuthenticationProperties { IsPersistent = true };
-
-            // This allows you to call 'HttpContext.GetTokenAsync("access_token")' later
-            var tokens = new List<AuthenticationToken>();
-            if (result.Properties?.GetTokenValue("access_token") is string token)
+            // If result.Succeeded is false, OpenIddict didn't find the 'code' or 'state'
+            if (!result.Succeeded || result.Principal is null)
             {
-                tokens.Add(new AuthenticationToken { Name = "access_token", Value = token });
+                return BadRequest(new { error = "OIDC process failed. Ensure the Redirect URI matches exactly." });
             }
-            props.StoreTokens(tokens);
 
+            // 3. Sign in to your local Cookie (Task 3 requirement)
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 result.Principal,
-                props);
+                new AuthenticationProperties { IsPersistent = true });
 
             return Redirect("/api/auth/success");
         }
