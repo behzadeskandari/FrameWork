@@ -19,7 +19,7 @@ Log.Logger = new LoggerConfiguration()
 try
 {
     var builder = WebApplication.CreateBuilder(args);
-
+    Console.WriteLine($"Content Root: {builder.Environment.ContentRootPath}");
     // ── Serilog ─────────────────────────────────────────────────────
     builder.Host.UseSerilog((ctx, lc) => lc
         .ReadFrom.Configuration(ctx.Configuration)
@@ -48,7 +48,7 @@ try
     builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
         {
             // Password policy — banking-grade
-            options.Password.RequiredLength = 12;
+            options.Password.RequiredLength = 8;
             options.Password.RequireDigit = true;
             options.Password.RequireLowercase = true;
             options.Password.RequireUppercase = true;
@@ -147,7 +147,7 @@ try
         });
 
     // ── MVC + Razor Pages ────────────────────────────────────────────
-    builder.Services.AddControllersWithViews();
+    builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
     builder.Services.AddRazorPages();
 
     // ── Authorization policies ───────────────────────────────────────
