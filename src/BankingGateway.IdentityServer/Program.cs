@@ -2,6 +2,7 @@
 
 using BankingGateway.IdentityServer.Data;
 using BankingGateway.IdentityServer.Domain;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OpenIddict.Abstractions;
@@ -166,7 +167,16 @@ try
         options.AddPolicy("WriteAccess", p => p.RequireRole("Admin", "Writer"));
         options.AddPolicy("AuditAccess", p => p.RequireRole("Admin", "Auditor"));
     });
+    var sharedKeyPath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", "..", "SharedKeys"));
 
+    if (!Directory.Exists(sharedKeyPath))
+    {
+        Directory.CreateDirectory(sharedKeyPath);
+    }
+
+    builder.Services.AddDataProtection()
+        .PersistKeysToFileSystem(new DirectoryInfo(sharedKeyPath))
+        .SetApplicationName("BankingApp-Common-Context");
     // ════════════════════════════════════════════════════════════════
     var app = builder.Build();
 

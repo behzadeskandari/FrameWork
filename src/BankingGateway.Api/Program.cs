@@ -21,6 +21,7 @@ using Serilog;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.DataProtection;
 
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
@@ -67,7 +68,7 @@ try
         options.SlidingExpiration = true;
         options.Cookie.HttpOnly = true;
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-        options.Cookie.SameSite = SameSiteMode.Lax;
+        options.Cookie.SameSite = SameSiteMode.None;
     });
 
     // ── OpenTelemetry ───────────────────────────────────────────────
@@ -200,12 +201,22 @@ try
           new Helper().CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
     });
 
+    var sharedKeyPath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", "..", "SharedKeys"));
 
+    if (!Directory.Exists(sharedKeyPath))
+    {
+        Directory.CreateDirectory(sharedKeyPath);
+    }
+
+    builder.Services.AddDataProtection()
+        .PersistKeysToFileSystem(new DirectoryInfo(sharedKeyPath))
+        .SetApplicationName("BankingApp-Common-Context");
     // ═════════════════════════════════════════════════════════════════
     var app = builder.Build();
 
     // ── Middleware Pipeline ─────────────────────────────────────────
     app.UseForwardedHeaders();
+    app.UseCookiePolicy();
     app.UseHttpsRedirection();
     app.UseMiddleware<ExceptionHandlingMiddleware>();
     app.UseMiddleware<CorrelationIdMiddleware>();
@@ -228,7 +239,6 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-    app.UseCookiePolicy();
     app.UseRateLimiter();
     app.UseAuthentication();
     app.UseAuthorization();

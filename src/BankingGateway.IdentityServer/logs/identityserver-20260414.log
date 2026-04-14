@@ -4436,3 +4436,476 @@ Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
 }.
 2026-04-14 12:10:57.825 +03:30 [INF] The userinfo request was successfully validated.
 2026-04-14 12:10:57.832 +03:30 [INF] HTTP GET /connect/userinfo responded 200 in 2.4829 ms
+2026-04-14 12:17:03.849 +03:30 [WRN] No XML encryptor configured. Key {c9cc9b0c-4d8e-4d75-a480-822ed9538da6} may be persisted to storage in unencrypted form.
+2026-04-14 12:17:12.844 +03:30 [INF] HTTP GET / responded 200 in 1575.2819 ms
+2026-04-14 12:17:12.855 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 12:17:12.860 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 12:17:12.899 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1758 ms
+2026-04-14 12:17:38.277 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 12:17:38.286 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 12:17:38.290 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 12:17:38.301 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 12:17:38.385 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 12:17:38.391 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 12:17:38.396 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 12:17:38.417 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 12:17:38.530 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 12:17:38.543 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "2shUXaUQdn7n0TvRqxWhYoaNka6TEDgk1DtoQZ0s1uE",
+  "code_challenge": "H39BIcOxueGTLawFzZI4SODP2ouCvUCCTX4-DYc2s0Q",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.fnTSuHhDuqNgiDBgeMyfJsX_kUqfDl1a7MTuBM1JXx2sPaUNxDGbAtuN3K7c5wKS9MVRy9HvOgFpwm4KnJA9oFJhw8D6YmYOrAlm1u4YPJSMa9NGN7Y7rbZcscsFhx40lITfo3noh86u54UqmLTVHkI9ooBJ_QkzKV_5INh54R5uKXn_9iVvLOCb9l-CQqZnULoZ2XPbCLxSG-r7pMYSO_UHcj6iI-N7-4DNLhKt-bMyoZDIYGdBWMf8hVIhBDrYBXMgZEwEs0GRhHvK_mSv_lXJaM0fhAtkBWrNhuVAv5dlyf8lZFgQfAGHLBZSNC0FMZLxfA-a8bAJjIJxV_FhnE-Nx_9OKwTRxyWQ8cNHOwN3qDI60VatXXytJ9YHwG6asJMCtYon_CrBRHpXxFG_TYJa3jIO_0JeECTxtB_P0Alr4vidTgZYObj9tsexIuhKliGzEGBNMZgYzrxBAEE7xMYUKgO-x5vpyQ9dxMvLghlDDA61HIstjik03NZd21dmm3PsZRIV-isz2lnQEDb9HdC-8cly1KYUTEXMERwVHtpW05iOC0Gw6K4CAr37LW7Bk-1HuCK-xfzTC4yIJKFzut1eGgtQrDsxiLv05ChtKt8jDx8bfU27IctaPGX-SDI4_c5vovTodzNyPo5NUa5BZuEgvRalaqBStF2PIKIXPtY.WBteo8uxJTSvgClwQqr2KA.Vmm0LfybfgW63CHkQi0GpdD-E3Wu4GEZrN_fndbTh9H1JI_E6xkG0NXPdSHegljJgt0B0cFa3PGMnMQI7pV5uDTUghwUDU17jMIO6IXTCUiHJvlLcG0A1pdqCtU3zsIF8EAljLn2oCLB1O7FyOJnJHDcIsGv15CjzqYai4GZDgCRqwyT4vqLwwdO4TwpfK7TFoBfK83mHc4RW2t3MpiZ_lYAGELQ0ftHpGfONs3Jckd743eidQ8XMbfTcfbe2vlnNha2ZD4lt6_xw92bTXq8xq0OgstlymVV6qXSO623SguhnD-BJA-H1XmcaFVivAnJLNQyP59gTw4cl9rNGpiSTizWt02B7Cp9yfg_M_Ft5GOE9QN83BznoEYx88KYgkZkLpUbSJJXA9QIfmhknpzxvYR1iKoYo3Lrd84-4m5cjw81u6VFyJ6gg7_GvZUZgViYoMzNDFJwxRpjpI28bOiD08AS7C3-Fo-OCdwkL6WcW3EaYSBumDU8ba7DoJE8n657KGJOfjpAjYqFnftlXFFMYFPcdCNkOx7wVxqoG33p8dYO1ytGzrHhESXeS6WST_D7EKvzEgQ-CPx7ErYz95PswxccoJfPYma_J1hEXQu8QRVfla221IFPV1z2miIGB8-J7gLIuiLcYc7yOSEeFsD8_NeRHiT1rBeGWPTOh86tdcEtG2mPb_WO1GTpURDfNIDkqZdjgDe0MakFImleVeDVr1y2G-gUqOvAKS3oPPazT6DvnZPuTtrrC-HZA1BDVMAchOaXQYuG6NqXkUg58V2Yz1ZBVuRst_MdQDZ-tPLYLZRmUWIG2IRsaBw9ED3k8Z4EoEoQUDRODn93R5sLzg_suf0oalOvWS7LIE5Tbg7I9A1FZBc-AQeZDDbEXjjAWSWkI57tK9MbEYKq-WsLT3hX8l9G_HBu1yKgme3YC6gSCGu4h6PCzs5p8QaN9ncz-8Ipgqz8YoClpseyucCl9slTIJuZpqkqIm48BwZ0NGqKk-VdJAiAabNSutSDZT5TyOoqWsOK4prcBXH8czwn3lwwj5xwMA-MBAINVKVfPpyi1n9zQARLwTsfdHcOaBgtk72xw4LBSqlqOrMw0xrYlWnRNayp_uL0Aet1drf-ULeQ4C39BHqsbi4i-MTSsDSihZZPInHyELLlzweSri6T0WkOCTm2HfZzYytwyFaC1GShjqkQufHv5wwNsk1AlTHUJjxXkPWXEF6CTznCdks1OqDEKEg4t9ckXv4Gueo4OMzR6TVaMIBdXdSFtj_SV-RAjIMhFmY7nyKsEIiXNJUG8nJx43QlhAEbTRuUJeO6UaWYNU1PEANw8NX_ywM3RJSvpQMPdbGviB40s0QetrMUeFAca6mo-75Nw61KU3AVRPldFnCgWeO2zm9h6iL_m84y8E2JxA9Z34Fnbkff0Ol-Zmki7657In79vJ5greqIW3e164-dxcJbetG0SBxScjFtTJfi2pTyGF-cYDjojZLGxhPXhVVoBsVDNQO95biM9hwzDUtSQ0HlLBBAUCtj1d-xL1tatcBgiYNt6HZ93nW4qB3QFdf7-_w30Dt-VLVEhqSTzSwaFBnF3p4RxScN7JERCeRNi7Hgw1UG8zKZ27qLYuXCNw_NHMhMyWLU9fh1Zy0bdgHPtntGiej5ygDTrKrNeK4BnWtHFX64gqAArv3rYyEaoS2DZ2E3ldkHxS8d3dDVg_K2hyv9ccxqzF_QjpR9ASW_RPXOTUy8x0KlF-pSh6-AAmjRBtkhwRrSbDsU47gVE4lxjKxIxAt8Slax3Kcx03dCGg2m6uMV4bgXjc2MhV4J76HqPyWaeENKp74dJCvGrAAWTarjyZTpN2lFavJOt9x9YrfKJIvOuju8Fe3Q4S6Lc_YbAvi_c1BjwSrD5UvW6x9w0QqwaUdhqVjyH_dEIw-ltQKycWYU2ix74O5aasuQ4_F-0NRWAb5d9g1Y7jzQ_1t6q7ApA6CTfDcLMCvf0EeCC7PJ_RdO-ZGPBo5na0hcA8wLiBhi9r15zRWEk8cc97P48Ga4Do_UlY1ovsWKCTwe1zVNW8ZJNxMsdxaZhxGCFmyGhKCVw6o6bLREjDqDcxmI_KnvGZDzIeNBL26h2qYimlyuv3aWLl3DDbQGHK7oD-9y2xbsZV8UCLiLtEKR1kTLNDRUjKraT1N9zVdtvzF8.55ObjKScKdFxO8BsJ0Sa1I041Ixlv8rB4WgcWEiftQA"
+}.
+2026-04-14 12:17:38.595 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 12:17:38.621 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 17.9729 ms
+2026-04-14 12:17:42.795 +03:30 [INF] HTTP GET /Account/Login responded 200 in 4164.6128 ms
+2026-04-14 12:17:42.799 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 12:17:42.805 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 12:17:42.840 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0128 ms
+2026-04-14 12:18:10.409 +03:30 [INF] User 'admin@bankinggateway.local' logged in successfully.
+2026-04-14 12:18:10.452 +03:30 [INF] HTTP POST /Account/Login responded 302 in 16975.3036 ms
+2026-04-14 12:18:10.478 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 12:18:10.481 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "2shUXaUQdn7n0TvRqxWhYoaNka6TEDgk1DtoQZ0s1uE",
+  "code_challenge": "H39BIcOxueGTLawFzZI4SODP2ouCvUCCTX4-DYc2s0Q",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.fnTSuHhDuqNgiDBgeMyfJsX_kUqfDl1a7MTuBM1JXx2sPaUNxDGbAtuN3K7c5wKS9MVRy9HvOgFpwm4KnJA9oFJhw8D6YmYOrAlm1u4YPJSMa9NGN7Y7rbZcscsFhx40lITfo3noh86u54UqmLTVHkI9ooBJ_QkzKV_5INh54R5uKXn_9iVvLOCb9l-CQqZnULoZ2XPbCLxSG-r7pMYSO_UHcj6iI-N7-4DNLhKt-bMyoZDIYGdBWMf8hVIhBDrYBXMgZEwEs0GRhHvK_mSv_lXJaM0fhAtkBWrNhuVAv5dlyf8lZFgQfAGHLBZSNC0FMZLxfA-a8bAJjIJxV_FhnE-Nx_9OKwTRxyWQ8cNHOwN3qDI60VatXXytJ9YHwG6asJMCtYon_CrBRHpXxFG_TYJa3jIO_0JeECTxtB_P0Alr4vidTgZYObj9tsexIuhKliGzEGBNMZgYzrxBAEE7xMYUKgO-x5vpyQ9dxMvLghlDDA61HIstjik03NZd21dmm3PsZRIV-isz2lnQEDb9HdC-8cly1KYUTEXMERwVHtpW05iOC0Gw6K4CAr37LW7Bk-1HuCK-xfzTC4yIJKFzut1eGgtQrDsxiLv05ChtKt8jDx8bfU27IctaPGX-SDI4_c5vovTodzNyPo5NUa5BZuEgvRalaqBStF2PIKIXPtY.WBteo8uxJTSvgClwQqr2KA.Vmm0LfybfgW63CHkQi0GpdD-E3Wu4GEZrN_fndbTh9H1JI_E6xkG0NXPdSHegljJgt0B0cFa3PGMnMQI7pV5uDTUghwUDU17jMIO6IXTCUiHJvlLcG0A1pdqCtU3zsIF8EAljLn2oCLB1O7FyOJnJHDcIsGv15CjzqYai4GZDgCRqwyT4vqLwwdO4TwpfK7TFoBfK83mHc4RW2t3MpiZ_lYAGELQ0ftHpGfONs3Jckd743eidQ8XMbfTcfbe2vlnNha2ZD4lt6_xw92bTXq8xq0OgstlymVV6qXSO623SguhnD-BJA-H1XmcaFVivAnJLNQyP59gTw4cl9rNGpiSTizWt02B7Cp9yfg_M_Ft5GOE9QN83BznoEYx88KYgkZkLpUbSJJXA9QIfmhknpzxvYR1iKoYo3Lrd84-4m5cjw81u6VFyJ6gg7_GvZUZgViYoMzNDFJwxRpjpI28bOiD08AS7C3-Fo-OCdwkL6WcW3EaYSBumDU8ba7DoJE8n657KGJOfjpAjYqFnftlXFFMYFPcdCNkOx7wVxqoG33p8dYO1ytGzrHhESXeS6WST_D7EKvzEgQ-CPx7ErYz95PswxccoJfPYma_J1hEXQu8QRVfla221IFPV1z2miIGB8-J7gLIuiLcYc7yOSEeFsD8_NeRHiT1rBeGWPTOh86tdcEtG2mPb_WO1GTpURDfNIDkqZdjgDe0MakFImleVeDVr1y2G-gUqOvAKS3oPPazT6DvnZPuTtrrC-HZA1BDVMAchOaXQYuG6NqXkUg58V2Yz1ZBVuRst_MdQDZ-tPLYLZRmUWIG2IRsaBw9ED3k8Z4EoEoQUDRODn93R5sLzg_suf0oalOvWS7LIE5Tbg7I9A1FZBc-AQeZDDbEXjjAWSWkI57tK9MbEYKq-WsLT3hX8l9G_HBu1yKgme3YC6gSCGu4h6PCzs5p8QaN9ncz-8Ipgqz8YoClpseyucCl9slTIJuZpqkqIm48BwZ0NGqKk-VdJAiAabNSutSDZT5TyOoqWsOK4prcBXH8czwn3lwwj5xwMA-MBAINVKVfPpyi1n9zQARLwTsfdHcOaBgtk72xw4LBSqlqOrMw0xrYlWnRNayp_uL0Aet1drf-ULeQ4C39BHqsbi4i-MTSsDSihZZPInHyELLlzweSri6T0WkOCTm2HfZzYytwyFaC1GShjqkQufHv5wwNsk1AlTHUJjxXkPWXEF6CTznCdks1OqDEKEg4t9ckXv4Gueo4OMzR6TVaMIBdXdSFtj_SV-RAjIMhFmY7nyKsEIiXNJUG8nJx43QlhAEbTRuUJeO6UaWYNU1PEANw8NX_ywM3RJSvpQMPdbGviB40s0QetrMUeFAca6mo-75Nw61KU3AVRPldFnCgWeO2zm9h6iL_m84y8E2JxA9Z34Fnbkff0Ol-Zmki7657In79vJ5greqIW3e164-dxcJbetG0SBxScjFtTJfi2pTyGF-cYDjojZLGxhPXhVVoBsVDNQO95biM9hwzDUtSQ0HlLBBAUCtj1d-xL1tatcBgiYNt6HZ93nW4qB3QFdf7-_w30Dt-VLVEhqSTzSwaFBnF3p4RxScN7JERCeRNi7Hgw1UG8zKZ27qLYuXCNw_NHMhMyWLU9fh1Zy0bdgHPtntGiej5ygDTrKrNeK4BnWtHFX64gqAArv3rYyEaoS2DZ2E3ldkHxS8d3dDVg_K2hyv9ccxqzF_QjpR9ASW_RPXOTUy8x0KlF-pSh6-AAmjRBtkhwRrSbDsU47gVE4lxjKxIxAt8Slax3Kcx03dCGg2m6uMV4bgXjc2MhV4J76HqPyWaeENKp74dJCvGrAAWTarjyZTpN2lFavJOt9x9YrfKJIvOuju8Fe3Q4S6Lc_YbAvi_c1BjwSrD5UvW6x9w0QqwaUdhqVjyH_dEIw-ltQKycWYU2ix74O5aasuQ4_F-0NRWAb5d9g1Y7jzQ_1t6q7ApA6CTfDcLMCvf0EeCC7PJ_RdO-ZGPBo5na0hcA8wLiBhi9r15zRWEk8cc97P48Ga4Do_UlY1ovsWKCTwe1zVNW8ZJNxMsdxaZhxGCFmyGhKCVw6o6bLREjDqDcxmI_KnvGZDzIeNBL26h2qYimlyuv3aWLl3DDbQGHK7oD-9y2xbsZV8UCLiLtEKR1kTLNDRUjKraT1N9zVdtvzF8.55ObjKScKdFxO8BsJ0Sa1I041Ixlv8rB4WgcWEiftQA"
+}.
+2026-04-14 12:18:10.494 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 12:18:10.714 +03:30 [INF] An ad hoc authorization was automatically created and associated with the 'banking-gateway' application: 3132c35c-a5fb-4b10-0350-08de9a028e98.
+2026-04-14 12:18:10.853 +03:30 [INF] The authorization response was successfully returned to 'https://localhost:7033/api/auth/callback' using the query response mode: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.fnTSuHhDuqNgiDBgeMyfJsX_kUqfDl1a7MTuBM1JXx2sPaUNxDGbAtuN3K7c5wKS9MVRy9HvOgFpwm4KnJA9oFJhw8D6YmYOrAlm1u4YPJSMa9NGN7Y7rbZcscsFhx40lITfo3noh86u54UqmLTVHkI9ooBJ_QkzKV_5INh54R5uKXn_9iVvLOCb9l-CQqZnULoZ2XPbCLxSG-r7pMYSO_UHcj6iI-N7-4DNLhKt-bMyoZDIYGdBWMf8hVIhBDrYBXMgZEwEs0GRhHvK_mSv_lXJaM0fhAtkBWrNhuVAv5dlyf8lZFgQfAGHLBZSNC0FMZLxfA-a8bAJjIJxV_FhnE-Nx_9OKwTRxyWQ8cNHOwN3qDI60VatXXytJ9YHwG6asJMCtYon_CrBRHpXxFG_TYJa3jIO_0JeECTxtB_P0Alr4vidTgZYObj9tsexIuhKliGzEGBNMZgYzrxBAEE7xMYUKgO-x5vpyQ9dxMvLghlDDA61HIstjik03NZd21dmm3PsZRIV-isz2lnQEDb9HdC-8cly1KYUTEXMERwVHtpW05iOC0Gw6K4CAr37LW7Bk-1HuCK-xfzTC4yIJKFzut1eGgtQrDsxiLv05ChtKt8jDx8bfU27IctaPGX-SDI4_c5vovTodzNyPo5NUa5BZuEgvRalaqBStF2PIKIXPtY.WBteo8uxJTSvgClwQqr2KA.Vmm0LfybfgW63CHkQi0GpdD-E3Wu4GEZrN_fndbTh9H1JI_E6xkG0NXPdSHegljJgt0B0cFa3PGMnMQI7pV5uDTUghwUDU17jMIO6IXTCUiHJvlLcG0A1pdqCtU3zsIF8EAljLn2oCLB1O7FyOJnJHDcIsGv15CjzqYai4GZDgCRqwyT4vqLwwdO4TwpfK7TFoBfK83mHc4RW2t3MpiZ_lYAGELQ0ftHpGfONs3Jckd743eidQ8XMbfTcfbe2vlnNha2ZD4lt6_xw92bTXq8xq0OgstlymVV6qXSO623SguhnD-BJA-H1XmcaFVivAnJLNQyP59gTw4cl9rNGpiSTizWt02B7Cp9yfg_M_Ft5GOE9QN83BznoEYx88KYgkZkLpUbSJJXA9QIfmhknpzxvYR1iKoYo3Lrd84-4m5cjw81u6VFyJ6gg7_GvZUZgViYoMzNDFJwxRpjpI28bOiD08AS7C3-Fo-OCdwkL6WcW3EaYSBumDU8ba7DoJE8n657KGJOfjpAjYqFnftlXFFMYFPcdCNkOx7wVxqoG33p8dYO1ytGzrHhESXeS6WST_D7EKvzEgQ-CPx7ErYz95PswxccoJfPYma_J1hEXQu8QRVfla221IFPV1z2miIGB8-J7gLIuiLcYc7yOSEeFsD8_NeRHiT1rBeGWPTOh86tdcEtG2mPb_WO1GTpURDfNIDkqZdjgDe0MakFImleVeDVr1y2G-gUqOvAKS3oPPazT6DvnZPuTtrrC-HZA1BDVMAchOaXQYuG6NqXkUg58V2Yz1ZBVuRst_MdQDZ-tPLYLZRmUWIG2IRsaBw9ED3k8Z4EoEoQUDRODn93R5sLzg_suf0oalOvWS7LIE5Tbg7I9A1FZBc-AQeZDDbEXjjAWSWkI57tK9MbEYKq-WsLT3hX8l9G_HBu1yKgme3YC6gSCGu4h6PCzs5p8QaN9ncz-8Ipgqz8YoClpseyucCl9slTIJuZpqkqIm48BwZ0NGqKk-VdJAiAabNSutSDZT5TyOoqWsOK4prcBXH8czwn3lwwj5xwMA-MBAINVKVfPpyi1n9zQARLwTsfdHcOaBgtk72xw4LBSqlqOrMw0xrYlWnRNayp_uL0Aet1drf-ULeQ4C39BHqsbi4i-MTSsDSihZZPInHyELLlzweSri6T0WkOCTm2HfZzYytwyFaC1GShjqkQufHv5wwNsk1AlTHUJjxXkPWXEF6CTznCdks1OqDEKEg4t9ckXv4Gueo4OMzR6TVaMIBdXdSFtj_SV-RAjIMhFmY7nyKsEIiXNJUG8nJx43QlhAEbTRuUJeO6UaWYNU1PEANw8NX_ywM3RJSvpQMPdbGviB40s0QetrMUeFAca6mo-75Nw61KU3AVRPldFnCgWeO2zm9h6iL_m84y8E2JxA9Z34Fnbkff0Ol-Zmki7657In79vJ5greqIW3e164-dxcJbetG0SBxScjFtTJfi2pTyGF-cYDjojZLGxhPXhVVoBsVDNQO95biM9hwzDUtSQ0HlLBBAUCtj1d-xL1tatcBgiYNt6HZ93nW4qB3QFdf7-_w30Dt-VLVEhqSTzSwaFBnF3p4RxScN7JERCeRNi7Hgw1UG8zKZ27qLYuXCNw_NHMhMyWLU9fh1Zy0bdgHPtntGiej5ygDTrKrNeK4BnWtHFX64gqAArv3rYyEaoS2DZ2E3ldkHxS8d3dDVg_K2hyv9ccxqzF_QjpR9ASW_RPXOTUy8x0KlF-pSh6-AAmjRBtkhwRrSbDsU47gVE4lxjKxIxAt8Slax3Kcx03dCGg2m6uMV4bgXjc2MhV4J76HqPyWaeENKp74dJCvGrAAWTarjyZTpN2lFavJOt9x9YrfKJIvOuju8Fe3Q4S6Lc_YbAvi_c1BjwSrD5UvW6x9w0QqwaUdhqVjyH_dEIw-ltQKycWYU2ix74O5aasuQ4_F-0NRWAb5d9g1Y7jzQ_1t6q7ApA6CTfDcLMCvf0EeCC7PJ_RdO-ZGPBo5na0hcA8wLiBhi9r15zRWEk8cc97P48Ga4Do_UlY1ovsWKCTwe1zVNW8ZJNxMsdxaZhxGCFmyGhKCVw6o6bLREjDqDcxmI_KnvGZDzIeNBL26h2qYimlyuv3aWLl3DDbQGHK7oD-9y2xbsZV8UCLiLtEKR1kTLNDRUjKraT1N9zVdtvzF8.55ObjKScKdFxO8BsJ0Sa1I041Ixlv8rB4WgcWEiftQA",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 12:18:10.861 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 361.0384 ms
+2026-04-14 12:18:10.950 +03:30 [INF] The request URI matched a server endpoint: "Token".
+2026-04-14 12:18:10.960 +03:30 [INF] The token request was successfully extracted: {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "OYzwS5RX37voXZGwUCqABQmS31FdYl4dbSOiv6lzrys",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 12:18:11.099 +03:30 [INF] The token request was successfully validated.
+2026-04-14 12:18:11.138 +03:30 [INF] The token 'f88c6dcb-1a52-4c89-9a89-08de9a028eab' was successfully marked as redeemed.
+2026-04-14 12:18:11.199 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 900,
+  "scope": "openid profile email offline_access banking_api",
+  "id_token": "[redacted]",
+  "refresh_token": "[redacted]"
+}.
+2026-04-14 12:18:11.224 +03:30 [INF] HTTP POST /connect/token responded 200 in 100.5198 ms
+2026-04-14 12:18:11.265 +03:30 [INF] The request URI matched a server endpoint: "Userinfo".
+2026-04-14 12:18:11.270 +03:30 [INF] The userinfo request was successfully extracted: {
+  "access_token": "[redacted]"
+}.
+2026-04-14 12:18:11.288 +03:30 [INF] The userinfo request was successfully validated.
+2026-04-14 12:18:11.327 +03:30 [INF] HTTP GET /connect/userinfo responded 200 in 28.0558 ms
+2026-04-14 12:22:23.785 +03:30 [INF] HTTP GET / responded 200 in 1702.3422 ms
+2026-04-14 12:22:23.842 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 12:22:23.849 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 12:22:23.868 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.2539 ms
+2026-04-14 12:22:31.131 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 12:22:31.142 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 12:22:31.147 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 12:22:31.168 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 12:22:31.250 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 12:22:31.256 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 12:22:31.259 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 12:22:31.283 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 12:22:31.443 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 12:22:31.455 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "nVnBAkCvmUlc_OUlUO432khjov1Zo5H9jzSFEJWEcFo",
+  "code_challenge": "TCKakC7APt2LTkin8YbsGbPbg4IFr9PwwWfPBtVNX8o",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.yVwx_JVE5Y8KbX7g4JT5sHmWLq-azv9mSc4juo2oU6CkQPPw75VnHLmBzBlVb_cuoPurX3Ungph6kAe-dNXX_FAjtK57updxHylbMFER714FTsjcwCDJWIGKW_9WRJMC4f-X9TT1FB7WaRdXZMaYDaUHM9IpkjOs80qzVC9XlOiGj5l3i6O4oTVVIUz1mJ_wacS0gFLStiERbkkFcChYety9rT_1qhrPY6iWHq6036ZwfLZRlTM7cPKZE9Db4GYotOFq-HLlpEKMgXtBbM3gkn17b5TrEHd3BCTIBQs-1dTHwVLAOg9gPjiT8LcWtWbfUhf2vPxI-vtj4PWtZJjkzjQyAXrlnERk8uI2bWhI1EdNozg0wmgIymhEwqF4oRvrUqxaKCEikjZcEbg6h5ZV7ih1UoIYN92Qi0CtKENwPOiMNUC9FrQ9_xlWUHtgQX9PPdfGq3fj9Dyseqh7gszKqf0uVyLHMLs0q6rONWulg0vPt5eekJLlAPWGMAVB2KIdGlP_ntjflU4cOX2bPhaNdIcobglclCC_I5RLftc8B2yS_2ED3pMaVl6gxta82PtVZRFrPIayEy4dmCLRML3_h0z3IHWxEJU7iKL109PEoI3tggRtsj4d8R6Hc-rlGasRK4Ix2vlgQzkA9Yh9mN8G4nQsndbSjWhIjKTqd2bHcag.MGQtBEr-k6o5cXJjIPQxNA.27KpnKYUtLXzbypV-sp9Fok0z58o7JM8SESMXIzIifdLjOjNOD-cgI-_yQb-TvL3ziF0KoLlMnIPFqw8TUwUZTLKc5sc0rK0yc5BGkXbd3on2ot6oq0t-xKfLuBcuY29nl5GWJhcnhZvKoYErype8_wQ_-23qdlBj0TqBtZyLRC0M18ckSHq5bf146a-AaGduZh0N2v06LyCc8vtC96ASxTLOveN6n5pv94pG3qbrooNkHzpvLUipyEUzxgA4s2Rahuv0kg4xIIIZQLftkLX13tQOS6nmB47hTqEgGn2xfKfg_l56JFob5t60UPQTHJJAsM32iY7gFy066l275qfwNpPFqzrcXT3gzNuTxwdpIFMpZxOljQcdFzzdVEDCfZvJNAMOD2S4kxLzAKQEMzKmZjClgJxc0eGDQnGo9_XIUdhLfnt8UiLTUnJ5FyIfKf4qGDHO4LEk1Hg75N8T5ESkKAm68XCftS7AaV3pFfsKoCA0wU-DlR4mjsgPZpCTxIQsO5aok_i0EYpMtKVBS80LMHx3nxwoixrw8wQ0JIkYl4E9lrRM7MKAAaTVg2hi5a-o0jsWvbT7qqU0RBBsOw9xCXHI287kBxooohO9fT9v6muW9Aj8wsPu9H9kycRIcME51-7x4FXZTsts93_RHX8Hi66CO07zJFc0bk7Z905TdPuat7jAIl_EtA0CMc_gdX093ti_wNh5EzTI0_L3gxIIHSwguRIx5jqFW36OXXb8F-QuLb3gKYEoFSL1HsnI6d-M2_ehTDTEMLWu8LFY_XXCeqG0r7TG1eRMDrmIp_12ZleN5F7u2i81LtzkoHoS4jXAqtzoNLtIl49r47O9wG6StXjqmfOu9njfhsn9ACE7CikSGNQtssFyj1xtXq8Ltu2Tj_GozhTagUWyAZUdUIyJA5nin2ngNVZ-KonGEzHzgj2PjkNqyV-8tvdpH-OzscfWprUg9MbfSUIi5tEnA9_CZeC-nnv1f0tdpDfNoNYjA7AzrqX8Li18zUf3fuk6SW9iQzrbhfWg_qaJVQ-jAzwuhw2uP38NgJ7Z2IU1wjYd4uJXirKduOtWqLAuoe0_Nu7an2zX7VXgf3uiMwT-oYKQEyvDwXU6Ob2V0vK7reXIQaxWnet4F0MAWN40figYNE8iMvRHHjdC8KqlkMoM_JPQzZLW1b1OE6U07WiVDyXFUQT0bWdBdvQeOHkNrZFrYhWirrNjEbmxG5BEJmFDDxhXsxeKqFVuSbYWaJPk8vRWOQabGtODUNrvaVYp5rXVU_wLBS5bfnIPLSt_vIy9YqywZDYnymhJol1X6uMFSdJhSrvYe_i9CnlVQwlLjYNGusYsrJqR2WLlTVUNpqhwNGAGGZXGg_Z0OHh-Z_1ffHai1GrCJ7Bs-caXszKTi4BWW8rBtSyBz_XKhqrq6DyVTYWaAFk_IgzM6lpornI-AYDpKT2c7wKW3a8E8l4ZkCOORuOKbSyqdufSsSvrE8QZyf_bCx03s8UMvxZq7NT9OFT61d573gF_ya2PDQWJGSJx3A-XoZBZGnY-4FEW7oC4CEiZqdzcfAcmSXCqz5w7VFFJWqcpS9hbnZm7tjFpLt-Bu-e1SAPIgxVqhuXnKOAyPa7V-b26hW300QIjmOV9Nm2SXo0xM65bXnn5xQBZx8_dG-H6EPu7N6faNg5qXkwsLjVsWtRm3C8r-vCkRjbhzpHe91cJZvf6LLF_n0_5HLQ_n4_qeZw-w5yhIDsYoioph3fzG3zs1Vw2HNB9-juwHk-mInSJySrVPM_fm1Qb--Kc6leTFPOmOvIAGe0HLMBwBhzr3MXUSWeiN9SucR6ZSt5bqf25NMDOSY5Bxp5q5pVCqykd4vSf3Es5mVhWBS0puaRgDI8D0K920qW_hoVkge9Rcku0tLVlVgQDF_ErF0EZ9V4AJqnmXxcCNZGXzdpWw2VYPBZv6NJs9rmyLdYpviZf6hMfYa3QKfJV4RES5zfYktj5GZ56_9t2CSN3cAArYGn3qpk0xuIdzDO6GaQZ-yi9VuuqUJv1rG-6l9kSkr5LLWLKvMyFpCCADLW0A-YxZecSJiZPobk_eA75dBaBidv_o7neQMVZvMjbeYpADQrj7-AEjiLdZ5EoOFcmiIELVkSngNy1A-nhw5nphiZbO79NuQFc1sGLNXoG-MNhmug2sqK.3A_ZRqMFCqMQeCZJKbWULHTi9_dptUi5BiE7V6W1SE0"
+}.
+2026-04-14 12:22:31.514 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 12:22:31.544 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 20.0472 ms
+2026-04-14 12:22:37.510 +03:30 [INF] HTTP GET /Account/Login responded 200 in 5957.7559 ms
+2026-04-14 12:22:37.520 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 12:22:37.526 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 12:22:37.572 +03:30 [INF] HTTP GET /.well-known/appspecific/com.chrome.devtools.json responded 404 in 0.0151 ms
+2026-04-14 12:22:37.573 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0090 ms
+2026-04-14 12:22:55.361 +03:30 [INF] User 'admin@bankinggateway.local' logged in successfully.
+2026-04-14 12:22:55.368 +03:30 [INF] HTTP POST /Account/Login responded 302 in 2247.3571 ms
+2026-04-14 12:22:55.380 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 12:22:55.383 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "nVnBAkCvmUlc_OUlUO432khjov1Zo5H9jzSFEJWEcFo",
+  "code_challenge": "TCKakC7APt2LTkin8YbsGbPbg4IFr9PwwWfPBtVNX8o",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.yVwx_JVE5Y8KbX7g4JT5sHmWLq-azv9mSc4juo2oU6CkQPPw75VnHLmBzBlVb_cuoPurX3Ungph6kAe-dNXX_FAjtK57updxHylbMFER714FTsjcwCDJWIGKW_9WRJMC4f-X9TT1FB7WaRdXZMaYDaUHM9IpkjOs80qzVC9XlOiGj5l3i6O4oTVVIUz1mJ_wacS0gFLStiERbkkFcChYety9rT_1qhrPY6iWHq6036ZwfLZRlTM7cPKZE9Db4GYotOFq-HLlpEKMgXtBbM3gkn17b5TrEHd3BCTIBQs-1dTHwVLAOg9gPjiT8LcWtWbfUhf2vPxI-vtj4PWtZJjkzjQyAXrlnERk8uI2bWhI1EdNozg0wmgIymhEwqF4oRvrUqxaKCEikjZcEbg6h5ZV7ih1UoIYN92Qi0CtKENwPOiMNUC9FrQ9_xlWUHtgQX9PPdfGq3fj9Dyseqh7gszKqf0uVyLHMLs0q6rONWulg0vPt5eekJLlAPWGMAVB2KIdGlP_ntjflU4cOX2bPhaNdIcobglclCC_I5RLftc8B2yS_2ED3pMaVl6gxta82PtVZRFrPIayEy4dmCLRML3_h0z3IHWxEJU7iKL109PEoI3tggRtsj4d8R6Hc-rlGasRK4Ix2vlgQzkA9Yh9mN8G4nQsndbSjWhIjKTqd2bHcag.MGQtBEr-k6o5cXJjIPQxNA.27KpnKYUtLXzbypV-sp9Fok0z58o7JM8SESMXIzIifdLjOjNOD-cgI-_yQb-TvL3ziF0KoLlMnIPFqw8TUwUZTLKc5sc0rK0yc5BGkXbd3on2ot6oq0t-xKfLuBcuY29nl5GWJhcnhZvKoYErype8_wQ_-23qdlBj0TqBtZyLRC0M18ckSHq5bf146a-AaGduZh0N2v06LyCc8vtC96ASxTLOveN6n5pv94pG3qbrooNkHzpvLUipyEUzxgA4s2Rahuv0kg4xIIIZQLftkLX13tQOS6nmB47hTqEgGn2xfKfg_l56JFob5t60UPQTHJJAsM32iY7gFy066l275qfwNpPFqzrcXT3gzNuTxwdpIFMpZxOljQcdFzzdVEDCfZvJNAMOD2S4kxLzAKQEMzKmZjClgJxc0eGDQnGo9_XIUdhLfnt8UiLTUnJ5FyIfKf4qGDHO4LEk1Hg75N8T5ESkKAm68XCftS7AaV3pFfsKoCA0wU-DlR4mjsgPZpCTxIQsO5aok_i0EYpMtKVBS80LMHx3nxwoixrw8wQ0JIkYl4E9lrRM7MKAAaTVg2hi5a-o0jsWvbT7qqU0RBBsOw9xCXHI287kBxooohO9fT9v6muW9Aj8wsPu9H9kycRIcME51-7x4FXZTsts93_RHX8Hi66CO07zJFc0bk7Z905TdPuat7jAIl_EtA0CMc_gdX093ti_wNh5EzTI0_L3gxIIHSwguRIx5jqFW36OXXb8F-QuLb3gKYEoFSL1HsnI6d-M2_ehTDTEMLWu8LFY_XXCeqG0r7TG1eRMDrmIp_12ZleN5F7u2i81LtzkoHoS4jXAqtzoNLtIl49r47O9wG6StXjqmfOu9njfhsn9ACE7CikSGNQtssFyj1xtXq8Ltu2Tj_GozhTagUWyAZUdUIyJA5nin2ngNVZ-KonGEzHzgj2PjkNqyV-8tvdpH-OzscfWprUg9MbfSUIi5tEnA9_CZeC-nnv1f0tdpDfNoNYjA7AzrqX8Li18zUf3fuk6SW9iQzrbhfWg_qaJVQ-jAzwuhw2uP38NgJ7Z2IU1wjYd4uJXirKduOtWqLAuoe0_Nu7an2zX7VXgf3uiMwT-oYKQEyvDwXU6Ob2V0vK7reXIQaxWnet4F0MAWN40figYNE8iMvRHHjdC8KqlkMoM_JPQzZLW1b1OE6U07WiVDyXFUQT0bWdBdvQeOHkNrZFrYhWirrNjEbmxG5BEJmFDDxhXsxeKqFVuSbYWaJPk8vRWOQabGtODUNrvaVYp5rXVU_wLBS5bfnIPLSt_vIy9YqywZDYnymhJol1X6uMFSdJhSrvYe_i9CnlVQwlLjYNGusYsrJqR2WLlTVUNpqhwNGAGGZXGg_Z0OHh-Z_1ffHai1GrCJ7Bs-caXszKTi4BWW8rBtSyBz_XKhqrq6DyVTYWaAFk_IgzM6lpornI-AYDpKT2c7wKW3a8E8l4ZkCOORuOKbSyqdufSsSvrE8QZyf_bCx03s8UMvxZq7NT9OFT61d573gF_ya2PDQWJGSJx3A-XoZBZGnY-4FEW7oC4CEiZqdzcfAcmSXCqz5w7VFFJWqcpS9hbnZm7tjFpLt-Bu-e1SAPIgxVqhuXnKOAyPa7V-b26hW300QIjmOV9Nm2SXo0xM65bXnn5xQBZx8_dG-H6EPu7N6faNg5qXkwsLjVsWtRm3C8r-vCkRjbhzpHe91cJZvf6LLF_n0_5HLQ_n4_qeZw-w5yhIDsYoioph3fzG3zs1Vw2HNB9-juwHk-mInSJySrVPM_fm1Qb--Kc6leTFPOmOvIAGe0HLMBwBhzr3MXUSWeiN9SucR6ZSt5bqf25NMDOSY5Bxp5q5pVCqykd4vSf3Es5mVhWBS0puaRgDI8D0K920qW_hoVkge9Rcku0tLVlVgQDF_ErF0EZ9V4AJqnmXxcCNZGXzdpWw2VYPBZv6NJs9rmyLdYpviZf6hMfYa3QKfJV4RES5zfYktj5GZ56_9t2CSN3cAArYGn3qpk0xuIdzDO6GaQZ-yi9VuuqUJv1rG-6l9kSkr5LLWLKvMyFpCCADLW0A-YxZecSJiZPobk_eA75dBaBidv_o7neQMVZvMjbeYpADQrj7-AEjiLdZ5EoOFcmiIELVkSngNy1A-nhw5nphiZbO79NuQFc1sGLNXoG-MNhmug2sqK.3A_ZRqMFCqMQeCZJKbWULHTi9_dptUi5BiE7V6W1SE0"
+}.
+2026-04-14 12:22:55.393 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 12:22:55.672 +03:30 [INF] An ad hoc authorization was automatically created and associated with the 'banking-gateway' application: 5e41af21-b1fb-4fd5-e917-08de9a033869.
+2026-04-14 12:22:55.832 +03:30 [INF] The authorization response was successfully returned to 'https://localhost:7033/api/auth/callback' using the query response mode: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.yVwx_JVE5Y8KbX7g4JT5sHmWLq-azv9mSc4juo2oU6CkQPPw75VnHLmBzBlVb_cuoPurX3Ungph6kAe-dNXX_FAjtK57updxHylbMFER714FTsjcwCDJWIGKW_9WRJMC4f-X9TT1FB7WaRdXZMaYDaUHM9IpkjOs80qzVC9XlOiGj5l3i6O4oTVVIUz1mJ_wacS0gFLStiERbkkFcChYety9rT_1qhrPY6iWHq6036ZwfLZRlTM7cPKZE9Db4GYotOFq-HLlpEKMgXtBbM3gkn17b5TrEHd3BCTIBQs-1dTHwVLAOg9gPjiT8LcWtWbfUhf2vPxI-vtj4PWtZJjkzjQyAXrlnERk8uI2bWhI1EdNozg0wmgIymhEwqF4oRvrUqxaKCEikjZcEbg6h5ZV7ih1UoIYN92Qi0CtKENwPOiMNUC9FrQ9_xlWUHtgQX9PPdfGq3fj9Dyseqh7gszKqf0uVyLHMLs0q6rONWulg0vPt5eekJLlAPWGMAVB2KIdGlP_ntjflU4cOX2bPhaNdIcobglclCC_I5RLftc8B2yS_2ED3pMaVl6gxta82PtVZRFrPIayEy4dmCLRML3_h0z3IHWxEJU7iKL109PEoI3tggRtsj4d8R6Hc-rlGasRK4Ix2vlgQzkA9Yh9mN8G4nQsndbSjWhIjKTqd2bHcag.MGQtBEr-k6o5cXJjIPQxNA.27KpnKYUtLXzbypV-sp9Fok0z58o7JM8SESMXIzIifdLjOjNOD-cgI-_yQb-TvL3ziF0KoLlMnIPFqw8TUwUZTLKc5sc0rK0yc5BGkXbd3on2ot6oq0t-xKfLuBcuY29nl5GWJhcnhZvKoYErype8_wQ_-23qdlBj0TqBtZyLRC0M18ckSHq5bf146a-AaGduZh0N2v06LyCc8vtC96ASxTLOveN6n5pv94pG3qbrooNkHzpvLUipyEUzxgA4s2Rahuv0kg4xIIIZQLftkLX13tQOS6nmB47hTqEgGn2xfKfg_l56JFob5t60UPQTHJJAsM32iY7gFy066l275qfwNpPFqzrcXT3gzNuTxwdpIFMpZxOljQcdFzzdVEDCfZvJNAMOD2S4kxLzAKQEMzKmZjClgJxc0eGDQnGo9_XIUdhLfnt8UiLTUnJ5FyIfKf4qGDHO4LEk1Hg75N8T5ESkKAm68XCftS7AaV3pFfsKoCA0wU-DlR4mjsgPZpCTxIQsO5aok_i0EYpMtKVBS80LMHx3nxwoixrw8wQ0JIkYl4E9lrRM7MKAAaTVg2hi5a-o0jsWvbT7qqU0RBBsOw9xCXHI287kBxooohO9fT9v6muW9Aj8wsPu9H9kycRIcME51-7x4FXZTsts93_RHX8Hi66CO07zJFc0bk7Z905TdPuat7jAIl_EtA0CMc_gdX093ti_wNh5EzTI0_L3gxIIHSwguRIx5jqFW36OXXb8F-QuLb3gKYEoFSL1HsnI6d-M2_ehTDTEMLWu8LFY_XXCeqG0r7TG1eRMDrmIp_12ZleN5F7u2i81LtzkoHoS4jXAqtzoNLtIl49r47O9wG6StXjqmfOu9njfhsn9ACE7CikSGNQtssFyj1xtXq8Ltu2Tj_GozhTagUWyAZUdUIyJA5nin2ngNVZ-KonGEzHzgj2PjkNqyV-8tvdpH-OzscfWprUg9MbfSUIi5tEnA9_CZeC-nnv1f0tdpDfNoNYjA7AzrqX8Li18zUf3fuk6SW9iQzrbhfWg_qaJVQ-jAzwuhw2uP38NgJ7Z2IU1wjYd4uJXirKduOtWqLAuoe0_Nu7an2zX7VXgf3uiMwT-oYKQEyvDwXU6Ob2V0vK7reXIQaxWnet4F0MAWN40figYNE8iMvRHHjdC8KqlkMoM_JPQzZLW1b1OE6U07WiVDyXFUQT0bWdBdvQeOHkNrZFrYhWirrNjEbmxG5BEJmFDDxhXsxeKqFVuSbYWaJPk8vRWOQabGtODUNrvaVYp5rXVU_wLBS5bfnIPLSt_vIy9YqywZDYnymhJol1X6uMFSdJhSrvYe_i9CnlVQwlLjYNGusYsrJqR2WLlTVUNpqhwNGAGGZXGg_Z0OHh-Z_1ffHai1GrCJ7Bs-caXszKTi4BWW8rBtSyBz_XKhqrq6DyVTYWaAFk_IgzM6lpornI-AYDpKT2c7wKW3a8E8l4ZkCOORuOKbSyqdufSsSvrE8QZyf_bCx03s8UMvxZq7NT9OFT61d573gF_ya2PDQWJGSJx3A-XoZBZGnY-4FEW7oC4CEiZqdzcfAcmSXCqz5w7VFFJWqcpS9hbnZm7tjFpLt-Bu-e1SAPIgxVqhuXnKOAyPa7V-b26hW300QIjmOV9Nm2SXo0xM65bXnn5xQBZx8_dG-H6EPu7N6faNg5qXkwsLjVsWtRm3C8r-vCkRjbhzpHe91cJZvf6LLF_n0_5HLQ_n4_qeZw-w5yhIDsYoioph3fzG3zs1Vw2HNB9-juwHk-mInSJySrVPM_fm1Qb--Kc6leTFPOmOvIAGe0HLMBwBhzr3MXUSWeiN9SucR6ZSt5bqf25NMDOSY5Bxp5q5pVCqykd4vSf3Es5mVhWBS0puaRgDI8D0K920qW_hoVkge9Rcku0tLVlVgQDF_ErF0EZ9V4AJqnmXxcCNZGXzdpWw2VYPBZv6NJs9rmyLdYpviZf6hMfYa3QKfJV4RES5zfYktj5GZ56_9t2CSN3cAArYGn3qpk0xuIdzDO6GaQZ-yi9VuuqUJv1rG-6l9kSkr5LLWLKvMyFpCCADLW0A-YxZecSJiZPobk_eA75dBaBidv_o7neQMVZvMjbeYpADQrj7-AEjiLdZ5EoOFcmiIELVkSngNy1A-nhw5nphiZbO79NuQFc1sGLNXoG-MNhmug2sqK.3A_ZRqMFCqMQeCZJKbWULHTi9_dptUi5BiE7V6W1SE0",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 12:22:55.842 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 442.8053 ms
+2026-04-14 12:22:55.968 +03:30 [INF] The request URI matched a server endpoint: "Token".
+2026-04-14 12:22:55.974 +03:30 [INF] The token request was successfully extracted: {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "d9tatsLTkoVI38UZHYsayx_FR_U2StMUssi4oHwRV_s",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 12:22:56.095 +03:30 [INF] The token request was successfully validated.
+2026-04-14 12:22:56.133 +03:30 [INF] The token '378629ed-a529-4ed6-9e48-08de9a033887' was successfully marked as redeemed.
+2026-04-14 12:22:56.171 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 900,
+  "scope": "openid profile email offline_access banking_api",
+  "id_token": "[redacted]",
+  "refresh_token": "[redacted]"
+}.
+2026-04-14 12:22:56.176 +03:30 [INF] HTTP POST /connect/token responded 200 in 59.3207 ms
+2026-04-14 12:22:56.213 +03:30 [INF] The request URI matched a server endpoint: "Userinfo".
+2026-04-14 12:22:56.218 +03:30 [INF] The userinfo request was successfully extracted: {
+  "access_token": "[redacted]"
+}.
+2026-04-14 12:22:56.236 +03:30 [INF] The userinfo request was successfully validated.
+2026-04-14 12:22:56.275 +03:30 [INF] HTTP GET /connect/userinfo responded 200 in 27.9278 ms
+2026-04-14 12:25:54.019 +03:30 [INF] HTTP GET / responded 200 in 1915.0058 ms
+2026-04-14 12:25:54.054 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 12:25:54.058 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 12:25:54.104 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1513 ms
+2026-04-14 12:25:57.765 +03:30 [INF] The request URI matched a server endpoint: "Configuration".
+2026-04-14 12:25:57.774 +03:30 [INF] The configuration request was successfully extracted: {}.
+2026-04-14 12:25:57.779 +03:30 [INF] The configuration request was successfully validated.
+2026-04-14 12:25:57.791 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:65460/",
+  "authorization_endpoint": "https://localhost:65460/connect/authorize",
+  "token_endpoint": "https://localhost:65460/connect/token",
+  "introspection_endpoint": "https://localhost:65460/connect/introspect",
+  "end_session_endpoint": "https://localhost:65460/connect/logout",
+  "revocation_endpoint": "https://localhost:65460/connect/revoke",
+  "userinfo_endpoint": "https://localhost:65460/connect/userinfo",
+  "jwks_uri": "https://localhost:65460/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "banking_api"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "plain",
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "revocation_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "private_key_jwt",
+    "client_secret_basic"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false,
+  "authorization_response_iss_parameter_supported": true
+}.
+2026-04-14 12:25:57.862 +03:30 [INF] The request URI matched a server endpoint: "Cryptography".
+2026-04-14 12:25:57.868 +03:30 [INF] The cryptography request was successfully extracted: {}.
+2026-04-14 12:25:57.874 +03:30 [INF] The cryptography request was successfully validated.
+2026-04-14 12:25:57.894 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "B8789232E57B414CEB50510A5D9673F1AEA31C9F",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv_OxMLAJjwEDIEdZ_LOSQVCUGqvcT5ay35cl7NaCsL-LUiMCUK-uzHaZunoNhPTQJfhHYmd6rrRSQZqm-JNTXuSRS5HSa_Bdn2OyX1X4UuTp4qs-w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0-bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz_piendu6b3phtBsq_TgFW9SxNnB-5gZfkPNHbIrJ4UwPJmT6C8F_vNd5OjLHSvObLuJAEQ",
+      "x5t": "uHiSMuV7QUzrUFEKXZZz8a6jHJ8",
+      "x5c": [
+        "MIIC9TCCAd2gAwIBAgIJAL6yduG5MQxAMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwHhcNMjYwNDEyMTExNDM3WhcNMjgwNDEyMTExNDM3WjAwMS4wLAYDVQQDEyVPcGVuSWRkaWN0IFNlcnZlciBTaWduaW5nIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7rKX76dQznWuHRTsH5Mowf0fkJWmPT6zTg2qOzDqoXCADzz9niqyVRF65VEv/OxMLAJjwEDIEdZ/LOSQVCUGqvcT5ay35cl7NaCsL+LUiMCUK+uzHaZunoNhPTQJfhHYmd6rrRSQZqm+JNTXuSRS5HSa/Bdn2OyX1X4UuTp4qs+w0qkTsTsrZfWfiEXjpjd8OdBvbbNFfQKM71p7v8cVhiY7wFqUfmQICooJf734VT9M0+bYMbmRWnYAWLBm9hYZJVEVA2vsIqENovYz/piendu6b3phtBsq/TgFW9SxNnB+5gZfkPNHbIrJ4UwPJmT6C8F/vNd5OjLHSvObLuJAEQIDAQABoxIwEDAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAI87s3RrumdeTS0yZmWPP8qkcG1R9Ejw10STUyTV+/In0rJYLoYXfWh7b5x06lelvAwsUdpzhbAM+n5DRjbrQMHFVMyjSqWb/wTVGmmAZHOa6dcKkdDmkyfyKDSYMqy3y8p/XrSHOH039XUyS7kWXl9q2qCdYAGYr7E2cGLSpvlj7vhT91WaksY9/XwNRiC5F1rskH8WJjSRUElonf+E1jfhkLgL4X9qlCfm1H5NFOGvostEv+Bne25BQAla/iczIz8AYfMGzdbgMDSvlb1zyacxVONUi5TEsGyOeyifqNDmH+GOz56dAxOtbWNRZV0aWNDjNSMcWwI21lxJ3ZcRXRs="
+      ]
+    }
+  ]
+}.
+2026-04-14 12:25:58.020 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 12:25:58.028 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "LoWdxQJ4qt0Gkp2IXv0GTgi7TaoIngojN-qJhvmtR4o",
+  "code_challenge": "xf_36piMAduacTYpGSHpKDy6F3n6zeM26korOyOhpcI",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.NTBwyoM7eSBX9GWxv3croZ8cGpOf_E1YCXDh2aj2D7fX5Uq52Ixc1UBSOQaQGOhW8CeeOdRLLc-CogtL1XDEf0dcc2vhXsqE6FtTObYMFCUFYLmIb3gA3O71pRMPNbcJXuEtYp8DWWxltUJjZ3boY851F-ATjwQS3V4tu8rIKNlL6CJ_Mwig9uiwqhba2lrEekhlqWHYOG7V9dTrNAwx5n8uMcmS01HkcD5nBxQvGk7aClCv0zwTUl3Wqe49ZjdJs75FsIWRB4Bo5nV5gXXJB92gmAavqG7zLdBcIVOEOFAH_FjfaSG8pq-4-EvGuz4XSgeWGGiM8_smf9NNiQHfE1YkBykahSRxwt3ImPf5ZUTBE2cXAmZ-ZE7Yv51l_-SbNBDeN2MImLjQSSTGvjpJLtkPERFdZw9Jl0OOWwic919p2wjyF3F6l82wwe5G62nxDNINy2nyvqByFN9uLs7xnHstDfegZJ2lBoav_rBesMZ2g-gfTklH06ceBnmIU9Vw3CRaEhJQtmWcEaY4_r2lUcUQp_-kIYuaJCIrkk--PNDe4d5HD9TxM9t_52VX_OlpnZPp0LaDlIH8pxhgUJ1dLWZAxvH6MRKRBmzmoBpYBNNlNFeBCrFrWzBCZgo_443Mlnf2Ng9OAZmpCbkcRxKB0Ad4akVcDdRwwse4JqpM-6c.JyUWUNvoB9wt7HI3VhJUrA.VbRMsMU3_-c_mk6SBF4XZPf8Pc812GbajpC6I5vQfpuWsoaFdOWSfBILha3y-3ccEP2_p9rVQz04oKCSYQD6jnaDLiqBbndAcQzOPXnRBsOO0tseC-V8lqd3oJKZRMvSBdrdXdkRnzYq10fOMRrTyZoeA-4KCZMYRC4tIte-c6WlmbG0hvZEMR5qG7S4lZMHdokOkR4qPvEvEIQn5viDiP47sWZi0vVFGbegHpQs13t_eO7R0bbg4UNRryOoVhc2I8ZXi7AELuvcm6pUUpxLbw3xoR4DyFj3fUB4tA4KlaiPIqDRtczIydW5hDP_JiW4domAhn3yI0Y_Ji5kpVP3qXkhXaNLVKy8SNlqq9U3PcClK9XaG66uUgWqGtL_nT6OX9AiP7skQi8dxC1f6YObDy14fCvQlub8mGMezE5UsnQZSfn4W2gDdNag2KlQIBaQ6oryb0wywBOrxf43NvOQDRBwC6gHmWQmOHFMm9zGESDxlfuF8VfpyuSzR2NlOvrLn7bI3hPJ06iRdjq_9k8-hZPIJxvXTykZX5aHPtBYoFUTepIAAfC78OtRMArxwemZa15Vx_OnKOlz6jE8pKEsYlzy4bB_p3rP0aKW5C4J-7wM9HzRWd8CKEBLripZq1FmK4IwWHf46Z8_VKHWR9gAnD_82Pp0qCcHEIEs1-ilpOQQ3qWGw9-ZV27g3wIoNeimjitqaXCtbmHhg1QcsXdNumMZDtNhZQcFfKyJg1NpaGQ0oTnIcJKyMFzP8Mz7pYj4pbJ_Eo1e9muaU887ymNrpHMWcz9aVvVoBs6ET6oTqLvEntL0jvzfP5pQ-RwGng-mzQ48MQBEF6D4dUvnr9eQALpUhIQP7jYR-7_IXE9JkR8VeFE4wrvWoQFQVNgOH8UsIyJPOOgVtXCg1x3pIKZAK-GKfvMg5UZIbD0wixaxcM-KdZCTPLTd3VgHPsQv_yE1O7nK1GJWj6YpYkyXsZLlrQfLWSF_Y_zOqptkM1pCz_eBUyVI84W2-1d0U33jGRwVGrRhPKyLiKL0CqgdtANN0hnXR-GsL1MnkhjTysws_FNVkYI1aGzzxaTUOVkf_D8wQnVBzRiXQoZyZeb7TwMbL3tgdyEJxPsCTkDvjnzaVlklI04ttIOgTyiH8zhsyT45rd3T8pptZkm98TFXgW0VKtV_LSZpsyFrZzWNiGvywuO_V01sZ0KjfMQMFp2BvJDKxtDzOKNXWJi3bXkg0WX0eQxL8kEVI_4tzneuaZFSTzpDSW_odAaAnvs8C8gwawmupaQWwmu38y_t5J6L48eqyl8OwMvGfYePgr8UHFr6av3Yq38Mxp1B98W6Q5HHL4-lXwbKDO4PdWP5JokpxJWwbnfMMBH-cT5_qU2JUCgB0LGUIU6bN__bUEsFK7S1i5nDlkHSg7H7jotGN2MpkrMKmmFbV23GZnK9XkVQmjVMbS9M3K3jsGvaykW7T9dnCxtP90Njac3yujHae-E_dxHYM4zawxmztx7VJeTdPtp-762-ykoHGpR9jUv0qqvXUpYK2Y107ncrQG4vjjdPa696vLsVSqUnoShK0lhVxmECmZrIwq3DoLKSe7S29IXnMoD8ocKS9Lc5yxvKFrc76KNySSCekpBiMKEav7ocmLpk0Gfz0y4uuAU-BecAamvLjtv7ixuzVhcHUsIQD7lO5fNqXLy5b4kulCrlBcvEZtMek7XsiJllDFQmzslN_j2dm1jLUeRg-ZgoB1nCXgniOD8xkhxbhcYQiyGtdKNxzX4TIMpzYBB9Iu4SE_rhEh2X6XtNnVbuG3RI7pJXl782i_PsqbjIG0mEEkfL3DaE8vJUB8k1jaH3P8MjO9GSX_w4UUVGHYuNNxv96poiAxD_n0sBY1oUl-SCxECgzGUBEkMnASIjYMMqNfuOhjUgLawQT4jkPVTsTgW3ptfHQduU8nm-5aKJeaTZkS5TD_FmuwQ0HWMXMmUplWM1zFeBeVJIF-Hm1ykKxRdUXGJNtNaSp6qdYR2gUXsPGPjmN02xQnHLhIYu47YWi3ktUm53jqfRJtrsZq6U1EKCdaejK7XP8O0AFItpa0dAlXhvwz9oINMzyxKLmi-Kg59J9pDubAcylNuuBmrvChN4O2XEXbTgkFHWIPICRIXRYoZjTmNUEnWN7aKyKPM-43YQQwmBCkvLmeFd.YuvApr548Dw_vv_696vBfjGYeVlXzN9AYLzGYXkKM-g"
+}.
+2026-04-14 12:25:58.071 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 12:25:58.104 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 21.4408 ms
+2026-04-14 12:25:59.846 +03:30 [INF] HTTP GET /Account/Login responded 200 in 1724.5710 ms
+2026-04-14 12:25:59.853 +03:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2026-04-14 12:25:59.858 +03:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2026-04-14 12:25:59.900 +03:30 [INF] HTTP GET /favicon.ico responded 404 in 0.0157 ms
+2026-04-14 12:26:15.467 +03:30 [INF] User 'admin@bankinggateway.local' logged in successfully.
+2026-04-14 12:26:15.473 +03:30 [INF] HTTP POST /Account/Login responded 302 in 8638.0724 ms
+2026-04-14 12:26:15.485 +03:30 [INF] The request URI matched a server endpoint: "Authorization".
+2026-04-14 12:26:15.489 +03:30 [INF] The authorization request was successfully extracted: {
+  "client_id": "banking-gateway",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "response_type": "code",
+  "scope": "openid profile email offline_access banking_api",
+  "nonce": "LoWdxQJ4qt0Gkp2IXv0GTgi7TaoIngojN-qJhvmtR4o",
+  "code_challenge": "xf_36piMAduacTYpGSHpKDy6F3n6zeM26korOyOhpcI",
+  "code_challenge_method": "S256",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.NTBwyoM7eSBX9GWxv3croZ8cGpOf_E1YCXDh2aj2D7fX5Uq52Ixc1UBSOQaQGOhW8CeeOdRLLc-CogtL1XDEf0dcc2vhXsqE6FtTObYMFCUFYLmIb3gA3O71pRMPNbcJXuEtYp8DWWxltUJjZ3boY851F-ATjwQS3V4tu8rIKNlL6CJ_Mwig9uiwqhba2lrEekhlqWHYOG7V9dTrNAwx5n8uMcmS01HkcD5nBxQvGk7aClCv0zwTUl3Wqe49ZjdJs75FsIWRB4Bo5nV5gXXJB92gmAavqG7zLdBcIVOEOFAH_FjfaSG8pq-4-EvGuz4XSgeWGGiM8_smf9NNiQHfE1YkBykahSRxwt3ImPf5ZUTBE2cXAmZ-ZE7Yv51l_-SbNBDeN2MImLjQSSTGvjpJLtkPERFdZw9Jl0OOWwic919p2wjyF3F6l82wwe5G62nxDNINy2nyvqByFN9uLs7xnHstDfegZJ2lBoav_rBesMZ2g-gfTklH06ceBnmIU9Vw3CRaEhJQtmWcEaY4_r2lUcUQp_-kIYuaJCIrkk--PNDe4d5HD9TxM9t_52VX_OlpnZPp0LaDlIH8pxhgUJ1dLWZAxvH6MRKRBmzmoBpYBNNlNFeBCrFrWzBCZgo_443Mlnf2Ng9OAZmpCbkcRxKB0Ad4akVcDdRwwse4JqpM-6c.JyUWUNvoB9wt7HI3VhJUrA.VbRMsMU3_-c_mk6SBF4XZPf8Pc812GbajpC6I5vQfpuWsoaFdOWSfBILha3y-3ccEP2_p9rVQz04oKCSYQD6jnaDLiqBbndAcQzOPXnRBsOO0tseC-V8lqd3oJKZRMvSBdrdXdkRnzYq10fOMRrTyZoeA-4KCZMYRC4tIte-c6WlmbG0hvZEMR5qG7S4lZMHdokOkR4qPvEvEIQn5viDiP47sWZi0vVFGbegHpQs13t_eO7R0bbg4UNRryOoVhc2I8ZXi7AELuvcm6pUUpxLbw3xoR4DyFj3fUB4tA4KlaiPIqDRtczIydW5hDP_JiW4domAhn3yI0Y_Ji5kpVP3qXkhXaNLVKy8SNlqq9U3PcClK9XaG66uUgWqGtL_nT6OX9AiP7skQi8dxC1f6YObDy14fCvQlub8mGMezE5UsnQZSfn4W2gDdNag2KlQIBaQ6oryb0wywBOrxf43NvOQDRBwC6gHmWQmOHFMm9zGESDxlfuF8VfpyuSzR2NlOvrLn7bI3hPJ06iRdjq_9k8-hZPIJxvXTykZX5aHPtBYoFUTepIAAfC78OtRMArxwemZa15Vx_OnKOlz6jE8pKEsYlzy4bB_p3rP0aKW5C4J-7wM9HzRWd8CKEBLripZq1FmK4IwWHf46Z8_VKHWR9gAnD_82Pp0qCcHEIEs1-ilpOQQ3qWGw9-ZV27g3wIoNeimjitqaXCtbmHhg1QcsXdNumMZDtNhZQcFfKyJg1NpaGQ0oTnIcJKyMFzP8Mz7pYj4pbJ_Eo1e9muaU887ymNrpHMWcz9aVvVoBs6ET6oTqLvEntL0jvzfP5pQ-RwGng-mzQ48MQBEF6D4dUvnr9eQALpUhIQP7jYR-7_IXE9JkR8VeFE4wrvWoQFQVNgOH8UsIyJPOOgVtXCg1x3pIKZAK-GKfvMg5UZIbD0wixaxcM-KdZCTPLTd3VgHPsQv_yE1O7nK1GJWj6YpYkyXsZLlrQfLWSF_Y_zOqptkM1pCz_eBUyVI84W2-1d0U33jGRwVGrRhPKyLiKL0CqgdtANN0hnXR-GsL1MnkhjTysws_FNVkYI1aGzzxaTUOVkf_D8wQnVBzRiXQoZyZeb7TwMbL3tgdyEJxPsCTkDvjnzaVlklI04ttIOgTyiH8zhsyT45rd3T8pptZkm98TFXgW0VKtV_LSZpsyFrZzWNiGvywuO_V01sZ0KjfMQMFp2BvJDKxtDzOKNXWJi3bXkg0WX0eQxL8kEVI_4tzneuaZFSTzpDSW_odAaAnvs8C8gwawmupaQWwmu38y_t5J6L48eqyl8OwMvGfYePgr8UHFr6av3Yq38Mxp1B98W6Q5HHL4-lXwbKDO4PdWP5JokpxJWwbnfMMBH-cT5_qU2JUCgB0LGUIU6bN__bUEsFK7S1i5nDlkHSg7H7jotGN2MpkrMKmmFbV23GZnK9XkVQmjVMbS9M3K3jsGvaykW7T9dnCxtP90Njac3yujHae-E_dxHYM4zawxmztx7VJeTdPtp-762-ykoHGpR9jUv0qqvXUpYK2Y107ncrQG4vjjdPa696vLsVSqUnoShK0lhVxmECmZrIwq3DoLKSe7S29IXnMoD8ocKS9Lc5yxvKFrc76KNySSCekpBiMKEav7ocmLpk0Gfz0y4uuAU-BecAamvLjtv7ixuzVhcHUsIQD7lO5fNqXLy5b4kulCrlBcvEZtMek7XsiJllDFQmzslN_j2dm1jLUeRg-ZgoB1nCXgniOD8xkhxbhcYQiyGtdKNxzX4TIMpzYBB9Iu4SE_rhEh2X6XtNnVbuG3RI7pJXl782i_PsqbjIG0mEEkfL3DaE8vJUB8k1jaH3P8MjO9GSX_w4UUVGHYuNNxv96poiAxD_n0sBY1oUl-SCxECgzGUBEkMnASIjYMMqNfuOhjUgLawQT4jkPVTsTgW3ptfHQduU8nm-5aKJeaTZkS5TD_FmuwQ0HWMXMmUplWM1zFeBeVJIF-Hm1ykKxRdUXGJNtNaSp6qdYR2gUXsPGPjmN02xQnHLhIYu47YWi3ktUm53jqfRJtrsZq6U1EKCdaejK7XP8O0AFItpa0dAlXhvwz9oINMzyxKLmi-Kg59J9pDubAcylNuuBmrvChN4O2XEXbTgkFHWIPICRIXRYoZjTmNUEnWN7aKyKPM-43YQQwmBCkvLmeFd.YuvApr548Dw_vv_696vBfjGYeVlXzN9AYLzGYXkKM-g"
+}.
+2026-04-14 12:26:15.501 +03:30 [INF] The authorization request was successfully validated.
+2026-04-14 12:26:15.732 +03:30 [INF] An ad hoc authorization was automatically created and associated with the 'banking-gateway' application: 66d17960-3ed1-4398-1bba-08de9a03afaf.
+2026-04-14 12:26:15.864 +03:30 [INF] The authorization response was successfully returned to 'https://localhost:7033/api/auth/callback' using the query response mode: {
+  "code": "[redacted]",
+  "state": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiJEMzUyN0Y4OTdBQzQwRjdGMzcyODJGQjcwMjAxMjkwQ0E2NjBENzJDIiwidHlwIjoib2lfc3RldCtqd3QiLCJjdHkiOiJKV1QifQ.NTBwyoM7eSBX9GWxv3croZ8cGpOf_E1YCXDh2aj2D7fX5Uq52Ixc1UBSOQaQGOhW8CeeOdRLLc-CogtL1XDEf0dcc2vhXsqE6FtTObYMFCUFYLmIb3gA3O71pRMPNbcJXuEtYp8DWWxltUJjZ3boY851F-ATjwQS3V4tu8rIKNlL6CJ_Mwig9uiwqhba2lrEekhlqWHYOG7V9dTrNAwx5n8uMcmS01HkcD5nBxQvGk7aClCv0zwTUl3Wqe49ZjdJs75FsIWRB4Bo5nV5gXXJB92gmAavqG7zLdBcIVOEOFAH_FjfaSG8pq-4-EvGuz4XSgeWGGiM8_smf9NNiQHfE1YkBykahSRxwt3ImPf5ZUTBE2cXAmZ-ZE7Yv51l_-SbNBDeN2MImLjQSSTGvjpJLtkPERFdZw9Jl0OOWwic919p2wjyF3F6l82wwe5G62nxDNINy2nyvqByFN9uLs7xnHstDfegZJ2lBoav_rBesMZ2g-gfTklH06ceBnmIU9Vw3CRaEhJQtmWcEaY4_r2lUcUQp_-kIYuaJCIrkk--PNDe4d5HD9TxM9t_52VX_OlpnZPp0LaDlIH8pxhgUJ1dLWZAxvH6MRKRBmzmoBpYBNNlNFeBCrFrWzBCZgo_443Mlnf2Ng9OAZmpCbkcRxKB0Ad4akVcDdRwwse4JqpM-6c.JyUWUNvoB9wt7HI3VhJUrA.VbRMsMU3_-c_mk6SBF4XZPf8Pc812GbajpC6I5vQfpuWsoaFdOWSfBILha3y-3ccEP2_p9rVQz04oKCSYQD6jnaDLiqBbndAcQzOPXnRBsOO0tseC-V8lqd3oJKZRMvSBdrdXdkRnzYq10fOMRrTyZoeA-4KCZMYRC4tIte-c6WlmbG0hvZEMR5qG7S4lZMHdokOkR4qPvEvEIQn5viDiP47sWZi0vVFGbegHpQs13t_eO7R0bbg4UNRryOoVhc2I8ZXi7AELuvcm6pUUpxLbw3xoR4DyFj3fUB4tA4KlaiPIqDRtczIydW5hDP_JiW4domAhn3yI0Y_Ji5kpVP3qXkhXaNLVKy8SNlqq9U3PcClK9XaG66uUgWqGtL_nT6OX9AiP7skQi8dxC1f6YObDy14fCvQlub8mGMezE5UsnQZSfn4W2gDdNag2KlQIBaQ6oryb0wywBOrxf43NvOQDRBwC6gHmWQmOHFMm9zGESDxlfuF8VfpyuSzR2NlOvrLn7bI3hPJ06iRdjq_9k8-hZPIJxvXTykZX5aHPtBYoFUTepIAAfC78OtRMArxwemZa15Vx_OnKOlz6jE8pKEsYlzy4bB_p3rP0aKW5C4J-7wM9HzRWd8CKEBLripZq1FmK4IwWHf46Z8_VKHWR9gAnD_82Pp0qCcHEIEs1-ilpOQQ3qWGw9-ZV27g3wIoNeimjitqaXCtbmHhg1QcsXdNumMZDtNhZQcFfKyJg1NpaGQ0oTnIcJKyMFzP8Mz7pYj4pbJ_Eo1e9muaU887ymNrpHMWcz9aVvVoBs6ET6oTqLvEntL0jvzfP5pQ-RwGng-mzQ48MQBEF6D4dUvnr9eQALpUhIQP7jYR-7_IXE9JkR8VeFE4wrvWoQFQVNgOH8UsIyJPOOgVtXCg1x3pIKZAK-GKfvMg5UZIbD0wixaxcM-KdZCTPLTd3VgHPsQv_yE1O7nK1GJWj6YpYkyXsZLlrQfLWSF_Y_zOqptkM1pCz_eBUyVI84W2-1d0U33jGRwVGrRhPKyLiKL0CqgdtANN0hnXR-GsL1MnkhjTysws_FNVkYI1aGzzxaTUOVkf_D8wQnVBzRiXQoZyZeb7TwMbL3tgdyEJxPsCTkDvjnzaVlklI04ttIOgTyiH8zhsyT45rd3T8pptZkm98TFXgW0VKtV_LSZpsyFrZzWNiGvywuO_V01sZ0KjfMQMFp2BvJDKxtDzOKNXWJi3bXkg0WX0eQxL8kEVI_4tzneuaZFSTzpDSW_odAaAnvs8C8gwawmupaQWwmu38y_t5J6L48eqyl8OwMvGfYePgr8UHFr6av3Yq38Mxp1B98W6Q5HHL4-lXwbKDO4PdWP5JokpxJWwbnfMMBH-cT5_qU2JUCgB0LGUIU6bN__bUEsFK7S1i5nDlkHSg7H7jotGN2MpkrMKmmFbV23GZnK9XkVQmjVMbS9M3K3jsGvaykW7T9dnCxtP90Njac3yujHae-E_dxHYM4zawxmztx7VJeTdPtp-762-ykoHGpR9jUv0qqvXUpYK2Y107ncrQG4vjjdPa696vLsVSqUnoShK0lhVxmECmZrIwq3DoLKSe7S29IXnMoD8ocKS9Lc5yxvKFrc76KNySSCekpBiMKEav7ocmLpk0Gfz0y4uuAU-BecAamvLjtv7ixuzVhcHUsIQD7lO5fNqXLy5b4kulCrlBcvEZtMek7XsiJllDFQmzslN_j2dm1jLUeRg-ZgoB1nCXgniOD8xkhxbhcYQiyGtdKNxzX4TIMpzYBB9Iu4SE_rhEh2X6XtNnVbuG3RI7pJXl782i_PsqbjIG0mEEkfL3DaE8vJUB8k1jaH3P8MjO9GSX_w4UUVGHYuNNxv96poiAxD_n0sBY1oUl-SCxECgzGUBEkMnASIjYMMqNfuOhjUgLawQT4jkPVTsTgW3ptfHQduU8nm-5aKJeaTZkS5TD_FmuwQ0HWMXMmUplWM1zFeBeVJIF-Hm1ykKxRdUXGJNtNaSp6qdYR2gUXsPGPjmN02xQnHLhIYu47YWi3ktUm53jqfRJtrsZq6U1EKCdaejK7XP8O0AFItpa0dAlXhvwz9oINMzyxKLmi-Kg59J9pDubAcylNuuBmrvChN4O2XEXbTgkFHWIPICRIXRYoZjTmNUEnWN7aKyKPM-43YQQwmBCkvLmeFd.YuvApr548Dw_vv_696vBfjGYeVlXzN9AYLzGYXkKM-g",
+  "iss": "https://localhost:65460/"
+}.
+2026-04-14 12:26:15.873 +03:30 [INF] HTTP GET /connect/authorize responded 302 in 365.7151 ms
+2026-04-14 12:26:15.979 +03:30 [INF] The request URI matched a server endpoint: "Token".
+2026-04-14 12:26:15.988 +03:30 [INF] The token request was successfully extracted: {
+  "grant_type": "authorization_code",
+  "code": "[redacted]",
+  "code_verifier": "frXT7qtYPpT0n1d-SJ13Gjd-KEMEtckeBW6Mk3BUOKc",
+  "redirect_uri": "https://localhost:7033/api/auth/callback",
+  "client_id": "banking-gateway",
+  "client_secret": "[redacted]"
+}.
+2026-04-14 12:26:16.128 +03:30 [INF] The token request was successfully validated.
+2026-04-14 12:26:16.155 +03:30 [INF] The token '80eccc30-e4f9-4404-c6ee-08de9a03afc2' was successfully marked as redeemed.
+2026-04-14 12:26:16.187 +03:30 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 900,
+  "scope": "openid profile email offline_access banking_api",
+  "id_token": "[redacted]",
+  "refresh_token": "[redacted]"
+}.
+2026-04-14 12:26:16.191 +03:30 [INF] HTTP POST /connect/token responded 200 in 54.6718 ms
+2026-04-14 12:26:16.215 +03:30 [INF] The request URI matched a server endpoint: "Userinfo".
+2026-04-14 12:26:16.219 +03:30 [INF] The userinfo request was successfully extracted: {
+  "access_token": "[redacted]"
+}.
+2026-04-14 12:26:16.232 +03:30 [INF] The userinfo request was successfully validated.
+2026-04-14 12:26:16.259 +03:30 [INF] HTTP GET /connect/userinfo responded 200 in 18.2472 ms
